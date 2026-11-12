@@ -1,0 +1,11 @@
+valgrind
+========
+
+Shell
+-----
+
+[Sudo]
+    valgrind /bin/sh
+
+[Unprivileged]
+    valgrind /bin/sh

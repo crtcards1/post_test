@@ -1,0 +1,14 @@
+nice
+====
+
+Shell
+-----
+
+[Sudo]
+    nice /bin/sh
+
+[SUID]
+    nice /bin/sh -p
+
+[Unprivileged]
+    nice /bin/sh

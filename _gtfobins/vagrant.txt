@@ -1,0 +1,15 @@
+vagrant
+=======
+
+Inherit
+-------
+
+[Sudo]
+    echo '...' >Vagrantfile
+vagrant up
+    This allows to run Ruby code (`...`).
+
+[Unprivileged]
+    echo '...' >Vagrantfile
+vagrant up
+    This allows to run Ruby code (`...`).

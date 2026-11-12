@@ -1,0 +1,17 @@
+eqn
+===
+
+File read
+---------
+
+[Sudo]
+    eqn /path/to/input-file
+    The content is actually parsed and corrupted by the command.
+
+[SUID]
+    eqn /path/to/input-file
+    The content is actually parsed and corrupted by the command.
+
+[Unprivileged]
+    eqn /path/to/input-file
+    The content is actually parsed and corrupted by the command.

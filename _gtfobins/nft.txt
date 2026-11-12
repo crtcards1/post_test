@@ -1,0 +1,13 @@
+nft
+===
+
+File read
+---------
+
+[Sudo]
+    nft -f /path/to/input-file
+    The content is actually parsed and corrupted by the command.
+
+[Unprivileged]
+    nft -f /path/to/input-file
+    The content is actually parsed and corrupted by the command.

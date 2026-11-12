@@ -1,0 +1,14 @@
+highlight
+=========
+
+File read
+---------
+
+[Sudo]
+    highlight --no-doc --failsafe /path/to/input-file
+
+[SUID]
+    highlight --no-doc --failsafe /path/to/input-file
+
+[Unprivileged]
+    highlight --no-doc --failsafe /path/to/input-file

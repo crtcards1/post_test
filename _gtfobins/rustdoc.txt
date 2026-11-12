@@ -1,0 +1,26 @@
+rustdoc
+=======
+
+File read
+---------
+
+[Sudo]
+    rustdoc /path/to/input-file
+    Partial content is displayed as error messages.
+
+[Unprivileged]
+    rustdoc /path/to/input-file
+    Partial content is displayed as error messages.
+
+File write
+----------
+
+[Sudo]
+    echo '//! DATA' >/path/to/temp-file
+rustdoc /path/to/temp-file -o /path/to/output-dir/
+    This command creates a number of documentation files in the target directory, and the data is written in multiple locations, e.g., `src/temp_file/temp-file.html`, amidst other content.
+
+[Unprivileged]
+    echo '//! DATA' >/path/to/temp-file
+rustdoc /path/to/temp-file -o /path/to/output-dir/
+    This command creates a number of documentation files in the target directory, and the data is written in multiple locations, e.g., `src/temp_file/temp-file.html`, amidst other content.

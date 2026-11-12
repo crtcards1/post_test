@@ -1,0 +1,13 @@
+loginctl
+========
+
+Shell
+-----
+
+[Sudo]
+    loginctl user-status
+!/bin/sh
+
+[Unprivileged]
+    loginctl user-status
+!/bin/sh

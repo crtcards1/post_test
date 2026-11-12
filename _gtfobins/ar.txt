@@ -1,0 +1,17 @@
+ar
+==
+
+File read
+---------
+
+[Sudo]
+    ar r /path/to/output-file /path/to/input-file
+ar p /path/to/output-file
+
+[SUID]
+    ar r /path/to/output-file /path/to/input-file
+ar p /path/to/output-file
+
+[Unprivileged]
+    ar r /path/to/output-file /path/to/input-file
+ar p /path/to/output-file

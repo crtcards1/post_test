@@ -1,0 +1,14 @@
+join
+====
+
+File read
+---------
+
+[Sudo]
+    join -a 2 /dev/null /path/to/input-file
+
+[SUID]
+    join -a 2 /dev/null /path/to/input-file
+
+[Unprivileged]
+    join -a 2 /dev/null /path/to/input-file

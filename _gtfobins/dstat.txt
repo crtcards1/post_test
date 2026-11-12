@@ -1,0 +1,27 @@
+dstat
+=====
+
+Inherit
+-------
+
+[Sudo]
+    dstat --xxx
+    `dstat` allows you to run arbitrary Python scripts loaded as "external plugins" if they are located in one of the directories, stated in the `dstat` man page under "FILES":
+
+- `~/.dstat/`
+- `(path of binary)/plugins/`
+- `/usr/share/dstat/`
+- `/usr/local/share/dstat/`
+
+Pick the one that you can write into. The plugin named `xxx` file name must be defined in the `dstat_xxx.py` file.
+
+[Unprivileged]
+    dstat --xxx
+    `dstat` allows you to run arbitrary Python scripts loaded as "external plugins" if they are located in one of the directories, stated in the `dstat` man page under "FILES":
+
+- `~/.dstat/`
+- `(path of binary)/plugins/`
+- `/usr/share/dstat/`
+- `/usr/local/share/dstat/`
+
+Pick the one that you can write into. The plugin named `xxx` file name must be defined in the `dstat_xxx.py` file.

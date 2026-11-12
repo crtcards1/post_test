@@ -1,0 +1,14 @@
+grep
+====
+
+File read
+---------
+
+[Sudo]
+    grep '' /path/to/input-file
+
+[SUID]
+    grep '' /path/to/input-file
+
+[Unprivileged]
+    grep '' /path/to/input-file

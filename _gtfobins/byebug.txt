@@ -1,0 +1,11 @@
+byebug
+======
+
+Inherit
+-------
+
+[Sudo]
+    byebug --no-stop /path/to/script.rb
+
+[Unprivileged]
+    byebug --no-stop /path/to/script.rb

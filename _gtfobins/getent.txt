@@ -1,0 +1,13 @@
+getent
+======
+
+Privilege Escalation
+--------------------
+
+[Sudo]
+    getent shadow
+    This allows to dump password hashes from the `/etc/shadow` file.
+
+[SUID]
+    getent shadow
+    This allows to dump password hashes from the `/etc/shadow` file.

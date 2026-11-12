@@ -1,0 +1,13 @@
+redcarpet
+=========
+
+File read
+---------
+
+[Sudo]
+    redcarpet /path/to/input-file
+    The file is actually parsed as a Markdown file.
+
+[Unprivileged]
+    redcarpet /path/to/input-file
+    The file is actually parsed as a Markdown file.

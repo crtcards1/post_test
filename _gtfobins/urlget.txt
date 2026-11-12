@@ -1,0 +1,17 @@
+urlget
+======
+
+File read
+---------
+
+[Sudo]
+    urlget - /path/to/input-file
+    This is part of `gettext` and usually not in `PATH`, e.g., on Arch it can be found at `/usr/lib/gettext/urlget`.
+
+[SUID]
+    urlget - /path/to/input-file
+    This is part of `gettext` and usually not in `PATH`, e.g., on Arch it can be found at `/usr/lib/gettext/urlget`.
+
+[Unprivileged]
+    urlget - /path/to/input-file
+    This is part of `gettext` and usually not in `PATH`, e.g., on Arch it can be found at `/usr/lib/gettext/urlget`.

@@ -1,0 +1,11 @@
+firejail
+========
+
+Shell
+-----
+
+[Sudo]
+    firejail /bin/sh
+
+[Unprivileged]
+    firejail /bin/sh

@@ -1,0 +1,61 @@
+exiftool
+========
+
+File read
+---------
+
+[Sudo]
+    exiftool -filename=/path/to/output-file /path/to/input-file
+cat /path/to/output-file
+    If the permissions allow it, files are moved (instead of copied) to the destination.
+
+[Unprivileged]
+    exiftool -filename=/path/to/output-file /path/to/input-file
+cat /path/to/output-file
+    If the permissions allow it, files are moved (instead of copied) to the destination.
+
+File write
+----------
+
+[Sudo]
+    exiftool -filename=/path/to/output-file /path/to/input-file
+    If the permissions allow it, files are moved (instead of copied) to the destination.
+
+[Unprivileged]
+    exiftool -filename=/path/to/output-file /path/to/input-file
+    If the permissions allow it, files are moved (instead of copied) to the destination.
+
+[Sudo]
+    exiftool "-description<=/path/to/input-file --filename /path/to/output-file
+    The output file must exists, either empty or be a supported image file. The content is written amidst other content.
+
+[Unprivileged]
+    exiftool "-description<=/path/to/input-file --filename /path/to/output-file
+    The output file must exists, either empty or be a supported image file. The content is written amidst other content.
+
+[Sudo]
+    exiftool "-description=DATA --filename /path/to/output-file
+    The output file must exists, either empty or be a supported image file. The content is written amidst other content.
+
+[Unprivileged]
+    exiftool "-description=DATA --filename /path/to/output-file
+    The output file must exists, either empty or be a supported image file. The content is written amidst other content.
+
+[Sudo]
+    exiftool -description -W /path/to/output-file --filename /path/to/input-file
+    Writes the metadata tags of the input file in textual format to the output.
+
+[Unprivileged]
+    exiftool -description -W /path/to/output-file --filename /path/to/input-file
+    Writes the metadata tags of the input file in textual format to the output.
+
+Inherit
+-------
+
+[Sudo]
+    exiftool -if '...' /etc/passwd
+    This allows to run Perl code (`...`).
+
+[Unprivileged]
+    exiftool -if '...' /etc/passwd
+    This allows to run Perl code (`...`).

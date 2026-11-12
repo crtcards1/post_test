@@ -1,0 +1,26 @@
+dash
+====
+
+File write
+----------
+
+[Sudo]
+    dash -c 'echo DATA >/path/to/output-file'
+
+[SUID]
+    dash -c 'echo DATA >/path/to/output-file'
+
+[Unprivileged]
+    dash -c 'echo DATA >/path/to/output-file'
+
+Shell
+-----
+
+[Sudo]
+    dash
+
+[SUID]
+    dash
+
+[Unprivileged]
+    dash

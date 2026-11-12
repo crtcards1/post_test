@@ -1,0 +1,17 @@
+dialog
+======
+
+File read
+---------
+
+[Sudo]
+    dialog --textbox /path/to/input-file 0 0
+    The file is shown in an interactive TUI dialog.
+
+[SUID]
+    dialog --textbox /path/to/input-file 0 0
+    The file is shown in an interactive TUI dialog.
+
+[Unprivileged]
+    dialog --textbox /path/to/input-file 0 0
+    The file is shown in an interactive TUI dialog.

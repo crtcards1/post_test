@@ -1,0 +1,37 @@
+ltrace
+======
+
+File read
+---------
+
+[Sudo]
+    ltrace -F /path/to/input-file /dev/null
+    The file is parsed as a configuration file and its content is shown as error messages.
+
+[SUID]
+    ltrace -F /path/to/input-file /dev/null
+    The file is parsed as a configuration file and its content is shown as error messages.
+
+[Unprivileged]
+    ltrace -F /path/to/input-file /dev/null
+    The file is parsed as a configuration file and its content is shown as error messages.
+
+File write
+----------
+
+[Sudo]
+    ltrace -s 999 -o /path/to/input-file ltrace -F DATA
+    The data to be written appears amid the library function call log, quoted and with special characters escaped in octal notation. The string representation will be truncated, pick a value big enough instead of `999`. More generally, any binary that executes whatever library function call passing arbitrary data can be used in place of `ltrace -F DATA`.
+
+[Unprivileged]
+    ltrace -s 999 -o /path/to/input-file ltrace -F DATA
+    The data to be written appears amid the library function call log, quoted and with special characters escaped in octal notation. The string representation will be truncated, pick a value big enough instead of `999`. More generally, any binary that executes whatever library function call passing arbitrary data can be used in place of `ltrace -F DATA`.
+
+Shell
+-----
+
+[Sudo]
+    ltrace -b -L /bin/sh
+
+[Unprivileged]
+    ltrace -b -L /bin/sh

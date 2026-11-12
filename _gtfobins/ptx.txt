@@ -1,0 +1,14 @@
+ptx
+===
+
+File read
+---------
+
+[Sudo]
+    ptx -w 999 /path/to/input-file
+
+[SUID]
+    ptx -w 999 /path/to/input-file
+
+[Unprivileged]
+    ptx -w 999 /path/to/input-file

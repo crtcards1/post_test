@@ -1,0 +1,8 @@
+systemd-resolve
+===============
+
+Inherit
+-------
+
+[Sudo]
+    systemd-resolve --status

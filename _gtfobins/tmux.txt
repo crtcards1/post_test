@@ -1,0 +1,41 @@
+tmux
+====
+
+File read
+---------
+
+[Sudo]
+    tmux -f /path/to/input-file
+    The file is read and parsed as a `tmux` configuration file, part of the first invalid line is returned in an error message.
+
+[SUID]
+    tmux -f /path/to/input-file
+    The file is read and parsed as a `tmux` configuration file, part of the first invalid line is returned in an error message.
+
+[Unprivileged]
+    tmux -f /path/to/input-file
+    The file is read and parsed as a `tmux` configuration file, part of the first invalid line is returned in an error message.
+
+Shell
+-----
+
+[Sudo]
+    tmux -c /bin/sh
+
+[SUID]
+    tmux -c /bin/sh
+
+[Unprivileged]
+    tmux -c /bin/sh
+
+[Sudo]
+    tmux -S /path/to/socket
+    Provided to have enough permissions to access the socket (e.g., `/tmp/tmux-xxx/default`).
+
+[SUID]
+    tmux -S /path/to/socket
+    Provided to have enough permissions to access the socket (e.g., `/tmp/tmux-xxx/default`).
+
+[Unprivileged]
+    tmux -S /path/to/socket
+    Provided to have enough permissions to access the socket (e.g., `/tmp/tmux-xxx/default`).

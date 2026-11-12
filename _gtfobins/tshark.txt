@@ -1,0 +1,15 @@
+tshark
+======
+
+Inherit
+-------
+
+[Sudo]
+    echo '...' >/path/to/temp-file
+tshark -Xlua_script:/path/to/temp-file
+    This allows to run Lua code (`...`).
+
+[Unprivileged]
+    echo '...' >/path/to/temp-file
+tshark -Xlua_script:/path/to/temp-file
+    This allows to run Lua code (`...`).

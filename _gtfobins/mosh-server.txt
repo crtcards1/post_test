@@ -1,0 +1,9 @@
+mosh-server
+===========
+
+Shell
+-----
+
+[Sudo]
+    mosh --server=mosh-server localhost /bin/sh
+    The `mosh-server` has to be executed via `sudo`, e.g., `'--server=sudo mosh-server'`.

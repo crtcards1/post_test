@@ -1,0 +1,17 @@
+espeak
+======
+
+File read
+---------
+
+[Sudo]
+    espeak -qXf /path/to/input-file
+    The file content appears in the middle of other textual information as phonemes.
+
+[SUID]
+    espeak -qXf /path/to/input-file
+    The file content appears in the middle of other textual information as phonemes.
+
+[Unprivileged]
+    espeak -qXf /path/to/input-file
+    The file content appears in the middle of other textual information as phonemes.

@@ -1,0 +1,14 @@
+timeout
+=======
+
+Shell
+-----
+
+[Sudo]
+    timeout 0 /bin/sh
+
+[SUID]
+    timeout 0 /bin/sh -p
+
+[Unprivileged]
+    timeout 0 /bin/sh

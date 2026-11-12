@@ -1,0 +1,29 @@
+rpmquery
+========
+
+Inherit
+-------
+
+[Sudo]
+    rpmquery --eval '%{lua:...}'
+    This allows to run Lua code (`...`).
+
+[SUID]
+    rpmquery --eval '%{lua:...}'
+    This allows to run Lua code (`...`).
+
+[Unprivileged]
+    rpmquery --eval '%{lua:...}'
+    This allows to run Lua code (`...`).
+
+Shell
+-----
+
+[Sudo]
+    rpmquery --eval '%(/bin/sh 1>&2)'
+
+[SUID]
+    rpmquery --eval '%(/bin/sh 1>&2)'
+
+[Unprivileged]
+    rpmquery --eval '%(/bin/sh 1>&2)'

@@ -1,0 +1,14 @@
+head
+====
+
+File read
+---------
+
+[Sudo]
+    head -c-0 /path/to/input-file
+
+[SUID]
+    head -c-0 /path/to/input-file
+
+[Unprivileged]
+    head -c-0 /path/to/input-file

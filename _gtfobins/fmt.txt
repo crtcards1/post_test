@@ -1,0 +1,26 @@
+fmt
+===
+
+File read
+---------
+
+[Sudo]
+    fmt -pNON_EXISTING_PREFIX /path/to/input-file
+
+[SUID]
+    fmt -pNON_EXISTING_PREFIX /path/to/input-file
+
+[Unprivileged]
+    fmt -pNON_EXISTING_PREFIX /path/to/input-file
+
+[Sudo]
+    fmt -999 /path/to/input-file
+    This corrupts the output by wrapping very long lines at the given width (`999`).
+
+[SUID]
+    fmt -999 /path/to/input-file
+    This corrupts the output by wrapping very long lines at the given width (`999`).
+
+[Unprivileged]
+    fmt -999 /path/to/input-file
+    This corrupts the output by wrapping very long lines at the given width (`999`).

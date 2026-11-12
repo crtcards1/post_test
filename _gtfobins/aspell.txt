@@ -1,0 +1,29 @@
+aspell
+======
+
+File read
+---------
+
+[Sudo]
+    aspell -c /path/to/input-file
+    The textual file is displayed in an interactive TUI showing only the parts that contain mispelled words.
+
+[SUID]
+    aspell -c /path/to/input-file
+    The textual file is displayed in an interactive TUI showing only the parts that contain mispelled words.
+
+[Unprivileged]
+    aspell -c /path/to/input-file
+    The textual file is displayed in an interactive TUI showing only the parts that contain mispelled words.
+
+[Sudo]
+    aspell --conf /path/to/input-file
+    The first word is likely displayed as error messaged, and converted to lowercase.
+
+[SUID]
+    aspell --conf /path/to/input-file
+    The first word is likely displayed as error messaged, and converted to lowercase.
+
+[Unprivileged]
+    aspell --conf /path/to/input-file
+    The first word is likely displayed as error messaged, and converted to lowercase.

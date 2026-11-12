@@ -1,0 +1,17 @@
+cmp
+===
+
+File read
+---------
+
+[Sudo]
+    cmp /path/to/input-file /dev/zero -b -l
+    Dump the bytes of the input file that are different from the NUL byte in a tabular format.
+
+[SUID]
+    cmp /path/to/input-file /dev/zero -b -l
+    Dump the bytes of the input file that are different from the NUL byte in a tabular format.
+
+[Unprivileged]
+    cmp /path/to/input-file /dev/zero -b -l
+    Dump the bytes of the input file that are different from the NUL byte in a tabular format.

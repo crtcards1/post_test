@@ -1,0 +1,26 @@
+ash
+===
+
+File write
+----------
+
+[Sudo]
+    ash -c 'echo DATA >/path/to/output-file'
+
+[SUID]
+    ash -p -c 'echo DATA >/path/to/output-file'
+
+[Unprivileged]
+    ash -c 'echo DATA >/path/to/output-file'
+
+Shell
+-----
+
+[Sudo]
+    ash
+
+[SUID]
+    ash -p
+
+[Unprivileged]
+    ash

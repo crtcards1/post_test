@@ -1,0 +1,13 @@
+chmod
+=====
+
+Privilege Escalation
+--------------------
+
+[Sudo]
+    chmod 6777 /path/to/input-file
+    This can be run with elevated privileges to change permissions (`6` denotes the SUID bits) and then read, write, or execute a file.
+
+[SUID]
+    chmod 6777 /path/to/input-file
+    This can be run with elevated privileges to change permissions (`6` denotes the SUID bits) and then read, write, or execute a file.

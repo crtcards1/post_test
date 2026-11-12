@@ -1,0 +1,17 @@
+scanmem
+=======
+
+Shell
+-----
+
+[Sudo]
+    scanmem
+shell /bin/sh
+
+[SUID]
+    scanmem
+shell /bin/sh
+
+[Unprivileged]
+    scanmem
+shell /bin/sh

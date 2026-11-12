@@ -1,0 +1,13 @@
+check_raid
+==========
+
+File read
+---------
+
+[Sudo]
+    check_raid --extra-opts=@/path/to/input-file
+    The read file content is limited to the first line.
+
+[Unprivileged]
+    check_raid --extra-opts=@/path/to/input-file
+    The read file content is limited to the first line.

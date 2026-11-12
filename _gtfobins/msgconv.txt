@@ -1,0 +1,17 @@
+msgconv
+=======
+
+File read
+---------
+
+[Sudo]
+    msgconv -P /path/to/input-file
+    The file is parsed and displayed as a Java `.properties` file.
+
+[SUID]
+    msgconv -P /path/to/input-file
+    The file is parsed and displayed as a Java `.properties` file.
+
+[Unprivileged]
+    msgconv -P /path/to/input-file
+    The file is parsed and displayed as a Java `.properties` file.

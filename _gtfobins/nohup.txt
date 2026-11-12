@@ -1,0 +1,35 @@
+nohup
+=====
+
+Command
+-------
+
+[Sudo]
+    nohup /path/to/command
+cat nohup.out
+    The `nohup.out` file contains the standard output and error of the command.
+
+[SUID]
+    nohup /path/to/command
+cat nohup.out
+    The `nohup.out` file contains the standard output and error of the command.
+
+[Unprivileged]
+    nohup /path/to/command
+cat nohup.out
+    The `nohup.out` file contains the standard output and error of the command.
+
+Shell
+-----
+
+[Sudo]
+    nohup /bin/sh -c '/bin/sh </dev/tty >/dev/tty 2>/dev/tty'
+    This creates a `nohup.out` file in the current working directory.
+
+[SUID]
+    nohup /bin/sh -p -c '/bin/sh -p </dev/tty >/dev/tty 2>/dev/tty'
+    This creates a `nohup.out` file in the current working directory.
+
+[Unprivileged]
+    nohup /bin/sh -c '/bin/sh </dev/tty >/dev/tty 2>/dev/tty'
+    This creates a `nohup.out` file in the current working directory.

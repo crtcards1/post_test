@@ -1,0 +1,11 @@
+pygmentize
+==========
+
+File read
+---------
+
+[Sudo]
+    pygmentize -l text /path/to/input-file
+
+[Unprivileged]
+    pygmentize -l text /path/to/input-file

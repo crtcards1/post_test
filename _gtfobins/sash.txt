@@ -1,0 +1,14 @@
+sash
+====
+
+Shell
+-----
+
+[Sudo]
+    sash
+
+[SUID]
+    sash
+
+[Unprivileged]
+    sash

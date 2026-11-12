@@ -1,0 +1,14 @@
+unshare
+=======
+
+Shell
+-----
+
+[Sudo]
+    unshare /bin/sh
+
+[SUID]
+    unshare -r /bin/sh
+
+[Unprivileged]
+    unshare /bin/sh

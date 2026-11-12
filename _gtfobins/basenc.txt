@@ -1,0 +1,14 @@
+basenc
+======
+
+File read
+---------
+
+[Sudo]
+    basenc --base64 /path/to/input-file | basenc -d --base64
+
+[SUID]
+    basenc --base64 /path/to/input-file | basenc -d --base64
+
+[Unprivileged]
+    basenc --base64 /path/to/input-file | basenc -d --base64

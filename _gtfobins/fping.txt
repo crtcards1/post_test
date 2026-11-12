@@ -1,0 +1,17 @@
+fping
+=====
+
+File read
+---------
+
+[Sudo]
+    fping -f /path/to/input-file
+    Each line is treated as an hostname and it's leaked as an error message.
+
+[SUID]
+    fping -f /path/to/input-file
+    Each line is treated as an hostname and it's leaked as an error message.
+
+[Unprivileged]
+    fping -f /path/to/input-file
+    Each line is treated as an hostname and it's leaked as an error message.

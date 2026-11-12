@@ -1,0 +1,17 @@
+terraform
+=========
+
+File read
+---------
+
+[Sudo]
+    terraform console
+file("/path/to/input-file")
+
+[SUID]
+    terraform console
+file("/path/to/input-file")
+
+[Unprivileged]
+    terraform console
+file("/path/to/input-file")

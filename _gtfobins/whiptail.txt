@@ -1,0 +1,17 @@
+whiptail
+========
+
+File read
+---------
+
+[Sudo]
+    whiptail --textbox --scrolltext /path/to/input-file 0 0
+    The file is shown in an interactive TUI dialog made for displaying text, arrows can be used to scroll long content.
+
+[SUID]
+    whiptail --textbox --scrolltext /path/to/input-file 0 0
+    The file is shown in an interactive TUI dialog made for displaying text, arrows can be used to scroll long content.
+
+[Unprivileged]
+    whiptail --textbox --scrolltext /path/to/input-file 0 0
+    The file is shown in an interactive TUI dialog made for displaying text, arrows can be used to scroll long content.

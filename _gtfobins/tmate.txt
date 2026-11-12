@@ -1,0 +1,14 @@
+tmate
+=====
+
+Shell
+-----
+
+[Sudo]
+    tmate -c /bin/sh
+
+[SUID]
+    tmate -c /bin/sh
+
+[Unprivileged]
+    tmate -c /bin/sh

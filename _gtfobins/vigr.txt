@@ -1,0 +1,13 @@
+vigr
+====
+
+Inherit
+-------
+
+[Sudo]
+    vigr
+    Despite requiring superuser privileges to run, the editor is executed as the unprivileged user.
+
+[SUID]
+    vigr
+    Despite requiring superuser privileges to run, the editor is executed as the unprivileged user.

@@ -1,0 +1,8 @@
+su
+==
+
+Shell
+-----
+
+[Sudo]
+    su -c /bin/sh

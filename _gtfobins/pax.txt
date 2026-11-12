@@ -1,0 +1,14 @@
+pax
+===
+
+File read
+---------
+
+[Sudo]
+    pax -w /path/to/input-file | tar -xO
+
+[SUID]
+    pax -w /path/to/input-file | tar -xO
+
+[Unprivileged]
+    pax -w /path/to/input-file | tar -xO

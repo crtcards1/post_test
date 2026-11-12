@@ -1,0 +1,13 @@
+install
+=======
+
+Privilege Escalation
+--------------------
+
+[Sudo]
+    install -m 6777 /path/to/input-file /path/to/output-dir/
+    This can be run with elevated privileges to change permissions (`6` denotes the SUID bits) and then read, write, or execute a file.
+
+[SUID]
+    install -m 6777 /path/to/input-file /path/to/output-dir/
+    This can be run with elevated privileges to change permissions (`6` denotes the SUID bits) and then read, write, or execute a file.

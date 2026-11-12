@@ -1,0 +1,13 @@
+knife
+=====
+
+Inherit
+-------
+
+[Sudo]
+    knife exec -E '...'
+    This allows to run Ruby code (`...`).
+
+[Unprivileged]
+    knife exec -E '...'
+    This allows to run Ruby code (`...`).

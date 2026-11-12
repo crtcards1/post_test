@@ -1,0 +1,15 @@
+procmail
+========
+
+Command
+-------
+
+[Sudo]
+    echo -e ':0\n| /path/to/command >/path/to/temp-file
+procmail -m /path/to/temp-file
+    The program is picky about the file ownership, and waits for some input.
+
+[Unprivileged]
+    echo -e ':0\n| /path/to/command >/path/to/temp-file
+procmail -m /path/to/temp-file
+    The program is picky about the file ownership, and waits for some input.

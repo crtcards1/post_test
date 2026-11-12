@@ -1,0 +1,15 @@
+pipx
+====
+
+Inherit
+-------
+
+[Sudo]
+    echo '...' >/path/to/file.py
+pipx run /path/to/file.py
+    This allows to run Python code (`...`).
+
+[Unprivileged]
+    echo '...' >/path/to/file.py
+pipx run /path/to/file.py
+    This allows to run Python code (`...`).

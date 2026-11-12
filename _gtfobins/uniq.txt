@@ -1,0 +1,17 @@
+uniq
+====
+
+File read
+---------
+
+[Sudo]
+    uniq /path/to/input-file
+    The read file content is corrupted by squashing multiple adjacent lines.
+
+[SUID]
+    uniq /path/to/input-file
+    The read file content is corrupted by squashing multiple adjacent lines.
+
+[Unprivileged]
+    uniq /path/to/input-file
+    The read file content is corrupted by squashing multiple adjacent lines.

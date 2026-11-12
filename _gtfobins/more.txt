@@ -1,0 +1,32 @@
+more
+====
+
+File read
+---------
+
+[Sudo]
+    more /path/to/input-file
+    The file is displayed in the terminal interface.
+
+[SUID]
+    more /path/to/input-file
+    The file is displayed in the terminal interface.
+
+[Unprivileged]
+    more /path/to/input-file
+    The file is displayed in the terminal interface.
+
+Shell
+-----
+
+[Sudo]
+    more /etc/hosts
+!/bin/sh
+
+[SUID]
+    more /etc/hosts
+!/bin/sh
+
+[Unprivileged]
+    more /etc/hosts
+!/bin/sh

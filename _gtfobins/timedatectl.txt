@@ -1,0 +1,11 @@
+timedatectl
+===========
+
+Inherit
+-------
+
+[Sudo]
+    timedatectl list-timezones
+
+[Unprivileged]
+    timedatectl list-timezones

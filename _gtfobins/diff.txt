@@ -1,0 +1,26 @@
+diff
+====
+
+File read
+---------
+
+[Sudo]
+    diff --line-format=%L /dev/null /path/to/input-file
+
+[SUID]
+    diff --line-format=%L /dev/null /path/to/input-file
+
+[Unprivileged]
+    diff --line-format=%L /dev/null /path/to/input-file
+
+[Sudo]
+    diff --recursive /path/to/empty-dir /path/to/input-dir/
+    This lists the content of a directory. `/path/to/empty-dir` can be any directory, but for convenience it is better to use an empty directory to avoid noise output.
+
+[SUID]
+    diff --recursive /path/to/empty-dir /path/to/input-dir/
+    This lists the content of a directory. `/path/to/empty-dir` can be any directory, but for convenience it is better to use an empty directory to avoid noise output.
+
+[Unprivileged]
+    diff --recursive /path/to/empty-dir /path/to/input-dir/
+    This lists the content of a directory. `/path/to/empty-dir` can be any directory, but for convenience it is better to use an empty directory to avoid noise output.

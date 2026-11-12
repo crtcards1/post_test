@@ -1,0 +1,9 @@
+passwd
+======
+
+Privilege Escalation
+--------------------
+
+[Sudo]
+    echo -e 'x\nx' | passwd
+    This changes the root password to `x`, so it's now possible to log in using, for example, `su`.

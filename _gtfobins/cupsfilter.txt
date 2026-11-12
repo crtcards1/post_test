@@ -1,0 +1,14 @@
+cupsfilter
+==========
+
+File read
+---------
+
+[Sudo]
+    cupsfilter -i application/octet-stream -m application/octet-stream /path/to/input-file
+
+[SUID]
+    cupsfilter -i application/octet-stream -m application/octet-stream /path/to/input-file
+
+[Unprivileged]
+    cupsfilter -i application/octet-stream -m application/octet-stream /path/to/input-file

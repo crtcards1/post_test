@@ -1,0 +1,14 @@
+bzip2
+=====
+
+File read
+---------
+
+[Sudo]
+    bzip2 -c /path/to/input-file | bzip2 -d
+
+[SUID]
+    bzip2 -c /path/to/input-file | bzip2 -d
+
+[Unprivileged]
+    bzip2 -c /path/to/input-file | bzip2 -d

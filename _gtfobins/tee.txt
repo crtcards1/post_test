@@ -1,0 +1,17 @@
+tee
+===
+
+File write
+----------
+
+[Sudo]
+    echo DATA | tee /path/to/output-file
+    Use `-a` to append data to exising files.
+
+[SUID]
+    echo DATA | tee /path/to/output-file
+    Use `-a` to append data to exising files.
+
+[Unprivileged]
+    echo DATA | tee /path/to/output-file
+    Use `-a` to append data to exising files.

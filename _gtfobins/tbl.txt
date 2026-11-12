@@ -1,0 +1,17 @@
+tbl
+===
+
+File read
+---------
+
+[Sudo]
+    tbl /path/to/input-file
+    The read file content is corrupted by additional text at the beginning.
+
+[SUID]
+    tbl /path/to/input-file
+    The read file content is corrupted by additional text at the beginning.
+
+[Unprivileged]
+    tbl /path/to/input-file
+    The read file content is corrupted by additional text at the beginning.

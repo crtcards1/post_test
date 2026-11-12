@@ -1,0 +1,23 @@
+bee
+===
+
+Inherit
+-------
+
+[Sudo]
+    bee eval '...'
+    This allows to run PHP code (`...`).
+
+This must be excuted from the Backdrop CMS root directory (e.g. `/var/www/html`), alternatively use the `--root` option.
+
+[SUID]
+    bee eval '...'
+    This allows to run PHP code (`...`).
+
+This must be excuted from the Backdrop CMS root directory (e.g. `/var/www/html`), alternatively use the `--root` option.
+
+[Unprivileged]
+    bee eval '...'
+    This allows to run PHP code (`...`).
+
+This must be excuted from the Backdrop CMS root directory (e.g. `/var/www/html`), alternatively use the `--root` option.

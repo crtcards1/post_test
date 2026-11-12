@@ -1,0 +1,17 @@
+zsoelim
+=======
+
+File read
+---------
+
+[Sudo]
+    zsoelim /path/to/input-file
+    The content is actually parsed and corrupted by the command.
+
+[SUID]
+    zsoelim /path/to/input-file
+    The content is actually parsed and corrupted by the command.
+
+[Unprivileged]
+    zsoelim /path/to/input-file
+    The content is actually parsed and corrupted by the command.

@@ -1,0 +1,44 @@
+fzf
+===
+
+Command
+-------
+
+[Sudo]
+    fzf --listen=12345
+    Commands can be issued via POST requests, for example:
+
+```
+curl http://localhost:12345 -d 'execute(/path/to/command)'
+```
+
+[SUID]
+    fzf --listen=12345
+    Commands can be issued via POST requests, for example:
+
+```
+curl http://localhost:12345 -d 'execute(/path/to/command)'
+```
+
+[Unprivileged]
+    fzf --listen=12345
+    Commands can be issued via POST requests, for example:
+
+```
+curl http://localhost:12345 -d 'execute(/path/to/command)'
+```
+
+Shell
+-----
+
+[Sudo]
+    fzf --bind 'enter:execute(/bin/sh)'
+    Press `Enter` to receive the shell.
+
+[SUID]
+    fzf --bind 'enter:execute(/bin/sh)'
+    Press `Enter` to receive the shell.
+
+[Unprivileged]
+    fzf --bind 'enter:execute(/bin/sh)'
+    Press `Enter` to receive the shell.

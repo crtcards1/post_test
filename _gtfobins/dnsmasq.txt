@@ -1,0 +1,14 @@
+dnsmasq
+=======
+
+Command
+-------
+
+[Sudo]
+    dnsmasq --conf-script='/path/to/command 1>&2'
+
+[SUID]
+    dnsmasq --conf-script='/path/to/command 1>&2'
+
+[Unprivileged]
+    dnsmasq --conf-script='/path/to/command 1>&2'

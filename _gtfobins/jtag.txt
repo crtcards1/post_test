@@ -1,0 +1,13 @@
+jtag
+====
+
+Shell
+-----
+
+[Sudo]
+    jtag --interactive
+shell /bin/sh
+
+[Unprivileged]
+    jtag --interactive
+shell /bin/sh

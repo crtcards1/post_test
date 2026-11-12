@@ -1,0 +1,11 @@
+zgrep
+=====
+
+File read
+---------
+
+[Sudo]
+    grep '' /path/to/input-file
+
+[Unprivileged]
+    grep '' /path/to/input-file

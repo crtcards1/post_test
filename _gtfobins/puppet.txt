@@ -1,0 +1,31 @@
+puppet
+======
+
+File read
+---------
+
+[Sudo]
+    puppet filebucket -l diff /dev/null /path/to/input-file
+    The read file content is corrupted by the `diff` output format. The actual `diff` command is executed.
+
+[Unprivileged]
+    puppet filebucket -l diff /dev/null /path/to/input-file
+    The read file content is corrupted by the `diff` output format. The actual `diff` command is executed.
+
+File write
+----------
+
+[Sudo]
+    puppet apply -e 'file { "/path/to/output-file": content => "DATA" }'
+
+[Unprivileged]
+    puppet apply -e 'file { "/path/to/output-file": content => "DATA" }'
+
+Shell
+-----
+
+[Sudo]
+    puppet apply -e "exec { '/bin/sh <$(tty) >$(tty) 2>$(tty)': }"
+
+[Unprivileged]
+    puppet apply -e "exec { '/bin/sh <$(tty) >$(tty) 2>$(tty)': }"

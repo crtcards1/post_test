@@ -1,0 +1,19 @@
+poetry
+======
+
+Inherit
+-------
+
+[Sudo]
+    echo '...' >/path/to/temp-file
+poetry run python /path/to/temp-file
+    This allows to run Python code (`...`).
+
+A valid `pyproject.toml` file must be present in the current working directory, you can create one with `poetry init -n`.
+
+[Unprivileged]
+    echo '...' >/path/to/temp-file
+poetry run python /path/to/temp-file
+    This allows to run Python code (`...`).
+
+A valid `pyproject.toml` file must be present in the current working directory, you can create one with `poetry init -n`.

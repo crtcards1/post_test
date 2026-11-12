@@ -1,0 +1,9 @@
+tailscale
+=========
+
+Upload
+------
+
+[Sudo]
+    tailscale serve --http=12345 /path/to/input-file
+    The URL is reachable by any host of the same Tailnet.

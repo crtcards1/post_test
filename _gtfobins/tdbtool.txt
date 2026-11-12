@@ -1,0 +1,17 @@
+tdbtool
+=======
+
+Shell
+-----
+
+[Sudo]
+    tdbtool
+! /bin/sh
+
+[SUID]
+    tdbtool
+! /bin/sh
+
+[Unprivileged]
+    tdbtool
+! /bin/sh

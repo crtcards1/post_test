@@ -1,0 +1,17 @@
+volatility
+==========
+
+Inherit
+-------
+
+[Sudo]
+    volatility -f /path/to/core-dump volshell
+...
+
+[SUID]
+    volatility -f /path/to/core-dump volshell
+...
+
+[Unprivileged]
+    volatility -f /path/to/core-dump volshell
+...

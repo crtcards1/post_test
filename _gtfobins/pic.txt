@@ -1,0 +1,35 @@
+pic
+===
+
+File read
+---------
+
+[Sudo]
+    pic /path/to/input-file
+    The output is prefixed with some content.
+
+[SUID]
+    pic /path/to/input-file
+    The output is prefixed with some content.
+
+[Unprivileged]
+    pic /path/to/input-file
+    The output is prefixed with some content.
+
+Shell
+-----
+
+[Sudo]
+    pic -U
+.PS
+sh X sh X
+
+[SUID]
+    pic -U
+.PS
+sh X sh X
+
+[Unprivileged]
+    pic -U
+.PS
+sh X sh X

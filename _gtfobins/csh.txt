@@ -1,0 +1,26 @@
+csh
+===
+
+File write
+----------
+
+[Sudo]
+    csh -c 'echo DATA >/path/to/output-file'
+
+[SUID]
+    csh -c 'echo DATA >/path/to/output-file' -b
+
+[Unprivileged]
+    csh -c 'echo DATA >/path/to/output-file'
+
+Shell
+-----
+
+[Sudo]
+    csh
+
+[SUID]
+    csh -b
+
+[Unprivileged]
+    csh

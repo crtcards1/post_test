@@ -1,0 +1,23 @@
+aws
+===
+
+File read
+---------
+
+[Sudo]
+    aws ec2 describe-instances --filter file:///path/to/input-file
+
+[SUID]
+    aws ec2 describe-instances --filter file:///path/to/input-file
+
+[Unprivileged]
+    aws ec2 describe-instances --filter file:///path/to/input-file
+
+Inherit
+-------
+
+[Sudo]
+    aws help
+
+[Unprivileged]
+    aws help

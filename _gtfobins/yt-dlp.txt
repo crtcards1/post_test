@@ -1,0 +1,13 @@
+yt-dlp
+======
+
+Shell
+-----
+
+[Sudo]
+    yt-dlp 'https://www.youtube.com/watch?v=xxxxxxxxxxx' --exec '/bin/sh #'
+    The URL must point to a valid YouTube video which will be actually downloaded.
+
+[Unprivileged]
+    yt-dlp 'https://www.youtube.com/watch?v=xxxxxxxxxxx' --exec '/bin/sh #'
+    The URL must point to a valid YouTube video which will be actually downloaded.

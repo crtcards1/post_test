@@ -1,0 +1,24 @@
+neofetch
+========
+
+File read
+---------
+
+[Sudo]
+    neofetch --ascii /path/to/input-file
+    The file content is used as the logo while some other information is displayed on its right.
+
+[Unprivileged]
+    neofetch --ascii /path/to/input-file
+    The file content is used as the logo while some other information is displayed on its right.
+
+Shell
+-----
+
+[Sudo]
+    echo 'exec /bin/sh' >/path/to/temp-file
+neofetch --config /path/to/temp-file
+
+[Unprivileged]
+    echo 'exec /bin/sh' >/path/to/temp-file
+neofetch --config /path/to/temp-file

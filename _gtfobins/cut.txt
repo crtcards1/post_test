@@ -1,0 +1,14 @@
+cut
+===
+
+File read
+---------
+
+[Sudo]
+    cut -d '' -f1 /path/to/input-file
+
+[SUID]
+    cut -d '' -f1 /path/to/input-file
+
+[Unprivileged]
+    cut -d '' -f1 /path/to/input-file

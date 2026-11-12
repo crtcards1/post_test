@@ -1,0 +1,17 @@
+arp
+===
+
+File read
+---------
+
+[Sudo]
+    arp -v -f /path/to/input-file
+    Lines are likely leaked as error messages.
+
+[SUID]
+    arp -v -f /path/to/input-file
+    Lines are likely leaked as error messages.
+
+[Unprivileged]
+    arp -v -f /path/to/input-file
+    Lines are likely leaked as error messages.

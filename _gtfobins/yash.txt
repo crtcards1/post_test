@@ -1,0 +1,14 @@
+yash
+====
+
+Shell
+-----
+
+[Sudo]
+    yash
+
+[SUID]
+    yash
+
+[Unprivileged]
+    yash

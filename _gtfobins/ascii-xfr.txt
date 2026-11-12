@@ -1,0 +1,14 @@
+ascii-xfr
+=========
+
+File read
+---------
+
+[Sudo]
+    ascii-xfr -ns /path/to/input-file
+
+[SUID]
+    ascii-xfr -ns /path/to/input-file
+
+[Unprivileged]
+    ascii-xfr -ns /path/to/input-file

@@ -1,0 +1,14 @@
+genie
+=====
+
+Shell
+-----
+
+[Sudo]
+    genie -c '/bin/sh'
+
+[SUID]
+    genie -c '/bin/sh'
+
+[Unprivileged]
+    genie -c '/bin/sh'

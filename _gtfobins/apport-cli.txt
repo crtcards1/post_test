@@ -1,0 +1,12 @@
+apport-cli
+==========
+
+Inherit
+-------
+
+[Unprivileged]
+    apport-cli -f
+1
+2
+v
+    The terminal interface expects some choices in order to spawn tha pager.

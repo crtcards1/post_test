@@ -1,0 +1,17 @@
+strings
+=======
+
+File read
+---------
+
+[Sudo]
+    strings /path/to/input-file
+    This only returns ASCII strings.
+
+[SUID]
+    strings /path/to/input-file
+    This only returns ASCII strings.
+
+[Unprivileged]
+    strings /path/to/input-file
+    This only returns ASCII strings.

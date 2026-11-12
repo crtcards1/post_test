@@ -1,0 +1,21 @@
+facter
+======
+
+Inherit
+-------
+
+[Sudo]
+    FACTERLIB=/path/to/dir/ facter
+    The first `.rb` file in the `/path/to/dir/` directory will be executed.
+
+[Unprivileged]
+    FACTERLIB=/path/to/dir/ facter
+    The first `.rb` file in the `/path/to/dir/` directory will be executed.
+
+[Sudo]
+    facter --custom-dir=/path/to/dir/ x
+    The first `.rb` file in the `/path/to/dir/` directory will be executed.
+
+[Unprivileged]
+    facter --custom-dir=/path/to/dir/ x
+    The first `.rb` file in the `/path/to/dir/` directory will be executed.

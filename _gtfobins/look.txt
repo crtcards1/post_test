@@ -1,0 +1,14 @@
+look
+====
+
+File read
+---------
+
+[Sudo]
+    look '' /path/to/input-file
+
+[SUID]
+    look '' /path/to/input-file
+
+[Unprivileged]
+    look '' /path/to/input-file

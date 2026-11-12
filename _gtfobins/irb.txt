@@ -1,0 +1,15 @@
+irb
+===
+
+Inherit
+-------
+
+[Sudo]
+    irb
+...
+    This allows to run Ruby code (`...`).
+
+[Unprivileged]
+    irb
+...
+    This allows to run Ruby code (`...`).

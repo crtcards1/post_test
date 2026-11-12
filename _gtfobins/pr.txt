@@ -1,0 +1,14 @@
+pr
+==
+
+File read
+---------
+
+[Sudo]
+    pr -T /path/to/input-file
+
+[SUID]
+    pr -T /path/to/input-file
+
+[Unprivileged]
+    pr -T /path/to/input-file

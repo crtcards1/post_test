@@ -1,0 +1,17 @@
+bridge
+======
+
+File read
+---------
+
+[Sudo]
+    bridge -b /path/to/input-file
+    Outputs the first line of the file (until the first whitespace) inside an error message to stdandard error.
+
+[SUID]
+    bridge -b /path/to/input-file
+    Outputs the first line of the file (until the first whitespace) inside an error message to stdandard error.
+
+[Unprivileged]
+    bridge -b /path/to/input-file
+    Outputs the first line of the file (until the first whitespace) inside an error message to stdandard error.

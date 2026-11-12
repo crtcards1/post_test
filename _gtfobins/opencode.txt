@@ -1,0 +1,28 @@
+opencode
+========
+
+Command
+-------
+
+[Sudo]
+    opencode
+! /path/to/command
+
+[SUID]
+    opencode
+! /path/to/command
+
+[Unprivileged]
+    opencode
+! /path/to/command
+
+Inherit
+-------
+
+[Sudo]
+    opencode db '...'
+    This allows to run SQLite queries (`...`) provided that `sqlite3` is installed.
+
+[Unprivileged]
+    opencode db '...'
+    This allows to run SQLite queries (`...`) provided that `sqlite3` is installed.

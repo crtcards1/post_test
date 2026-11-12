@@ -1,0 +1,17 @@
+debugfs
+=======
+
+Shell
+-----
+
+[Sudo]
+    debugfs
+!/bin/sh
+
+[SUID]
+    debugfs
+!/bin/sh
+
+[Unprivileged]
+    debugfs
+!/bin/sh

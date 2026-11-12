@@ -1,0 +1,24 @@
+rake
+====
+
+File read
+---------
+
+[Sudo]
+    rake -f /path/to/input-file
+    The file is actually parsed and the first wrong line is returned in an error message.
+
+[Unprivileged]
+    rake -f /path/to/input-file
+    The file is actually parsed and the first wrong line is returned in an error message.
+
+Inherit
+-------
+
+[Sudo]
+    rake -p '...'
+    This allows to run Ruby code (`...`).
+
+[Unprivileged]
+    rake -p '...'
+    This allows to run Ruby code (`...`).

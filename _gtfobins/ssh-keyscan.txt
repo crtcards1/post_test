@@ -1,0 +1,17 @@
+ssh-keyscan
+===========
+
+File read
+---------
+
+[Sudo]
+    ssh-keyscan -f /path/to/input-file
+    The file content is actually parsed so only a part of each line is returned as a part of an error message.
+
+[SUID]
+    ssh-keyscan -f /path/to/input-file
+    The file content is actually parsed so only a part of each line is returned as a part of an error message.
+
+[Unprivileged]
+    ssh-keyscan -f /path/to/input-file
+    The file content is actually parsed so only a part of each line is returned as a part of an error message.

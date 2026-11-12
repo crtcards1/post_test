@@ -1,0 +1,26 @@
+sort
+====
+
+File read
+---------
+
+[Sudo]
+    sort -m /path/to/input-file
+
+[SUID]
+    sort -m /path/to/input-file
+
+[Unprivileged]
+    sort -m /path/to/input-file
+
+File write
+----------
+
+[Sudo]
+    echo DATA | sort -m -o /path/to/output-file
+
+[SUID]
+    echo DATA | sort -m -o /path/to/output-file
+
+[Unprivileged]
+    echo DATA | sort -m -o /path/to/output-file

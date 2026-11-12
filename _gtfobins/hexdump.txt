@@ -1,0 +1,17 @@
+hexdump
+=======
+
+File read
+---------
+
+[Sudo]
+    hd /path/to/input-file
+    The output is actually an hex dump.
+
+[SUID]
+    hd /path/to/input-file
+    The output is actually an hex dump.
+
+[Unprivileged]
+    hd /path/to/input-file
+    The output is actually an hex dump.

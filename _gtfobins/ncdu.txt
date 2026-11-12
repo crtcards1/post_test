@@ -1,0 +1,17 @@
+ncdu
+====
+
+Shell
+-----
+
+[Sudo]
+    ncdu
+b
+
+[SUID]
+    ncdu
+b
+
+[Unprivileged]
+    ncdu
+b

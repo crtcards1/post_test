@@ -1,0 +1,17 @@
+unexpand
+========
+
+File read
+---------
+
+[Sudo]
+    unexpand -t999 /path/to/input-file
+    Convert sequences of (e.g., `999`) spaces to tab.
+
+[SUID]
+    unexpand -t999 /path/to/input-file
+    Convert sequences of (e.g., `999`) spaces to tab.
+
+[Unprivileged]
+    unexpand -t999 /path/to/input-file
+    Convert sequences of (e.g., `999`) spaces to tab.

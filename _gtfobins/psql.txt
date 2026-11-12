@@ -1,0 +1,32 @@
+psql
+====
+
+Inherit
+-------
+
+[Sudo]
+    psql
+\?
+
+[SUID]
+    psql
+\?
+
+[Unprivileged]
+    psql
+\?
+
+Shell
+-----
+
+[Sudo]
+    psql
+\! /bin/sh
+
+[SUID]
+    psql
+\! /bin/sh
+
+[Unprivileged]
+    psql
+\! /bin/sh

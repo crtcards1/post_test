@@ -1,0 +1,14 @@
+w3m
+===
+
+File read
+---------
+
+[Sudo]
+    w3m -dump /path/to/input-file
+
+[SUID]
+    w3m -dump /path/to/input-file
+
+[Unprivileged]
+    w3m -dump /path/to/input-file

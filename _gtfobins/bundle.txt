@@ -1,0 +1,46 @@
+bundle
+======
+
+Inherit
+-------
+
+[Sudo]
+    bundle help
+
+[Unprivileged]
+    bundle help
+
+[Sudo]
+    touch Gemfile
+bundle console
+
+[Unprivileged]
+    touch Gemfile
+bundle console
+
+Shell
+-----
+
+[Sudo]
+    BUNDLE_GEMFILE=x bundle exec /bin/sh
+
+[Unprivileged]
+    BUNDLE_GEMFILE=x bundle exec /bin/sh
+
+[Sudo]
+    touch Gemfile
+bundle exec /bin/sh
+
+[Unprivileged]
+    touch Gemfile
+bundle exec /bin/sh
+
+[Sudo]
+    echo 'system("/bin/sh")' >Gemfile
+bundle install
+    This might run the shell twice, one after the other.
+
+[Unprivileged]
+    echo 'system("/bin/sh")' >Gemfile
+bundle install
+    This might run the shell twice, one after the other.

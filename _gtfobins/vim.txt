@@ -1,0 +1,50 @@
+vim
+===
+
+File read
+---------
+
+[Sudo]
+    vim -c ':redir! >/path/to/output-file | echo "DATA" | redir END | q'
+
+[SUID]
+    vim -c ':redir! >/path/to/output-file | echo "DATA" | redir END | q'
+
+[Unprivileged]
+    vim -c ':redir! >/path/to/output-file | echo "DATA" | redir END | q'
+
+Inherit
+-------
+
+[Sudo]
+    vim -c ':py ...'
+    This allows to run Python code (`...`).
+
+[SUID]
+    vim -c ':py ...'
+    This allows to run Python code (`...`).
+
+[Unprivileged]
+    vim -c ':py ...'
+    This allows to run Python code (`...`).
+
+[Sudo]
+    vim -c ':lua ...'
+    This allows to run Lua code (`...`).
+
+[SUID]
+    vim -c ':lua ...'
+    This allows to run Lua code (`...`).
+
+[Unprivileged]
+    vim -c ':lua ...'
+    This allows to run Lua code (`...`).
+
+[Sudo]
+    vim
+
+[SUID]
+    vim
+
+[Unprivileged]
+    vim

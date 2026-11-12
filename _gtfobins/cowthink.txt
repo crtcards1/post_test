@@ -1,0 +1,11 @@
+cowthink
+========
+
+Inherit
+-------
+
+[Sudo]
+    cowthink -f /path/to/script.pl x
+
+[Unprivileged]
+    cowthink -f /path/to/script.pl x

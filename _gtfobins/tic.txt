@@ -1,0 +1,17 @@
+tic
+===
+
+File read
+---------
+
+[Sudo]
+    tic -C /path/to/input-file
+    This translates a terminfo file from source format into compiled format. It will attempt to translate an arbitrary file and output the contents of the file on failure.
+
+[SUID]
+    tic -C /path/to/input-file
+    This translates a terminfo file from source format into compiled format. It will attempt to translate an arbitrary file and output the contents of the file on failure.
+
+[Unprivileged]
+    tic -C /path/to/input-file
+    This translates a terminfo file from source format into compiled format. It will attempt to translate an arbitrary file and output the contents of the file on failure.

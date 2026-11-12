@@ -1,0 +1,14 @@
+jq
+==
+
+File read
+---------
+
+[Sudo]
+    jq -Rr . /path/to/input-file
+
+[SUID]
+    jq -Rr . /path/to/input-file
+
+[Unprivileged]
+    jq -Rr . /path/to/input-file

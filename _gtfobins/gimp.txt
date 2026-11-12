@@ -1,0 +1,13 @@
+gimp
+====
+
+Inherit
+-------
+
+[Sudo]
+    gimp -idf --batch-interpreter=python-fu-eval -b '...'
+    This allows to run Python code (`...`). It hangs afterwards and can be terminated by pressing `Ctrl-C`.
+
+[Unprivileged]
+    gimp -idf --batch-interpreter=python-fu-eval -b '...'
+    This allows to run Python code (`...`). It hangs afterwards and can be terminated by pressing `Ctrl-C`.

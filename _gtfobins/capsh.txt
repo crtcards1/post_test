@@ -1,0 +1,14 @@
+capsh
+=====
+
+Shell
+-----
+
+[Sudo]
+    capsh --
+
+[SUID]
+    capsh --gid=0 --uid=0 --
+
+[Unprivileged]
+    capsh --

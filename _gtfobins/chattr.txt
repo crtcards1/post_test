@@ -1,0 +1,13 @@
+chattr
+======
+
+Privilege Escalation
+--------------------
+
+[Sudo]
+    chattr +i /path/to/input-file
+    Make the target file immutable.
+
+[SUID]
+    chattr +i /path/to/input-file
+    Make the target file immutable.

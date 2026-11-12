@@ -1,0 +1,44 @@
+pandoc
+======
+
+File read
+---------
+
+[Sudo]
+    pandoc -t plain /path/to/input-file
+
+[SUID]
+    pandoc -t plain /path/to/input-file
+
+[Unprivileged]
+    pandoc -t plain /path/to/input-file
+
+File write
+----------
+
+[Sudo]
+    echo DATA | pandoc -t plain -o /path/to/output-file
+
+[SUID]
+    echo DATA | pandoc -t plain -o /path/to/output-file
+
+[Unprivileged]
+    echo DATA | pandoc -t plain -o /path/to/output-file
+
+Inherit
+-------
+
+[Sudo]
+    echo '...' >/path/to/temp-file
+pandoc -L /path/to/temp-file /dev/null
+    This allows to run Lua code (`...`).
+
+[SUID]
+    echo '...' >/path/to/temp-file
+pandoc -L /path/to/temp-file /dev/null
+    This allows to run Lua code (`...`).
+
+[Unprivileged]
+    echo '...' >/path/to/temp-file
+pandoc -L /path/to/temp-file /dev/null
+    This allows to run Lua code (`...`).

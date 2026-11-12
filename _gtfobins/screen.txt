@@ -1,0 +1,30 @@
+screen
+======
+
+File write
+----------
+
+[Sudo]
+    screen -L -Logfile /path/to/output-file echo DATA
+    Data is appended to the file and `\n` is converted to `\r\n`.
+
+[Unprivileged]
+    screen -L -Logfile /path/to/output-file echo DATA
+    Data is appended to the file and `\n` is converted to `\r\n`.
+
+[Sudo]
+    screen -L /path/to/output-file echo DATA
+    Data is appended to the file and `\n` is converted to `\r\n`.
+
+[Unprivileged]
+    screen -L /path/to/output-file echo DATA
+    Data is appended to the file and `\n` is converted to `\r\n`.
+
+Shell
+-----
+
+[Sudo]
+    screen
+
+[Unprivileged]
+    screen

@@ -1,0 +1,11 @@
+ghc
+===
+
+Shell
+-----
+
+[Sudo]
+    ghc -e 'System.Process.callCommand "/bin/sh"'
+
+[Unprivileged]
+    ghc -e 'System.Process.callCommand "/bin/sh"'

@@ -1,0 +1,15 @@
+needrestart
+===========
+
+Inherit
+-------
+
+[Sudo]
+    echo '...' >/path/to/temp-file
+needrestart -c /path/to/temp-file
+    This allows to run Perl code (`...`).
+
+[Unprivileged]
+    echo '...' >/path/to/temp-file
+needrestart -c /path/to/temp-file
+    This allows to run Perl code (`...`).

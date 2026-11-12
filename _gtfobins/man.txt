@@ -1,0 +1,44 @@
+man
+===
+
+File read
+---------
+
+[Sudo]
+    man /path/to/input-file
+    The file is shown somehow formatted and displayed in the default pager.
+
+[SUID]
+    man /path/to/input-file
+    The file is shown somehow formatted and displayed in the default pager.
+
+[Unprivileged]
+    man /path/to/input-file
+    The file is shown somehow formatted and displayed in the default pager.
+
+Inherit
+-------
+
+[Sudo]
+    man man
+
+[SUID]
+    man man
+
+[Unprivileged]
+    man man
+
+Shell
+-----
+
+[Sudo]
+    man '-H/bin/sh #' man
+    This requires GNU `troff` (`groff`) to be installed.
+
+[SUID]
+    man '-H/bin/sh #' man
+    This requires GNU `troff` (`groff`) to be installed.
+
+[Unprivileged]
+    man '-H/bin/sh #' man
+    This requires GNU `troff` (`groff`) to be installed.

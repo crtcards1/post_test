@@ -1,0 +1,28 @@
+bconsole
+========
+
+File read
+---------
+
+[Sudo]
+    bconsole -c /path/to/file-input
+    The file is actually parsed and the first wrong line is returned in an error message.
+
+[SUID]
+    bconsole -c /path/to/file-input
+    The file is actually parsed and the first wrong line is returned in an error message.
+
+[Unprivileged]
+    bconsole -c /path/to/file-input
+    The file is actually parsed and the first wrong line is returned in an error message.
+
+Shell
+-----
+
+[Sudo]
+    bconsole
+@exec /bin/sh
+
+[Unprivileged]
+    bconsole
+@exec /bin/sh

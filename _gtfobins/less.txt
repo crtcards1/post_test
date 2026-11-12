@@ -1,0 +1,116 @@
+less
+====
+
+Command
+-------
+
+[Unprivileged]
+    cp /path/to/command ~/.lessfilter
+less /etc/hosts
+
+[Sudo]
+    LESSOPEN='/path/to/command # %s' less /etc/hosts
+
+[Unprivileged]
+    LESSOPEN='/path/to/command # %s' less /etc/hosts
+
+File read
+---------
+
+[Sudo]
+    less /path/to/input-file
+
+[SUID]
+    less /path/to/input-file
+
+[Unprivileged]
+    less /path/to/input-file
+
+[Sudo]
+    less /etc/hosts
+:e /path/to/input-file
+    This can be used to read another file, e.g., when invoked as a pager with some fixed content.
+
+[SUID]
+    less /etc/hosts
+:e /path/to/input-file
+    This can be used to read another file, e.g., when invoked as a pager with some fixed content.
+
+[Unprivileged]
+    less /etc/hosts
+:e /path/to/input-file
+    This can be used to read another file, e.g., when invoked as a pager with some fixed content.
+
+[Sudo]
+    LESSOPEN='echo /path/to/input-file # %s' less /etc/hosts
+    This can be used to read another file.
+
+[Unprivileged]
+    LESSOPEN='echo /path/to/input-file # %s' less /etc/hosts
+    This can be used to read another file.
+
+File write
+----------
+
+[Sudo]
+    echo DATA | less
+s/path/to/output-file
+q
+
+[SUID]
+    echo DATA | less
+s/path/to/output-file
+q
+
+[Unprivileged]
+    echo DATA | less
+s/path/to/output-file
+q
+
+Inherit
+-------
+
+[Sudo]
+    less /etc/hosts
+v
+
+[SUID]
+    less /etc/hosts
+v
+
+[Unprivileged]
+    less /etc/hosts
+v
+
+Shell
+-----
+
+[Sudo]
+    less /etc/hosts
+!/bin/sh
+
+[SUID]
+    less /etc/hosts
+!/bin/sh
+
+[Unprivileged]
+    less /etc/hosts
+!/bin/sh
+
+[Sudo]
+    LESSOPEN="/bin/sh -s 1>&0 2>&0 # %s" less /etc/hosts
+reset
+    The optional `reset` command is needed to receive the echo back of the typed keystrokes.
+
+[Unprivileged]
+    LESSOPEN="/bin/sh -s 1>&0 2>&0 # %s" less /etc/hosts
+reset
+    The optional `reset` command is needed to receive the echo back of the typed keystrokes.
+
+[Sudo]
+    VISUAL='/bin/sh -s --' less /etc/hosts
+v
+
+[Unprivileged]
+    VISUAL='/bin/sh -s --' less /etc/hosts
+v

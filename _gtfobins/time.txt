@@ -1,0 +1,17 @@
+time
+====
+
+Shell
+-----
+
+[Sudo]
+    time /bin/sh
+    Note that the shell might have its own builtin `time` implementation, which may behave differently than the binary, which is often located at `/usr/bin/time`.
+
+[SUID]
+    time /bin/sh -p
+    Note that the shell might have its own builtin `time` implementation, which may behave differently than the binary, which is often located at `/usr/bin/time`.
+
+[Unprivileged]
+    time /bin/sh
+    Note that the shell might have its own builtin `time` implementation, which may behave differently than the binary, which is often located at `/usr/bin/time`.

@@ -1,0 +1,11 @@
+cargo
+=====
+
+Inherit
+-------
+
+[Sudo]
+    cargo help doc
+
+[Unprivileged]
+    cargo help doc

@@ -1,0 +1,11 @@
+cowsay
+======
+
+Inherit
+-------
+
+[Sudo]
+    cowsay -f /path/to/script.pl x
+
+[Unprivileged]
+    cowsay -f /path/to/script.pl x

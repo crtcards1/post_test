@@ -1,0 +1,11 @@
+bashbug
+=======
+
+Inherit
+-------
+
+[Sudo]
+    bashbug
+
+[Unprivileged]
+    bashbug

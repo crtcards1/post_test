@@ -1,0 +1,20 @@
+iftop
+=====
+
+Shell
+-----
+
+[Sudo]
+    iftop
+!/bin/sh
+    This requires the privilege to capture on some device (specify with `-i` if needed).
+
+[SUID]
+    iftop
+!/bin/sh
+    This requires the privilege to capture on some device (specify with `-i` if needed).
+
+[Unprivileged]
+    iftop
+!/bin/sh
+    This requires the privilege to capture on some device (specify with `-i` if needed).

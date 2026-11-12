@@ -1,0 +1,29 @@
+expect
+======
+
+File read
+---------
+
+[Sudo]
+    expect /path/to/input-file
+    The file is read and parsed as an `expect` command file, the content of the first invalid line is returned in an error message.
+
+[SUID]
+    expect /path/to/input-file
+    The file is read and parsed as an `expect` command file, the content of the first invalid line is returned in an error message.
+
+[Unprivileged]
+    expect /path/to/input-file
+    The file is read and parsed as an `expect` command file, the content of the first invalid line is returned in an error message.
+
+Shell
+-----
+
+[Sudo]
+    expect -c 'spawn /bin/sh;interact'
+
+[SUID]
+    expect -c 'spawn /bin/sh -p;interact'
+
+[Unprivileged]
+    expect -c 'spawn /bin/sh;interact'

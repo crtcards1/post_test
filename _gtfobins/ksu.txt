@@ -1,0 +1,8 @@
+ksu
+===
+
+Shell
+-----
+
+[Sudo]
+    ksu -q -e /bin/sh

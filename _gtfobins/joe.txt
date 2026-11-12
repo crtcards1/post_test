@@ -1,0 +1,20 @@
+joe
+===
+
+Shell
+-----
+
+[Sudo]
+    joe
+^K!/bin/sh
+    The terminal is spawn int the terminal interface.
+
+[SUID]
+    joe
+^K!/bin/sh
+    The terminal is spawn int the terminal interface.
+
+[Unprivileged]
+    joe
+^K!/bin/sh
+    The terminal is spawn int the terminal interface.

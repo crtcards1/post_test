@@ -1,0 +1,24 @@
+dotnet
+======
+
+File read
+---------
+
+[Sudo]
+    dotnet fsi
+System.IO.File.ReadAllText("/path/to/input-file");;
+
+[Unprivileged]
+    dotnet fsi
+System.IO.File.ReadAllText("/path/to/input-file");;
+
+Shell
+-----
+
+[Sudo]
+    dotnet fsi
+System.Diagnostics.Process.Start("/bin/sh").WaitForExit();;
+
+[Unprivileged]
+    dotnet fsi
+System.Diagnostics.Process.Start("/bin/sh").WaitForExit();;

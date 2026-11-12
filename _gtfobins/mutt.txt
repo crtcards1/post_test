@@ -1,0 +1,13 @@
+mutt
+====
+
+File read
+---------
+
+[Sudo]
+    mutt -F /path/to/input-file
+    The file is leaked as error messages.
+
+[Unprivileged]
+    mutt -F /path/to/input-file
+    The file is leaked as error messages.

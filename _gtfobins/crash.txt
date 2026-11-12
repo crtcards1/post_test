@@ -1,0 +1,23 @@
+crash
+=====
+
+Command
+-------
+
+[Sudo]
+    CRASHPAGER=/path/to/command crash -h
+
+[Unprivileged]
+    CRASHPAGER=/path/to/command crash -h
+
+Inherit
+-------
+
+[Sudo]
+    crash -h
+
+[SUID]
+    crash -h
+
+[Unprivileged]
+    crash -h

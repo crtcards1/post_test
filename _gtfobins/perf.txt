@@ -1,0 +1,14 @@
+perf
+====
+
+Shell
+-----
+
+[Sudo]
+    perf stat /bin/sh
+
+[SUID]
+    perf stat /bin/sh -p
+
+[Unprivileged]
+    perf stat /bin/sh

@@ -1,0 +1,14 @@
+multitime
+=========
+
+Shell
+-----
+
+[Sudo]
+    multitime /bin/sh
+
+[SUID]
+    multitime /bin/sh -p
+
+[Unprivileged]
+    multitime /bin/sh

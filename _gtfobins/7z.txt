@@ -1,0 +1,11 @@
+7z
+==
+
+File read
+---------
+
+[Sudo]
+    7z a -ttar -an -so /path/to/input-file | 7z e -ttar -si -so
+
+[Unprivileged]
+    7z a -ttar -an -so /path/to/input-file | 7z e -ttar -si -so

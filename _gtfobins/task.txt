@@ -1,0 +1,14 @@
+task
+====
+
+Shell
+-----
+
+[Sudo]
+    task execute /bin/sh
+
+[SUID]
+    task execute /bin/sh
+
+[Unprivileged]
+    task execute /bin/sh

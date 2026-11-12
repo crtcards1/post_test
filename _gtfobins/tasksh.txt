@@ -1,0 +1,17 @@
+tasksh
+======
+
+Shell
+-----
+
+[Sudo]
+    tasksh
+!/bin/sh
+
+[SUID]
+    tasksh
+!/bin/sh
+
+[Unprivileged]
+    tasksh
+!/bin/sh

@@ -1,0 +1,20 @@
+bc
+==
+
+File read
+---------
+
+[Sudo]
+    bc -s /path/to/input-file
+quit
+    The file content is actually parsed and appears as error messages.
+
+[SUID]
+    bc -s /path/to/input-file
+quit
+    The file content is actually parsed and appears as error messages.
+
+[Unprivileged]
+    bc -s /path/to/input-file
+quit
+    The file content is actually parsed and appears as error messages.

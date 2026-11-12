@@ -1,0 +1,17 @@
+nl
+==
+
+File read
+---------
+
+[Sudo]
+    nl -bn -w1 -s '' /path/to/input-file
+    The read file content is corrupted by a leading space added to each line.
+
+[SUID]
+    nl -bn -w1 -s '' /path/to/input-file
+    The read file content is corrupted by a leading space added to each line.
+
+[Unprivileged]
+    nl -bn -w1 -s '' /path/to/input-file
+    The read file content is corrupted by a leading space added to each line.

@@ -1,0 +1,14 @@
+aa-exec
+=======
+
+Shell
+-----
+
+[Sudo]
+    aa-exec /bin/sh
+
+[SUID]
+    aa-exec /bin/sh
+
+[Unprivileged]
+    aa-exec /bin/sh

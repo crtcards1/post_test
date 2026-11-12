@@ -1,0 +1,35 @@
+rustc
+=====
+
+File read
+---------
+
+[Sudo]
+    rustc /path/to/input-file
+    The compiler leaks some file lines in the compiler error.
+
+[Unprivileged]
+    rustc /path/to/input-file
+    The compiler leaks some file lines in the compiler error.
+
+File write
+----------
+
+[Sudo]
+    echo 'fn main() { println!("DATA"); }' >/path/to/temp-file
+rustc /path/to/temp-file -o /path/to/output-file
+    The comment appears in the compiled program.
+
+[Unprivileged]
+    echo 'fn main() { println!("DATA"); }' >/path/to/temp-file
+rustc /path/to/temp-file -o /path/to/output-file
+    The comment appears in the compiled program.
+
+Inherit
+-------
+
+[Sudo]
+    rustc --explain E0001
+
+[Unprivileged]
+    rustc --explain E0001

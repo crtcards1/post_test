@@ -1,0 +1,17 @@
+xmore
+=====
+
+File read
+---------
+
+[Sudo]
+    xmore /path/to/input-file
+    The file is displayed in a graphical window.
+
+[SUID]
+    xmore /path/to/input-file
+    The file is displayed in a graphical window.
+
+[Unprivileged]
+    xmore /path/to/input-file
+    The file is displayed in a graphical window.

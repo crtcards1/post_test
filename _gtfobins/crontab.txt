@@ -1,0 +1,22 @@
+crontab
+=======
+
+Command
+-------
+
+[Sudo]
+    crontab -e
+    This spaws the default editor to edit the crontab file, commands can be scheduled to run using the [cron syntax](https://en.wikipedia.org/wiki/Cron).
+
+[Unprivileged]
+    crontab -e
+    This spaws the default editor to edit the crontab file, commands can be scheduled to run using the [cron syntax](https://en.wikipedia.org/wiki/Cron).
+
+Inherit
+-------
+
+[Sudo]
+    crontab -e
+
+[Unprivileged]
+    crontab -e

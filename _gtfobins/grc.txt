@@ -1,0 +1,11 @@
+grc
+===
+
+Shell
+-----
+
+[Sudo]
+    grc --pty /bin/sh
+
+[Unprivileged]
+    grc --pty /bin/sh

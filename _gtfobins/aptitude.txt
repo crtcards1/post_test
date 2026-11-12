@@ -1,0 +1,11 @@
+aptitude
+========
+
+Inherit
+-------
+
+[Sudo]
+    aptitude changelog aptitude
+
+[Unprivileged]
+    aptitude changelog aptitude

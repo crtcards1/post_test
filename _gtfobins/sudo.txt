@@ -1,0 +1,9 @@
+sudo
+====
+
+Shell
+-----
+
+[Sudo]
+    sudo /bin/sh
+    The invocation is actually `sudo sudo ...`.

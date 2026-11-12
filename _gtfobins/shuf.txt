@@ -1,0 +1,32 @@
+shuf
+====
+
+File read
+---------
+
+[Sudo]
+    shuf -z /path/to/input-file
+    The read file content is corrupted by randomizing the order of NUL terminated strings.
+
+[SUID]
+    shuf -z /path/to/input-file
+    The read file content is corrupted by randomizing the order of NUL terminated strings.
+
+[Unprivileged]
+    shuf -z /path/to/input-file
+    The read file content is corrupted by randomizing the order of NUL terminated strings.
+
+File write
+----------
+
+[Sudo]
+    shuf -e DATA -o /path/to/output-file
+    The written file content is corrupted by adding a newline.
+
+[SUID]
+    shuf -e DATA -o /path/to/output-file
+    The written file content is corrupted by adding a newline.
+
+[Unprivileged]
+    shuf -e DATA -o /path/to/output-file
+    The written file content is corrupted by adding a newline.

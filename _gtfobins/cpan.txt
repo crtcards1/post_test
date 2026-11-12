@@ -1,0 +1,15 @@
+cpan
+====
+
+Inherit
+-------
+
+[Sudo]
+    cpan
+! ...
+    Perl code can be executed with the `!` command.
+
+[Unprivileged]
+    cpan
+! ...
+    Perl code can be executed with the `!` command.

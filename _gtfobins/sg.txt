@@ -1,0 +1,13 @@
+sg
+==
+
+Shell
+-----
+
+[Sudo]
+    sg root
+    Commands can be run if the current user's group is specified, therefore no additional permissions are needed.
+
+[Unprivileged]
+    sg $(id -ng)
+    Commands can be run if the current user's group is specified, therefore no additional permissions are needed.

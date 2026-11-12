@@ -1,0 +1,11 @@
+eb
+==
+
+Inherit
+-------
+
+[Sudo]
+    eb logs
+
+[Unprivileged]
+    eb logs

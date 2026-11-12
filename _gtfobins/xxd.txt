@@ -1,0 +1,26 @@
+xxd
+===
+
+File read
+---------
+
+[Sudo]
+    xxd /path/to/input-file | xxd -r
+
+[SUID]
+    xxd /path/to/input-file | xxd -r
+
+[Unprivileged]
+    xxd /path/to/input-file | xxd -r
+
+File write
+----------
+
+[Sudo]
+    echo DATA | xxd | xxd -r - /path/to/output-file
+
+[SUID]
+    echo DATA | xxd | xxd -r - /path/to/output-file
+
+[Unprivileged]
+    echo DATA | xxd | xxd -r - /path/to/output-file

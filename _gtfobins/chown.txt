@@ -1,0 +1,13 @@
+chown
+=====
+
+Privilege Escalation
+--------------------
+
+[Sudo]
+    chown $(id -un):$(id -gn) /path/to/input-file
+    This can be run with elevated privileges to change ownership and then read, write, or execute a file.
+
+[SUID]
+    chown $(id -un):$(id -gn) /path/to/input-file
+    This can be run with elevated privileges to change ownership and then read, write, or execute a file.

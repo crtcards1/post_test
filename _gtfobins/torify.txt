@@ -1,0 +1,11 @@
+torify
+======
+
+Shell
+-----
+
+[Sudo]
+    torify /bin/sh
+
+[Unprivileged]
+    torify /bin/sh

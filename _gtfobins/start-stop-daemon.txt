@@ -1,0 +1,14 @@
+start-stop-daemon
+=================
+
+Shell
+-----
+
+[Sudo]
+    start-stop-daemon -S -x /bin/sh
+
+[SUID]
+    start-stop-daemon -S -x /bin/sh -- -p
+
+[Unprivileged]
+    start-stop-daemon -S -x /bin/sh

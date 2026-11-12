@@ -1,0 +1,22 @@
+at
+==
+
+Command
+-------
+
+[Sudo]
+    echo /path/to/command | at now
+
+[Unprivileged]
+    echo /path/to/command | at now
+
+Shell
+-----
+
+[Sudo]
+    echo "/bin/sh <$(tty) >$(tty) 2>$(tty)" | at now; tail -f /dev/null
+    `tail` is used to pause the terminal.
+
+[Unprivileged]
+    echo "/bin/sh <$(tty) >$(tty) 2>$(tty)" | at now; tail -f /dev/null
+    `tail` is used to pause the terminal.

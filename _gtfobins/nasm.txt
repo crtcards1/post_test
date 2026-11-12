@@ -1,0 +1,17 @@
+nasm
+====
+
+File read
+---------
+
+[Sudo]
+    nasm -@ /path/to/input-file
+    The file content is treated as command line options and disclosed throught error messages.
+
+[SUID]
+    nasm -@ /path/to/input-file
+    The file content is treated as command line options and disclosed throught error messages.
+
+[Unprivileged]
+    nasm -@ /path/to/input-file
+    The file content is treated as command line options and disclosed throught error messages.

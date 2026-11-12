@@ -1,0 +1,33 @@
+emacs
+=====
+
+File read
+---------
+
+[Sudo]
+    emacs /path/to/input-file
+
+[Unprivileged]
+    emacs /path/to/input-file
+
+File write
+----------
+
+[Sudo]
+    emacs /path/to/output-file
+DATA
+C-x C-s
+
+[Unprivileged]
+    emacs /path/to/output-file
+DATA
+C-x C-s
+
+Shell
+-----
+
+[Sudo]
+    emacs -Q -nw --eval '(term "/bin/sh")'
+
+[Unprivileged]
+    emacs -Q -nw --eval '(term "/bin/sh")'

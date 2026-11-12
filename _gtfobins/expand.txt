@@ -1,0 +1,17 @@
+expand
+======
+
+File read
+---------
+
+[Sudo]
+    expand /path/to/input-file
+    The read file content is corrupted by replacing tabs with spaces.
+
+[SUID]
+    expand /path/to/input-file
+    The read file content is corrupted by replacing tabs with spaces.
+
+[Unprivileged]
+    expand /path/to/input-file
+    The read file content is corrupted by replacing tabs with spaces.

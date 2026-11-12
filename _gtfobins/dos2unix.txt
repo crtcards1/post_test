@@ -1,0 +1,26 @@
+dos2unix
+========
+
+File read
+---------
+
+[Sudo]
+    dos2unix -f -O /path/to/input-file
+
+[SUID]
+    dos2unix -f -O /path/to/input-file
+
+[Unprivileged]
+    dos2unix -f -O /path/to/input-file
+
+File write
+----------
+
+[Sudo]
+    dos2unix -f -n /path/to/input-file /path/to/output-file
+
+[SUID]
+    dos2unix -f -n /path/to/input-file /path/to/output-file
+
+[Unprivileged]
+    dos2unix -f -n /path/to/input-file /path/to/output-file

@@ -1,0 +1,14 @@
+basez
+=====
+
+File read
+---------
+
+[Sudo]
+    basez /path/to/input-file | basez --decode
+
+[SUID]
+    basez /path/to/input-file | basez --decode
+
+[Unprivileged]
+    basez /path/to/input-file | basez --decode

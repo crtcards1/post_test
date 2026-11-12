@@ -1,0 +1,17 @@
+ssh-keygen
+==========
+
+Library load
+------------
+
+[Sudo]
+    ssh-keygen -D /path/to/lib.so
+    The shared library must contain the `void C_GetFunctionList() {}` function.
+
+[SUID]
+    ssh-keygen -D /path/to/lib.so
+    The shared library must contain the `void C_GetFunctionList() {}` function.
+
+[Unprivileged]
+    ssh-keygen -D /path/to/lib.so
+    The shared library must contain the `void C_GetFunctionList() {}` function.

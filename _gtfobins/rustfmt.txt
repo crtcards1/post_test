@@ -1,0 +1,13 @@
+rustfmt
+=======
+
+File read
+---------
+
+[Sudo]
+    rustfmt /path/to/input-file
+    Partial content is displayed as error messages.
+
+[Unprivileged]
+    rustfmt /path/to/input-file
+    Partial content is displayed as error messages.

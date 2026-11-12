@@ -1,0 +1,26 @@
+tcsh
+====
+
+File write
+----------
+
+[Sudo]
+    tcsh -c 'echo DATA >/path/to/output-file'
+
+[SUID]
+    tcsh -bc 'echo DATA >/path/to/output-file'
+
+[Unprivileged]
+    tcsh -c 'echo DATA >/path/to/output-file'
+
+Shell
+-----
+
+[Sudo]
+    tcsh
+
+[SUID]
+    tcsh -b
+
+[Unprivileged]
+    tcsh

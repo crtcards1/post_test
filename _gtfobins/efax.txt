@@ -1,0 +1,13 @@
+efax
+====
+
+File read
+---------
+
+[Sudo]
+    efax -d /path/to/input-file
+    The content is actually parsed by the command.
+
+[SUID]
+    efax -d /path/to/input-file
+    The content is actually parsed by the command.

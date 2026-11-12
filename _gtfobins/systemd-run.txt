@@ -1,0 +1,17 @@
+systemd-run
+===========
+
+Command
+-------
+
+[Sudo]
+    systemd-run /path/to/command
+
+Shell
+-----
+
+[Sudo]
+    systemd-run -S
+
+[Sudo]
+    systemd-run -t /bin/sh

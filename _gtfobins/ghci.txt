@@ -1,0 +1,13 @@
+ghci
+====
+
+Shell
+-----
+
+[Sudo]
+    ghci
+System.Process.callCommand "/bin/sh"
+
+[Unprivileged]
+    ghci
+System.Process.callCommand "/bin/sh"

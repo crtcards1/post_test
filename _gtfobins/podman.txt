@@ -1,0 +1,13 @@
+podman
+======
+
+Shell
+-----
+
+[Sudo]
+    podman run --rm -it --privileged --volume /:/mnt alpine chroot /mnt /bin/sh
+    This requires an actual image to be available (e.g., `alpine`) downloading it if not present.
+
+[Unprivileged]
+    podman run --rm -it --privileged --volume /:/mnt alpine chroot /mnt /bin/sh
+    This requires an actual image to be available (e.g., `alpine`) downloading it if not present.

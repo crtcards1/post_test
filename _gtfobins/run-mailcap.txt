@@ -1,0 +1,19 @@
+run-mailcap
+===========
+
+Inherit
+-------
+
+[Sudo]
+    run-mailcap --action=view text/plain:/etc/hosts
+
+[Unprivileged]
+    run-mailcap --action=view text/plain:/etc/hosts
+
+[Sudo]
+    run-mailcap --action=edit text/plain:/path/to/output-file
+    The file must exist and be not empty.
+
+[Unprivileged]
+    run-mailcap --action=edit text/plain:/path/to/output-file
+    The file must exist and be not empty.

@@ -1,0 +1,14 @@
+base64
+======
+
+File read
+---------
+
+[Sudo]
+    base64 /path/to/input-file | base64 --decode
+
+[SUID]
+    base64 /path/to/input-file | base64 --decode
+
+[Unprivileged]
+    base64 /path/to/input-file | base64 --decode

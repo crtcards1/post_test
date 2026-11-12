@@ -1,0 +1,13 @@
+ranger
+======
+
+Shell
+-----
+
+[Sudo]
+    ranger
+S
+
+[Unprivileged]
+    ranger
+S

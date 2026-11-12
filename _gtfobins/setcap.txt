@@ -1,0 +1,13 @@
+setcap
+======
+
+Privilege Escalation
+--------------------
+
+[Sudo]
+    setcap cap_setuid+ep /path/to/command
+    This can be used to assign capabilities to executable files.
+
+[SUID]
+    setcap cap_setuid+ep /path/to/command
+    This can be used to assign capabilities to executable files.

@@ -1,0 +1,17 @@
+atobm
+=====
+
+File read
+---------
+
+[Sudo]
+    atobm /path/to/input-file
+    Outputs only the first line of the file to standard error without the `-` and `#` characters, this can be customized with the `-c` option, by default is `-c -#`. Content can be retrieved with `awk -F "'" '{printf "%s", $2}'`.
+
+[SUID]
+    atobm /path/to/input-file
+    Outputs only the first line of the file to standard error without the `-` and `#` characters, this can be customized with the `-c` option, by default is `-c -#`. Content can be retrieved with `awk -F "'" '{printf "%s", $2}'`.
+
+[Unprivileged]
+    atobm /path/to/input-file
+    Outputs only the first line of the file to standard error without the `-` and `#` characters, this can be customized with the `-c` option, by default is `-c -#`. Content can be retrieved with `awk -F "'" '{printf "%s", $2}'`.

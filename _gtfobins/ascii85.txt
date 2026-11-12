@@ -1,0 +1,11 @@
+ascii85
+=======
+
+File read
+---------
+
+[Sudo]
+    ascii85 /path/to/input-file | ascii85 --decode
+
+[Unprivileged]
+    ascii85 /path/to/input-file | ascii85 --decode

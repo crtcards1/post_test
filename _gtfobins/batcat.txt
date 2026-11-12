@@ -1,0 +1,17 @@
+batcat
+======
+
+Inherit
+-------
+
+[Sudo]
+    batcat --paging always /etc/hosts
+    `--paging always` can be omitted provided that the output doesn't fit the screen.
+
+[SUID]
+    batcat --paging always /etc/hosts
+    `--paging always` can be omitted provided that the output doesn't fit the screen.
+
+[Unprivileged]
+    batcat --paging always /etc/hosts
+    `--paging always` can be omitted provided that the output doesn't fit the screen.

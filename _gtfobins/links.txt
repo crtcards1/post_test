@@ -1,0 +1,17 @@
+links
+=====
+
+File read
+---------
+
+[Sudo]
+    links /path/to/input-file
+    The result is displayed in a TUI interface.
+
+[SUID]
+    links /path/to/input-file
+    The result is displayed in a TUI interface.
+
+[Unprivileged]
+    links /path/to/input-file
+    The result is displayed in a TUI interface.

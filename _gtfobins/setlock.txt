@@ -1,0 +1,14 @@
+setlock
+=======
+
+Shell
+-----
+
+[Sudo]
+    setlock - /bin/sh
+
+[SUID]
+    setlock - /bin/sh -p
+
+[Unprivileged]
+    setlock - /bin/sh

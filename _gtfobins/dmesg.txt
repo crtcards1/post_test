@@ -1,0 +1,26 @@
+dmesg
+=====
+
+File read
+---------
+
+[Sudo]
+    dmesg -rF /path/to/input-file
+
+[SUID]
+    dmesg -rF /path/to/input-file
+
+[Unprivileged]
+    dmesg -rF /path/to/input-file
+
+Inherit
+-------
+
+[Sudo]
+    dmesg -H
+
+[SUID]
+    dmesg -H
+
+[Unprivileged]
+    dmesg -H

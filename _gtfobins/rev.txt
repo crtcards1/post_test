@@ -1,0 +1,14 @@
+rev
+===
+
+File read
+---------
+
+[Sudo]
+    rev /path/to/input-file | rev
+
+[SUID]
+    rev /path/to/input-file | rev
+
+[Unprivileged]
+    rev /path/to/input-file | rev

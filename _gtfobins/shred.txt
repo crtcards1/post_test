@@ -1,0 +1,17 @@
+shred
+=====
+
+File write
+----------
+
+[Sudo]
+    shred -u /path/to/output-file
+    This actually deletes the chosen file.
+
+[SUID]
+    shred -u /path/to/output-file
+    This actually deletes the chosen file.
+
+[Unprivileged]
+    shred -u /path/to/output-file
+    This actually deletes the chosen file.

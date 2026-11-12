@@ -1,0 +1,26 @@
+dd
+==
+
+File read
+---------
+
+[Sudo]
+    dd if=/path/to/input-file
+
+[SUID]
+    dd if=/path/to/input-file
+
+[Unprivileged]
+    dd if=/path/to/input-file
+
+File write
+----------
+
+[Sudo]
+    echo DATA | dd of=/path/to/output-file
+
+[SUID]
+    echo DATA | dd of=/path/to/output-file
+
+[Unprivileged]
+    echo DATA | dd of=/path/to/output-file

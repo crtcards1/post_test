@@ -1,0 +1,14 @@
+rc
+==
+
+Shell
+-----
+
+[Sudo]
+    rc
+
+[SUID]
+    rc
+
+[Unprivileged]
+    rc

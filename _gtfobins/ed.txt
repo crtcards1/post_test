@@ -1,0 +1,65 @@
+ed
+==
+
+File read
+---------
+
+[Sudo]
+    ed /path/to/input-file
+,p
+q
+
+[SUID]
+    ed /path/to/input-file
+,p
+q
+
+[Unprivileged]
+    ed /path/to/input-file
+,p
+q
+
+File write
+----------
+
+[Sudo]
+    ed /path/to/output-file
+a
+DATA
+.
+w
+q
+
+[SUID]
+    ed /path/to/output-file
+a
+DATA
+.
+w
+q
+
+[Unprivileged]
+    ed /path/to/output-file
+a
+DATA
+.
+w
+q
+
+Shell
+-----
+
+[Sudo]
+    ed
+!/bin/sh
+q
+
+[SUID]
+    ed
+!/bin/sh
+q
+
+[Unprivileged]
+    ed
+!/bin/sh
+q

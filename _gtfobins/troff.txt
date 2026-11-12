@@ -1,0 +1,17 @@
+troff
+=====
+
+File read
+---------
+
+[Sudo]
+    troff /path/to/input-file
+    The file is typeset but text is still readable in the output, alternatively the output can be read with `man -l`.
+
+[SUID]
+    troff /path/to/input-file
+    The file is typeset but text is still readable in the output, alternatively the output can be read with `man -l`.
+
+[Unprivileged]
+    troff /path/to/input-file
+    The file is typeset but text is still readable in the output, alternatively the output can be read with `man -l`.

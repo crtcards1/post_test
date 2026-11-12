@@ -1,0 +1,11 @@
+taskset
+=======
+
+Shell
+-----
+
+[Sudo]
+    taskset 1 /bin/sh
+
+[Unprivileged]
+    taskset 1 /bin/sh

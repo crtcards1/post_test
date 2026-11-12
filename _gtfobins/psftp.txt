@@ -1,0 +1,17 @@
+psftp
+=====
+
+Shell
+-----
+
+[Sudo]
+    psftp
+!/bin/sh
+
+[SUID]
+    psftp
+!/bin/sh
+
+[Unprivileged]
+    psftp
+!/bin/sh

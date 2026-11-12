@@ -1,0 +1,29 @@
+genisoimage
+===========
+
+File read
+---------
+
+[Sudo]
+    genisoimage -q -o - /path/to/input-file
+    The output is placed inside the ISO9660 file system binary format, it can be mounted or extracted with tools like `7z`.
+
+[SUID]
+    genisoimage -q -o - /path/to/input-file
+    The output is placed inside the ISO9660 file system binary format, it can be mounted or extracted with tools like `7z`.
+
+[Unprivileged]
+    genisoimage -q -o - /path/to/input-file
+    The output is placed inside the ISO9660 file system binary format, it can be mounted or extracted with tools like `7z`.
+
+[Sudo]
+    genisoimage -sort /path/to/input-file
+    The file is parsed, and some of its content is disclosed by the error messages.
+
+[SUID]
+    genisoimage -sort /path/to/input-file
+    The file is parsed, and some of its content is disclosed by the error messages.
+
+[Unprivileged]
+    genisoimage -sort /path/to/input-file
+    The file is parsed, and some of its content is disclosed by the error messages.

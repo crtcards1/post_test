@@ -1,0 +1,17 @@
+msgmerge
+========
+
+File read
+---------
+
+[Sudo]
+    msgmerge -P /path/to/input-file /dev/null
+    The file is parsed and displayed as a Java `.properties` file.
+
+[SUID]
+    msgmerge -P /path/to/input-file /dev/null
+    The file is parsed and displayed as a Java `.properties` file.
+
+[Unprivileged]
+    msgmerge -P /path/to/input-file /dev/null
+    The file is parsed and displayed as a Java `.properties` file.

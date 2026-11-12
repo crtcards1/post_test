@@ -1,0 +1,17 @@
+od
+==
+
+File read
+---------
+
+[Sudo]
+    od -An -c -w999 /path/to/input-file
+    Three spaces are added before each character in the read file (wrapped at the specified value, i.e., `999`), and non-printable chars are printed as backslash escape sequences.
+
+[SUID]
+    od -An -c -w999 /path/to/input-file
+    Three spaces are added before each character in the read file (wrapped at the specified value, i.e., `999`), and non-printable chars are printed as backslash escape sequences.
+
+[Unprivileged]
+    od -An -c -w999 /path/to/input-file
+    Three spaces are added before each character in the read file (wrapped at the specified value, i.e., `999`), and non-printable chars are printed as backslash escape sequences.

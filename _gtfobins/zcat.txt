@@ -1,0 +1,11 @@
+zcat
+====
+
+File read
+---------
+
+[Sudo]
+    zcat -f /path/to/input-file
+
+[Unprivileged]
+    zcat -f /path/to/input-file

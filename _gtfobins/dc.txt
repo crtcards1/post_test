@@ -1,0 +1,14 @@
+dc
+==
+
+Shell
+-----
+
+[Sudo]
+    dc -e '!/bin/sh'
+
+[SUID]
+    dc -e '!/bin/sh'
+
+[Unprivileged]
+    dc -e '!/bin/sh'

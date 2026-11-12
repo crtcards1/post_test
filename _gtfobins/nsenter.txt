@@ -1,0 +1,17 @@
+nsenter
+=======
+
+Shell
+-----
+
+[Sudo]
+    nsenter /bin/sh
+    The shell command can be omitted.
+
+[SUID]
+    nsenter /bin/sh -p
+    The shell command can be omitted.
+
+[Unprivileged]
+    nsenter /bin/sh
+    The shell command can be omitted.

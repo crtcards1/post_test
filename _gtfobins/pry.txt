@@ -1,0 +1,11 @@
+pry
+===
+
+Inherit
+-------
+
+[Sudo]
+    pry
+
+[Unprivileged]
+    pry

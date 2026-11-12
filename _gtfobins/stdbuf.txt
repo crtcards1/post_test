@@ -1,0 +1,14 @@
+stdbuf
+======
+
+Shell
+-----
+
+[Sudo]
+    stdbuf -i0 /bin/sh
+
+[SUID]
+    stdbuf -i0 /bin/sh -p
+
+[Unprivileged]
+    stdbuf -i0 /bin/sh

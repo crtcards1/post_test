@@ -1,0 +1,11 @@
+iptables-save
+=============
+
+File write
+----------
+
+[Sudo]
+    iptables -A INPUT -i lo -j ACCEPT -m comment --comment DATA
+iptables -S
+iptables-save -f /path/to/output-file
+    The content is written along with a number of `iptables` rules.

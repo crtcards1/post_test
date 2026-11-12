@@ -1,0 +1,17 @@
+xmodmap
+=======
+
+File read
+---------
+
+[Sudo]
+    xmodmap -v /path/to/input-file
+    The read file content is corrupted by error prints.
+
+[SUID]
+    xmodmap -v /path/to/input-file
+    The read file content is corrupted by error prints.
+
+[Unprivileged]
+    xmodmap -v /path/to/input-file
+    The read file content is corrupted by error prints.

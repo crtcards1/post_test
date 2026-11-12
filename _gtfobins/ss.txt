@@ -1,0 +1,17 @@
+ss
+==
+
+File read
+---------
+
+[Sudo]
+    ss -a -F /path/to/input-file
+    The file content is actually parsed so only a part of the first line is returned as a part of an error message.
+
+[SUID]
+    ss -a -F /path/to/input-file
+    The file content is actually parsed so only a part of the first line is returned as a part of an error message.
+
+[Unprivileged]
+    ss -a -F /path/to/input-file
+    The file content is actually parsed so only a part of the first line is returned as a part of an error message.

@@ -1,0 +1,14 @@
+paste
+=====
+
+File read
+---------
+
+[Sudo]
+    paste /path/to/input-file
+
+[SUID]
+    paste /path/to/input-file
+
+[Unprivileged]
+    paste /path/to/input-file

@@ -1,0 +1,17 @@
+comm
+====
+
+File read
+---------
+
+[Sudo]
+    comm /path/to/input-file /dev/null
+    A newline is appended to the file.
+
+[SUID]
+    comm /path/to/input-file /dev/null
+    A newline is appended to the file.
+
+[Unprivileged]
+    comm /path/to/input-file /dev/null
+    A newline is appended to the file.

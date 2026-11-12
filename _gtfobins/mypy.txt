@@ -1,0 +1,24 @@
+mypy
+====
+
+File read
+---------
+
+[Sudo]
+    mypy /path/to/input-file
+    Partial content is leaked as error messages.
+
+[Unprivileged]
+    mypy /path/to/input-file
+    Partial content is leaked as error messages.
+
+File write
+----------
+
+[Sudo]
+    mypy /path/to/input-file --junit-xml /path/to/output-file
+    Partial content is leaked as error messages inside some XML tags.
+
+[Unprivileged]
+    mypy /path/to/input-file --junit-xml /path/to/output-file
+    Partial content is leaked as error messages inside some XML tags.

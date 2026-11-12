@@ -1,0 +1,17 @@
+nm
+==
+
+File read
+---------
+
+[Sudo]
+    nm /path/to/input-file
+    The file content is treated as command line options and disclosed through error messages.
+
+[SUID]
+    nm /path/to/input-file
+    The file content is treated as command line options and disclosed through error messages.
+
+[Unprivileged]
+    nm /path/to/input-file
+    The file content is treated as command line options and disclosed through error messages.

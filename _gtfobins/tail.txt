@@ -1,0 +1,14 @@
+tail
+====
+
+File read
+---------
+
+[Sudo]
+    tail -c+0 /path/to/input-file
+
+[SUID]
+    tail -c+0 /path/to/input-file
+
+[Unprivileged]
+    tail -c+0 /path/to/input-file

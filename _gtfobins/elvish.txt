@@ -1,0 +1,38 @@
+elvish
+======
+
+File read
+---------
+
+[Sudo]
+    elvish -c 'print (slurp </path/to/input-file)'
+
+[SUID]
+    elvish -c 'print (slurp </path/to/input-file)'
+
+[Unprivileged]
+    elvish -c 'print (slurp </path/to/input-file)'
+
+File write
+----------
+
+[Sudo]
+    elvish -c 'print DATA >/path/to/output-file'
+
+[SUID]
+    elvish -c 'print DATA >/path/to/output-file'
+
+[Unprivileged]
+    elvish -c 'print DATA >/path/to/output-file'
+
+Shell
+-----
+
+[Sudo]
+    elvish
+
+[SUID]
+    elvish
+
+[Unprivileged]
+    elvish

@@ -1,0 +1,14 @@
+xz
+==
+
+File read
+---------
+
+[Sudo]
+    xz -c /path/to/input-file | xz -d
+
+[SUID]
+    xz -c /path/to/input-file | xz -d
+
+[Unprivileged]
+    xz -c /path/to/input-file | xz -d

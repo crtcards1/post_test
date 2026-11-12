@@ -1,0 +1,26 @@
+iconv
+=====
+
+File read
+---------
+
+[Sudo]
+    iconv -f 8859_1 -t 8859_1 /path/to/input-file
+
+[SUID]
+    iconv -f 8859_1 -t 8859_1 /path/to/input-file
+
+[Unprivileged]
+    iconv -f 8859_1 -t 8859_1 /path/to/input-file
+
+File write
+----------
+
+[Sudo]
+    echo DATA | iconv -f 8859_1 -t 8859_1 -o /path/to/output-file
+
+[SUID]
+    echo DATA | iconv -f 8859_1 -t 8859_1 -o /path/to/output-file
+
+[Unprivileged]
+    echo DATA | iconv -f 8859_1 -t 8859_1 -o /path/to/output-file

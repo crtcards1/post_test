@@ -1,0 +1,14 @@
+zless
+=====
+
+Inherit
+-------
+
+[Sudo]
+    zless /path/to/input-file
+
+[SUID]
+    zless /path/to/input-file
+
+[Unprivileged]
+    zless /path/to/input-file

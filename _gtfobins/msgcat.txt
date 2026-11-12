@@ -1,0 +1,17 @@
+msgcat
+======
+
+File read
+---------
+
+[Sudo]
+    msgcat -P /path/to/input-file
+    The file is parsed and displayed as a Java `.properties` file.
+
+[SUID]
+    msgcat -P /path/to/input-file
+    The file is parsed and displayed as a Java `.properties` file.
+
+[Unprivileged]
+    msgcat -P /path/to/input-file
+    The file is parsed and displayed as a Java `.properties` file.

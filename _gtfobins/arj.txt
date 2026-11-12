@@ -1,0 +1,41 @@
+arj
+===
+
+File read
+---------
+
+[Sudo]
+    arj a /path/to/output-file /path/to/input-file
+arj p /path/to/output-file
+    The `.arj` suffix will be added to `output-file`.
+
+[SUID]
+    arj a /path/to/output-file /path/to/input-file
+arj p /path/to/output-file
+    The `.arj` suffix will be added to `output-file`.
+
+[Unprivileged]
+    arj a /path/to/output-file /path/to/input-file
+arj p /path/to/output-file
+    The `.arj` suffix will be added to `output-file`.
+
+File write
+----------
+
+[Sudo]
+    echo DATA >output-file
+arj a x output-file
+arj e x /path/to/output-dir/
+    The `.arj` suffix will be added to `x`.
+
+[SUID]
+    echo DATA >output-file
+arj a x output-file
+arj e x /path/to/output-dir/
+    The `.arj` suffix will be added to `x`.
+
+[Unprivileged]
+    echo DATA >output-file
+arj a x output-file
+arj e x /path/to/output-dir/
+    The `.arj` suffix will be added to `x`.

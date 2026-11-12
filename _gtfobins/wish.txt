@@ -1,0 +1,14 @@
+wish
+====
+
+Inherit
+-------
+
+[Sudo]
+    wish
+
+[SUID]
+    wish
+
+[Unprivileged]
+    wish

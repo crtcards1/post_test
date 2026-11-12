@@ -1,0 +1,17 @@
+lualatex
+========
+
+Inherit
+-------
+
+[Sudo]
+    lualatex -shell-escape '\directlua{...}\end'
+    This allows to run Lua code (`...`).
+
+[SUID]
+    lualatex -shell-escape '\directlua{...}\end'
+    This allows to run Lua code (`...`).
+
+[Unprivileged]
+    lualatex -shell-escape '\directlua{...}\end'
+    This allows to run Lua code (`...`).

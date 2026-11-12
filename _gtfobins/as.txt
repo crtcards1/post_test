@@ -1,0 +1,17 @@
+as
+==
+
+File read
+---------
+
+[Sudo]
+    as @/path/to/input-file
+    Lines are likely leaked as error messages.
+
+[SUID]
+    as @/path/to/input-file
+    Lines are likely leaked as error messages.
+
+[Unprivileged]
+    as @/path/to/input-file
+    Lines are likely leaked as error messages.

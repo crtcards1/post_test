@@ -1,0 +1,11 @@
+xdg-user-dir
+============
+
+Shell
+-----
+
+[Sudo]
+    xdg-user-dir '}; /bin/sh #'
+
+[Unprivileged]
+    xdg-user-dir '}; /bin/sh #'

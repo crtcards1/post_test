@@ -1,0 +1,17 @@
+alpine
+======
+
+File read
+---------
+
+[Sudo]
+    alpine -F /path/to/input-file
+    The file is displayed in the terminal interface. Other options might be available, for example, by pressing `S` is possible to save the file content elsewhere.
+
+[SUID]
+    alpine -F /path/to/input-file
+    The file is displayed in the terminal interface. Other options might be available, for example, by pressing `S` is possible to save the file content elsewhere.
+
+[Unprivileged]
+    alpine -F /path/to/input-file
+    The file is displayed in the terminal interface. Other options might be available, for example, by pressing `S` is possible to save the file content elsewhere.

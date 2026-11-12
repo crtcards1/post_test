@@ -1,0 +1,13 @@
+yelp
+====
+
+File read
+---------
+
+[Sudo]
+    yelp man:/path/to/input-file
+    This spawns a graphical window containing the file content somehow corrupted by word wrapping.
+
+[Unprivileged]
+    yelp man:/path/to/input-file
+    This spawns a graphical window containing the file content somehow corrupted by word wrapping.

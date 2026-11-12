@@ -1,0 +1,13 @@
+bbot
+====
+
+File read
+---------
+
+[Sudo]
+    bbot -d -cy /path/to/input-file
+    The file is displayed in the debug log.
+
+[Unprivileged]
+    bbot -d -cy /path/to/input-file
+    The file is displayed in the debug log.

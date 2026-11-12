@@ -1,0 +1,17 @@
+gzip
+====
+
+File read
+---------
+
+[Capabilities]
+    gzip -c /path/to/input-file | gzip -d
+
+[Sudo]
+    gzip -c /path/to/input-file | gzip -d
+
+[SUID]
+    gzip -c /path/to/input-file | gzip -d
+
+[Unprivileged]
+    gzip -c /path/to/input-file | gzip -d

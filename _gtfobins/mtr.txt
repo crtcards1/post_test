@@ -1,0 +1,13 @@
+mtr
+===
+
+File read
+---------
+
+[Sudo]
+    mtr --raw -F /path/to/input-file
+    The file is actually parsed, thus the content is corrupted by error prints.
+
+[Unprivileged]
+    mtr --raw -F /path/to/input-file
+    The file is actually parsed, thus the content is corrupted by error prints.

@@ -1,0 +1,11 @@
+posh
+====
+
+Shell
+-----
+
+[Sudo]
+    posh
+
+[Unprivileged]
+    posh

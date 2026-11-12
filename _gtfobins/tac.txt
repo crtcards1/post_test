@@ -1,0 +1,17 @@
+tac
+===
+
+File read
+---------
+
+[Sudo]
+    tac -s 'RANDOM' /path/to/input-file
+    Make sure that `RANDOM` does not appear into the file to read otherwise the content of the file is corrupted by reversing the order of `RANDOM`-separated chunks.
+
+[SUID]
+    tac -s 'RANDOM' /path/to/input-file
+    Make sure that `RANDOM` does not appear into the file to read otherwise the content of the file is corrupted by reversing the order of `RANDOM`-separated chunks.
+
+[Unprivileged]
+    tac -s 'RANDOM' /path/to/input-file
+    Make sure that `RANDOM` does not appear into the file to read otherwise the content of the file is corrupted by reversing the order of `RANDOM`-separated chunks.

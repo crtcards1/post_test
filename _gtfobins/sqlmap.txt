@@ -1,0 +1,13 @@
+sqlmap
+======
+
+Inherit
+-------
+
+[Sudo]
+    sqlmap -u 127.0.0.1 --eval='...'
+    This allows to run Python code (`...`).
+
+[Unprivileged]
+    sqlmap -u 127.0.0.1 --eval='...'
+    This allows to run Python code (`...`).

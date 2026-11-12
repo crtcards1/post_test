@@ -1,0 +1,26 @@
+run-parts
+=========
+
+Shell
+-----
+
+[Sudo]
+    run-parts --new-session --regex '^sh$' /bin
+
+[SUID]
+    run-parts --new-session --regex '^sh$' /bin --arg='-p'
+
+[Unprivileged]
+    run-parts --new-session --regex '^sh$' /bin
+
+[Sudo]
+    cp /bin/sh /path/to/temp-dir/
+run-parts /path/to/temp-dir/
+
+[SUID]
+    cp /bin/sh /path/to/temp-dir/
+run-parts /path/to/temp-dir/ --arg='-p'
+
+[Unprivileged]
+    cp /bin/sh /path/to/temp-dir/
+run-parts /path/to/temp-dir/

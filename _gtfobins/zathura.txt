@@ -1,0 +1,15 @@
+zathura
+=======
+
+Shell
+-----
+
+[Sudo]
+    zathura
+:! /bin/sh -c 'exec /bin/sh 0<&1'
+    The interaction happens in a GUI window, while the shell is dropped in the terminal.
+
+[Unprivileged]
+    zathura
+:! /bin/sh -c 'exec /bin/sh 0<&1'
+    The interaction happens in a GUI window, while the shell is dropped in the terminal.

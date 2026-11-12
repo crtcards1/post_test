@@ -1,0 +1,11 @@
+torsocks
+========
+
+Shell
+-----
+
+[Sudo]
+    torsocks /bin/sh
+
+[Unprivileged]
+    torsocks /bin/sh

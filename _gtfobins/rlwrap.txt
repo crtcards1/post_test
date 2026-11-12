@@ -1,0 +1,29 @@
+rlwrap
+======
+
+File write
+----------
+
+[Sudo]
+    rlwrap -l /path/to/output-file echo DATA
+    This adds timestamps to the output file. This relies on the external `echo` command.
+
+[SUID]
+    rlwrap -l /path/to/output-file echo DATA
+    This adds timestamps to the output file. This relies on the external `echo` command.
+
+[Unprivileged]
+    rlwrap -l /path/to/output-file echo DATA
+    This adds timestamps to the output file. This relies on the external `echo` command.
+
+Shell
+-----
+
+[Sudo]
+    rlwrap /bin/sh
+
+[SUID]
+    rlwrap /bin/sh -p
+
+[Unprivileged]
+    rlwrap /bin/sh

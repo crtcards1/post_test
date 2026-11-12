@@ -1,0 +1,17 @@
+xpad
+====
+
+File read
+---------
+
+[Sudo]
+    xpad -f /path/to/input-file
+    The file is displayed in a graphical window.
+
+[SUID]
+    xpad -f /path/to/input-file
+    The file is displayed in a graphical window.
+
+[Unprivileged]
+    xpad -f /path/to/input-file
+    The file is displayed in a graphical window.

@@ -1,0 +1,11 @@
+service
+=======
+
+Shell
+-----
+
+[Sudo]
+    service ../../bin/sh
+
+[Unprivileged]
+    service ../../bin/sh

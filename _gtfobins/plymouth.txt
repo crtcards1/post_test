@@ -1,0 +1,14 @@
+plymouth
+========
+
+Shell
+-----
+
+[Sudo]
+    plymouth ask-for-password --prompt=x --command=/bin/sh
+
+[SUID]
+    plymouth ask-for-password --prompt=x --command='/bin/sh -p'
+
+[Unprivileged]
+    plymouth ask-for-password --prompt=x --command=/bin/sh

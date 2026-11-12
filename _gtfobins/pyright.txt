@@ -1,0 +1,29 @@
+pyright
+=======
+
+File read
+---------
+
+[Sudo]
+    pyright /path/to/input-file
+    Content is leaked as error messages.
+
+[Unprivileged]
+    pyright /path/to/input-file
+    Content is leaked as error messages.
+
+[Sudo]
+    pyright --outputjson /path/to/input-file
+    Content is leaked as error messages in JSON format.
+
+[Unprivileged]
+    pyright --outputjson /path/to/input-file
+    Content is leaked as error messages in JSON format.
+
+[Sudo]
+    pyright -w /path/to/input-dir/
+    Recursively walks directories, parsing all Python files and leaking some contents through diagnostics.
+
+[Unprivileged]
+    pyright -w /path/to/input-dir/
+    Recursively walks directories, parsing all Python files and leaking some contents through diagnostics.

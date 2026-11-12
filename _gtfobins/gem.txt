@@ -1,0 +1,36 @@
+gem
+===
+
+Inherit
+-------
+
+[Sudo]
+    gem open debug
+    This requires the name of an installed gem to be provided, e.g., `debug` is usually installed.
+
+[Unprivileged]
+    gem open debug
+    This requires the name of an installed gem to be provided, e.g., `debug` is usually installed.
+
+[Sudo]
+    gem build /path/to/script.rb
+
+[Unprivileged]
+    gem build /path/to/script.rb
+
+[Sudo]
+    gem install --file /path/to/script.rb
+
+[Unprivileged]
+    gem install --file /path/to/script.rb
+
+Shell
+-----
+
+[Sudo]
+    gem open -e '/bin/sh -s' debug
+    This requires the name of an installed gem to be provided, e.g., `debug` is usually installed.
+
+[Unprivileged]
+    gem open -e '/bin/sh -s' debug
+    This requires the name of an installed gem to be provided, e.g., `debug` is usually installed.

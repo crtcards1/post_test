@@ -1,0 +1,17 @@
+ginsh
+=====
+
+Shell
+-----
+
+[Sudo]
+    ginsh
+!/bin/sh
+
+[SUID]
+    ginsh
+!/bin/sh
+
+[Unprivileged]
+    ginsh
+!/bin/sh

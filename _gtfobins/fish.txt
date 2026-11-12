@@ -1,0 +1,14 @@
+fish
+====
+
+Shell
+-----
+
+[Sudo]
+    fish
+
+[SUID]
+    fish
+
+[Unprivileged]
+    fish

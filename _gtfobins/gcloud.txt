@@ -1,0 +1,14 @@
+gcloud
+======
+
+Inherit
+-------
+
+[Sudo]
+    gcloud help
+
+[SUID]
+    gcloud help
+
+[Unprivileged]
+    gcloud help

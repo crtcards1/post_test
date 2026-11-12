@@ -1,0 +1,17 @@
+ntpdate
+=======
+
+File read
+---------
+
+[Sudo]
+    ntpdate -a x -k /path/to/input-file -d localhost
+    The file is actually parsed and lines are leaked through error messages.
+
+[SUID]
+    ntpdate -a x -k /path/to/input-file -d localhost
+    The file is actually parsed and lines are leaked through error messages.
+
+[Unprivileged]
+    ntpdate -a x -k /path/to/input-file -d localhost
+    The file is actually parsed and lines are leaked through error messages.

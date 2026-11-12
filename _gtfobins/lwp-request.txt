@@ -1,0 +1,11 @@
+lwp-request
+===========
+
+File read
+---------
+
+[Sudo]
+    lwp-request file:///path/to/input-file
+
+[Unprivileged]
+    lwp-request file:///path/to/input-file

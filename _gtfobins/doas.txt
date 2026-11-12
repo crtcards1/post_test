@@ -1,0 +1,13 @@
+doas
+====
+
+Shell
+-----
+
+[Sudo]
+    doas -u root /bin/sh
+    The user must be allowed to use `doas`.
+
+[Unprivileged]
+    doas -u root /bin/sh
+    The user must be allowed to use `doas`.

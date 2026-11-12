@@ -1,0 +1,11 @@
+aoss
+====
+
+Shell
+-----
+
+[Sudo]
+    aoss /bin/sh
+
+[Unprivileged]
+    aoss /bin/sh

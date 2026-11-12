@@ -1,0 +1,14 @@
+pidstat
+=======
+
+Shell
+-----
+
+[Sudo]
+    pidstat -e /bin/sh
+
+[SUID]
+    pidstat -e /bin/sh -p
+
+[Unprivileged]
+    pidstat -e /bin/sh

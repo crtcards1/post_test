@@ -1,0 +1,41 @@
+jshell
+======
+
+File read
+---------
+
+[Sudo]
+    jshell
+jshell> /open /path/to/input-file
+    The content is leaked as error messages.
+
+[Unprivileged]
+    jshell
+jshell> /open /path/to/input-file
+    The content is leaked as error messages.
+
+File write
+----------
+
+[Sudo]
+    jshell
+String x = "DATA";
+/save /path/to/output-file
+    Writes only the valid Java code to file.
+
+[Unprivileged]
+    jshell
+String x = "DATA";
+/save /path/to/output-file
+    Writes only the valid Java code to file.
+
+Shell
+-----
+
+[Sudo]
+    jshell
+Runtime.getRuntime().exec("/path/to/command");
+
+[Unprivileged]
+    jshell
+Runtime.getRuntime().exec("/path/to/command");

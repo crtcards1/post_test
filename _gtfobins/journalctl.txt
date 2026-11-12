@@ -1,0 +1,11 @@
+journalctl
+==========
+
+Inherit
+-------
+
+[Sudo]
+    journalctl
+
+[Unprivileged]
+    journalctl

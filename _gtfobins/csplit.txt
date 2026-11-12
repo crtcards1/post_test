@@ -1,0 +1,35 @@
+csplit
+======
+
+File read
+---------
+
+[Sudo]
+    csplit /path/to/input-file 1
+cat xx01
+
+[SUID]
+    csplit /path/to/input-file 1
+cat xx01
+
+[Unprivileged]
+    csplit /path/to/input-file 1
+cat xx01
+
+File write
+----------
+
+[Sudo]
+    echo DATA >/path/to/temp-file
+csplit -z -b '%doutput-file' /path/to/temp-file 1
+    Writes the data to `xx0output-file` in the current working directory. If needed, a different prefix can be specified with `-f` (instead of `xx`).
+
+[SUID]
+    echo DATA >/path/to/temp-file
+csplit -z -b '%doutput-file' /path/to/temp-file 1
+    Writes the data to `xx0output-file` in the current working directory. If needed, a different prefix can be specified with `-f` (instead of `xx`).
+
+[Unprivileged]
+    echo DATA >/path/to/temp-file
+csplit -z -b '%doutput-file' /path/to/temp-file 1
+    Writes the data to `xx0output-file` in the current working directory. If needed, a different prefix can be specified with `-f` (instead of `xx`).

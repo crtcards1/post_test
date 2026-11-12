@@ -1,0 +1,14 @@
+softlimit
+=========
+
+Shell
+-----
+
+[Sudo]
+    softlimit /bin/sh
+
+[SUID]
+    softlimit /bin/sh -p
+
+[Unprivileged]
+    softlimit /bin/sh

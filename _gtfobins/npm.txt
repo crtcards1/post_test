@@ -1,0 +1,27 @@
+npm
+===
+
+Shell
+-----
+
+[Sudo]
+    npm exec /bin/sh
+
+[Unprivileged]
+    npm exec /bin/sh
+
+[Sudo]
+    echo '{"scripts": {"preinstall": "/bin/sh"}}' >package.json
+npm -C . i
+
+[Unprivileged]
+    echo '{"scripts": {"preinstall": "/bin/sh"}}' >package.json
+npm -C . i
+
+[Sudo]
+    echo '{"scripts": {"xxx": "/bin/sh"}}' >package.json
+npm -C . run xxx
+
+[Unprivileged]
+    echo '{"scripts": {"xxx": "/bin/sh"}}' >package.json
+npm -C . run xxx
